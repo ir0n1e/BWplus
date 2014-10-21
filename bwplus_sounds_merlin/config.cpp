@@ -5,18 +5,16 @@ class CfgPatches {
 		weapons[] = {};
 		requiredVersion = 0.100000;
 		requiredAddons[] = {"bwplus_vehicles","A3_Air_F"};
-		version = "1.1";
-    	versionStr = "1.1";
-    	versionAr[] = {1,1,0};
+		version = "1.3";
+    	versionStr = "1.3";
+    	versionAr[] = {1,3,0};
     	author[] = {"EduardLaser", "Ir0n1E"};
     	authorUrl = "http://ntalpha.de";
 	};
 };
 
 class CfgAddons {
-
 	class PreloadAddons {
-
 		class CONFIG_SOUNDS_CLASS {
 			list[] = {"bwplus_sounds_merlin_merlin"};
 		};

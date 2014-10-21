@@ -45,6 +45,7 @@ class CfgFunctions {
     	};
   	};
 };
+
 #include <Macros.hpp>
 
 class CfgVehicles {
@@ -92,7 +93,6 @@ class CfgVehicles {
     	transportmaxmagazines = 9001;
     	transportmaxbackbacks = 0;
     	maximumload = 2000;
-
     	class TransportMagazines  {
         	MACRO_ADDMAGAZINE(APERSBoundingMine_Range_Mag,10)
         	MACRO_ADDMAGAZINE(ATMine_Range_Mag,5)
@@ -350,7 +350,6 @@ class CfgVehicles {
 			Init = "_this call BWplus_vehicles_fnc_saniFennecInit";
 		 	getin = "_this call BWplus_vehicles_fnc_getin";
 		};
-		
 		class TransportMagazines {
 			MACRO_ADDMAGAZINE(BWA3_30Rnd_556x45_G36,10)
 			MACRO_ADDMAGAZINE(BWA3_200Rnd_556x45,5)
@@ -370,7 +369,6 @@ class CfgVehicles {
 			MACRO_ADDWEAPON(BWA3_Pzf3_Loaded,2)
 		};
 	};
-	
 	class Fennek_Flecktarn_san: I_MRAP_03_F {
 		displayName = "$STR_BWplus_Vehicles_Fennek_medic";
 		author = "EduardLaser, Ir0n1E";
@@ -413,7 +411,6 @@ class CfgVehicles {
 		hiddenSelections[] = {"camo1","camo2"};
 		hiddenSelectionsTextures[] = {"BWplus_vehicles\data\Tropen\piotrop.paa","BWplus_vehicles\data\Tropen\trop2.paa"};
 	};
-	
 	class Fennek_Tropen_mg: Fennek_Flecktarn_mg {
 		displayName = "Fennek Kal.50";
 		author = "EduardLaser, Ir0n1E";
@@ -422,7 +419,6 @@ class CfgVehicles {
 		hiddenSelections[] = {"camo1","camo2"};
 		hiddenSelectionsTextures[] = {"BWplus_vehicles\data\Tropen\trop.paa","BWplus_vehicles\data\Tropen\trop2.paa"};
 	};	
-    
     class Fennek_Tropen_gmg: Fennek_Flecktarn_gmg {
 		displayName = "Fennek GMG";
 		author = "EduardLaser, Ir0n1E";
@@ -431,7 +427,6 @@ class CfgVehicles {
         hiddenSelections[] = {"camo1","camo2"};
 		hiddenSelectionsTextures[] = {"BWplus_vehicles\data\Tropen\trop.paa","BWplus_vehicles\data\Tropen\trop2.paa"};
 	};
-	
 	class Fennek_Tropen_san: Fennek_Flecktarn_san {
 		displayName = "$STR_BWplus_Vehicles_Fennek_medic";
 		author = "EduardLaser, Ir0n1E";
@@ -440,7 +435,6 @@ class CfgVehicles {
         hiddenSelections[] = {"camo1","camo2"};
 		hiddenSelectionsTextures[] = {"BWplus_vehicles\data\Tropen\santrop.paa","BWplus_vehicles\data\Tropen\trop2.paa"};
 	};
-
 	class Land_PortableLight_double_F;
 	class craterlong;
 	class CamoNet_INDP_F;
@@ -468,7 +462,6 @@ class CfgVehicles {
 	      	};
 		};
 	};
-
 	class BWplus_CamoNet: CamoNet_INDP_F {
 		displayName = "$STR_BWplus_Vehicles_Net";
 		descriptionShort = "$STR_BWplus_Vehicles_Net";
@@ -509,7 +502,6 @@ class CfgVehicles {
 		class eventHandlers {
 		 	Init = "_this execVM ""BWplus_vehicles\init_Crater.sqf"";";
 		};
-		
 		class AGM_Actions {
 	    	class BWplus_DismantleCrater {
 				displayName = "$STR_BWplus_Vehicles_DismanteleCrate";
@@ -521,7 +513,6 @@ class CfgVehicles {
 	      	};
 		};
 	};
-
 	class BWplus_Lights: Land_PortableLight_double_F {
 		displayName = "$STR_BWplus_Vehicles_Lights";
 		author = "BWplus";

@@ -32,7 +32,7 @@ class CfgVehicleClasses {
 };
 
 class CfgVehicles {
-class Man;
+	class Man;
 
 	class CAManBase: Man {
 		class AGM_SelfActions {
@@ -59,6 +59,7 @@ class Man;
 	};
 	
 	class Box_NATO_Support_F;
+	
 	#define MACRO_ADDITEM(ITEM,COUNT) class _xx_##ITEM { \
   	name = #ITEM; \
   	count = COUNT; \
@@ -72,7 +73,6 @@ class Man;
     	transportmaxmagazines = 9001;
     	transportmaxbackbacks = 0;
     	maximumload = 2000;
-
     	class TransportMagazines {
     	};
     	class TransportWeapons {
@@ -90,7 +90,6 @@ class Man;
 			MACRO_ADDITEM(BWplus_shemagh_Green,5)
 		};
 	};
-
 	class Item_Base_F;
 	class BWplus_Item_Cap_Sand: Item_Base_F {
 		author = "BWplus";
