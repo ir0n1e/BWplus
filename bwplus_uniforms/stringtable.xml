@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project name="BWplus">
+  <Package name="Uniformes">
+    <Key ID="STR_BWplus_Shemagh_Green">
+      <English>[BWplus] Shemagh Green</English>
+      <German>[BWplus] Shemagh Grün</German>
+    </Key>
+     <Key ID="STR_BWplus_Shemagh_Sand">
+      <English>[BWplus] Shemagh Sand</English>
+      <German>[BWplus] Shemagh Sand</German>
+    </Key>
+    <Key ID="STR_BWplus_LOG_Shemagh_Green">
+      <English>[BWplus] Shades Orange / Shemagh Green</English>
+      <German>[BWplus] Brille Orange / Shemagh Grün</German>
+    </Key>
+     <Key ID="STR_BWplus_LOG_Shemagh_Sand">
+      <English>[BWplus] Shades Orange / Shemagh Sand</English>
+      <German>[BWplus] Brille Orange / Shemagh Sand</German>
+    </Key>
+    <Key ID="STR_BWplus_LBG_Shemagh_Green">
+      <English>[BWplus] Shades Black / Shemagh Green</English>
+      <German>[BWplus] Brille Schwarz / Shemagh Grün</German>
+    </Key>
+     <Key ID="STR_BWplus_LBG_Shemagh_Sand">
+      <English>[BWplus] Shades Black / Shemagh Sand</English>
+      <German>[BWplus] Brille Schwarz / Shemagh Sand</German>
+    </Key>
+     <Key ID="STR_BWplus_LCG_Shemagh_Green">
+      <English>[BWplus] Shades Clear / Shemagh Green</English>
+      <German>[BWplus] Brille Klar / Shemagh Grün</German>
+    </Key>
+     <Key ID="STR_BWplus_LCG_Shemagh_Sand">
+      <English>[BWplus] Shades Clear / Shemagh Sand</English>
+      <German>[BWplus] Brille Klar / Shemagh Sand</German>
+    </Key>
+   <Key ID="STR_BWplus_Glasses">
+      <English>[BWplus] Glasses</English>
+      <German>[BWplus] Brillen</German>
+    </Key>
+    <Key ID="STR_BWplus_Cap_Green">
+      <English>[BWplus] Cap Green</English>
+      <German>[BWplus] Cap Grün</German>
+    </Key>
+    <Key ID="STR_BWplus_Cap_Sand">
+      <English>[BWplus] Cap Sand</English>
+      <German>[BWplus] Cap Sand</German>
+    </Key>
+     <Key ID="STR_BWplus_AddGoggles">
+      <English>Add Goggles</English>
+      <German>Brille aufsetzen</German>
+    </Key>
+    <Key ID="STR_BWplus_removeGoggles">
+      <English>Remove Goggles</English>
+      <German>Brille abnehmen</German>
+    </Key>
+    <Key ID="STR_BWplus_AttachGlasses">
+      <English>attached</English>
+      <German>aufgesetzt</German>
+    </Key>
+     <Key ID="STR_BWplus_detachGlasses">
+      <English>detached</English>
+      <German>aubgesetzt</German>
+    </Key>
+    <Key ID="STR_BWplus_box_Items">
+      <English>BWplus Items</English>
+      <German>BWplus Gegenstände</German>
+    </Key>
+  </Package>
+</Project>

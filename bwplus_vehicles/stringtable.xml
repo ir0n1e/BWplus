@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project name="BWplus">
+  <Package name="Vehicles">
+    <Key ID="STR_BWplus_Vehicles_Crate">
+      <English>Build Trench >></English>
+      <German>Stellung ausheben >></German>
+    </Key>
+    <Key ID="STR_BWplus_Vehicles_buildCrate">
+      <English>Build Foxhole</English>
+      <German>Schützenloch ausheben</German>
+    </Key>
+    <Key ID="STR_BWplus_Vehicles_DismanteleCrate">
+      <English>Dismantele Foxhole</English>
+      <German>Schützenloch abbauen</German>
+    </Key>
+    <Key ID="STR_BWplus_Vehicles_buildCrateNet">
+      <English>Build Trench (Net)</English>
+      <German>Unterstand ausheben</German>
+    </Key>
+     <Key ID="STR_BWplus_Vehicles_buildNet">
+      <English>Build Camonet</English>
+      <German>Tarnnetz aufbauen</German>
+    </Key>
+    <Key ID="STR_BWplus_Vehicles_DismanteleNet">
+      <English>Dismantele Camonet</English>
+      <German>Tarnnetz abbauen</German>
+    </Key>
+    <Key ID="STR_BWplus_Vehicles_LightsOn">
+      <English>Lights on</English>
+      <German>Strahler an</German>
+    </Key>
+    <Key ID="STR_BWplus_Vehicles_LightsOff">
+      <English>Lights off</English>
+      <German>Strahler aus</German>
+    </Key>
+ <Key ID="STR_BWplus_Vehicles_buildFOB">
+      <English>Build FOB</English>
+      <German>FOB aufbauen</German>
+    </Key>
+    <Key ID="STR_BWplus_Vehicles_DismanteleFOB">
+      <English>Dismantele FOB</English>
+      <German>FOB abbauen</German>
+    </Key>
+    <Key ID="STR_BWplus_Vehicles_box_exp">
+      <English>[BWplus] Explosives</English>
+      <German>[BWplus] Sprengladungen</German>
+    </Key>
+    <Key ID="STR_BWplus_Vehicles_box_items">
+      <English>[BWplus] Items</English>
+      <German>[BWplus] Items</German>
+    </Key>
+    <Key ID="STR_BWplus_Vehicles_box_556">
+      <English>[BWplus] 5.56 3000 Shots</English>
+      <German>[BWplus] 5.56 3000 Schuss</German>
+    </Key>
+    <Key ID="STR_BWplus_Vehicles_box_100_Rnd_556">
+      <English>[BWplus] 100Rnd 5.56 3000 Shots</English>
+      <German>[BWplus] 100Rnd 5.56 3000 Schuss</German>
+    </Key>
+    <Key ID="STR_BWplus_Vehicles_box_120Rnd_762">
+      <English>[BWplus] 120Rnd 7.62 3000 Shots</English>
+      <German>[BWplus] 120Rnd 7.62 3000 Schuss</German>
+    </Key>
+    <Key ID="STR_BWplus_Vehicles_box_10Rnd_762">
+      <English>[BWplus] 10Rnd 7.62 1000 Shots</English>
+      <German>[BWplus] 10Rnd 7.62 1000 Schuss</German>
+    </Key>
+    <Key ID="STR_BWplus_Vehicles_box_20Rnd_762">
+      <English>[BWplus] 20Rnd 7.62 1000 Shots</English>
+      <German>[BWplus] 20Rnd 7.62 1000 Schuss</German>
+    </Key>
+    <Key ID="STR_BWplus_Vehicles_box_40mm">
+      <English>[BWplus] 40mm 20 Shots</English>
+      <German>[BWplus] 40mm 20 Schuss</German>
+    </Key>
+    <Key ID="STR_BWplus_Vehicles_box_Grenade">
+      <English>[BWplus] 30 Grenades</English>
+      <German>[BWplus] 30 Granaten</German>
+    </Key>
+    <Key ID="STR_BWplus_Vehicles_Fennek_pio">
+      <English>Fennek Pioneer</English>
+      <German>Fennek Pionier</German>
+    </Key>
+    <Key ID="STR_BWplus_Vehicles_Fennek_medic">
+      <English>Fennek Medic</English>
+      <German>Fennek Sanitäter</German>
+    </Key>
+   <Key ID="STR_BWplus_Vehicles_Net_Dismanteled">
+      <English>[BWplus] Camonet Dismantled</English>
+      <German>[BWplus] Tarnnetz Demontiert</German>
+    </Key>
+     <Key ID="STR_BWplus_Vehicles_Net">
+      <English>[BWplus] Camonet</English>
+      <German>[BWplus] Tarnnetz</German>
+    </Key>
+     <Key ID="STR_BWplus_Vehicles_Crater">
+      <English>[BWplus] Trench</English>
+      <German>[BWplus] Schützenloch</German>
+    </Key>
+     <Key ID="STR_BWplus_Vehicles_Lights">
+      <English>[BWplus] Lights</English>
+      <German>[BWplus] 2000 Watt Strahler</German>
+    </Key>
+  <Key ID="STR_BWplus_Vehicles_BuildingFOB">
+      <English>Building FOB</English>
+      <German>Baue FOB</German>
+    </Key>
+    <Key ID="STR_BWplus_Vehicles_DismantelingFOB">
+      <English>Dismanteling FOB</English>
+      <German>Baue FOB ab</German>
+    </Key>
+     <Key ID="STR_BWplus_Vehicles_BuildingNet">
+      <English>Building Camo Net</English>
+      <German>Baue Tarnnetz auf</German>
+    </Key>
+     <Key ID="STR_BWplus_Vehicles_DismantelingNet">
+      <English>Dismenteling Camo Net</English>
+      <German>Baue Tarnnetz ab</German>
+    </Key>
+    <Key ID="STR_BWplus_Vehicles_BuildingCrater">
+      <English>Building foxhole</English>
+      <German>Hebe Stellung aus</German>
+    </Key>
+     <Key ID="STR_BWplus_Vehicles_DismantelingCrater">
+      <English>Dismenteling foxhole</English>
+      <German>Baue Stellung ab</German>
+    </Key>
+  </Package>
+</Project>
