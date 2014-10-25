@@ -14,8 +14,29 @@ class CfgPatches {
 
 class CfgVehicles {
   class AllVehicles;
+  class Plane_Base_F;
+
   class Air: AllVehicles {
     AGM_Paradrop = 1;
+  };
+  class Plane_CAS_01_base_F: Plane_Base_F {
+    envelope[] = {0.8,1.4,2.0,2.4,3.6,3.8,3.7,3.2,2.2,1.7,0.9};
+    thrustCoef[] = {1,1.2,1.3,1.25,1.06,1.01,1,0.92,0.75,0.65,0.5,0.25,0};
+  };
+  class LandVehicle;
+  class Car: LandVehicle {
+    AGM_Vehicle_Cargo = 6;
+  };
+  class Car_F;
+  class Truck_F: Car_F {
+    AGM_Vehicle_Cargo = 14;
+  };
+  class Helicopter: Air {
+    AGM_Vehicle_Cargo = 8;
+  };
+  class Heli_Transport_02_base_F;
+  class I_Heli_Transport_02_F : Heli_Transport_02_base_F {
+    AGM_Vehicle_Cargo = 20;
   };
 };
 

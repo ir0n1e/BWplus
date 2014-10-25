@@ -85,6 +85,10 @@
       <English>Fennek Medic</English>
       <German>Fennek Sanitäter</German>
     </Key>
+     <Key ID="STR_BWplus_Vehicles_Fennek">
+      <English>Fennek</English>
+      <German>Fennek</German>
+    </Key>
    <Key ID="STR_BWplus_Vehicles_Net_Dismanteled">
       <English>[BWplus] Camonet Dismantled</English>
       <German>[BWplus] Tarnnetz Demontiert</German>
