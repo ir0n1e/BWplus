@@ -23,12 +23,17 @@ class CfgFunctions {
 	class BWplus_vehicles {
     	class BWplus_vehicles {
       		file = "\BWplus_vehicles\fnc";
-      		class buildCrater;
-      		class buildFOB;
     		class buildCraterAbort;
     		class buildCraterCallback;
     		class buildFOBCallback;
     		class buildNet;
+    		class lamps_off;
+    		class lamps_on;
+    		class merlinInit;		
+    		class pioFennekInit;
+    		class saniFennekInit;
+      		class buildCrater;
+      		class buildFOB;
       		class canbuild;
       		class canbuildFOB;
       		class canbuildPio;
@@ -38,10 +43,6 @@ class CfgFunctions {
       		class getin;
       		class hasLoadedItems;
       		class leftorright;
-    		class lamps_on;
-    		class lamps_off;
-    		class pioFennekInit;
-    		class saniFennekInit;		
     	};
   	};
 };
@@ -88,8 +89,6 @@ class CfgVehicles {
 	class BWplus_Box_Exp: Box_NATO_Support_F {
     	author = "BWPlus";
 	    displayName = "$STR_BWplus_Vehicles_box_exp";
-    	scope = 2;
-    	scopeCurator = 2;
     	transportmaxmagazines = 9001;
     	transportmaxbackbacks = 0;
     	maximumload = 2000;
@@ -109,8 +108,6 @@ class CfgVehicles {
 	class BWplus_Box_Items: BWplus_Box_Exp {
     	author = "BWPlus";
 	    displayName = "$STR_BWplus_Vehicles_box_items";
-	    scope = 2;
-    	scopeCurator = 2;
 		class TransportMagazines {};
 		class TransportWeapons {};
 		class TransportItems {
@@ -121,8 +118,6 @@ class CfgVehicles {
 	class BWplus_Box_AMMO556: BWplus_Box_Exp {
 		author = "BWPlus";
 	    displayName = "$STR_BWplus_Vehicles_box_556";
-	    scope = 2;
-    	scopeCurator = 2;
 		transportmaxmagazines = 150;
 		maximumload = 2000;
 		transportmaxbackbacks = 0;
@@ -135,8 +130,6 @@ class CfgVehicles {
 	class BWplus_Box_AMMO556_100Rnd: BWplus_Box_Exp {
 		author = "BWPlus";
 	    displayName = "$STR_BWplus_Vehicles_box_100_Rnd_556";
-	    scope = 2;
-    	scopeCurator = 2;
 		transportmaxmagazines = 100;
 		maximumload = 2000;
 		transportmaxbackbacks = 0;
@@ -150,8 +143,6 @@ class CfgVehicles {
 	class BWplus_Box_AMMO762_120Rnd: BWplus_Box_Exp {
 		author = "BWPlus";
 	    displayName = "$STR_BWplus_Vehicles_box_120Rnd_762";
-	    scope = 2;
-    	scopeCurator = 2;
 		transportmaxmagazines = 50;
 		maximumload = 2000;
 		transportmaxbackbacks = 0;
@@ -163,9 +154,7 @@ class CfgVehicles {
 	};
 	class BWplus_Box_AMMO762_10Rnd: BWplus_Box_Exp {
 		author = "BWPlus";
-	    displayName = "$STR_BWplus_Vehicles_box_10Rnd_762";
-	    scope = 2;
-    	scopeCurator = 2;
+	    displayName = "$STR_BWplus_Vehicles_box_10Rnd_762"
 		transportmaxmagazines = 120;
 		maximumload = 2000;
 		transportmaxbackbacks = 0;
@@ -178,8 +167,6 @@ class CfgVehicles {
 	class BWplus_Box_AMMO762_20Rnd: BWplus_Box_Exp {
 		author = "BWPlus";
 	    displayName = "$STR_BWplus_Vehicles_box_20Rnd_762";
-	    scope = 2;
-    	scopeCurator = 2;
 		transportmaxmagazines = 100;
 		maximumload = 2000;
 		transportmaxbackbacks = 0;
@@ -193,8 +180,6 @@ class CfgVehicles {
 	class BWplus_Box_AMMO40mm: BWplus_Box_Exp {
 		author = "BWPlus";
 	    displayName = "$STR_BWplus_Vehicles_box_40mm";
-	    scope = 2;
-    	scopeCurator = 2;
 		transportmaxmagazines = 100;
 		maximumload = 2000;
 		transportmaxbackbacks = 0;
@@ -209,8 +194,6 @@ class CfgVehicles {
 	class BWplus_Box_AMMOgrenade: BWplus_Box_Exp {
 		author = "BWPlus";
 	    displayName = "$STR_BWplus_Vehicles_box_Grenade";
-	    scope = 2;
-    	scopeCurator = 2;
 		transportmaxmagazines = 100;
 		maximumload = 2000;
 		transportmaxbackbacks = 0;
@@ -268,6 +251,9 @@ class CfgVehicles {
 		crew = "BWA3_crew_fleck";
 		hiddenSelections[] = {"camo1","camo2","camo3"};
 		hiddenSelectionsTextures[] = {"bwplus_vehicles\data\mohawk\mhawk1.paa","BWplus_vehicles\data\mohawk\mhawk2.paa","BWplus_vehicles\data\mohawk\mhawk3.paa"};
+		class eventHandlers {
+			Init = "_this call BWplus_vehicles_fnc_merlinInit";
+		};
 		class TransportMagazines {
 			MACRO_ADDMAGAZINE(BWA3_30Rnd_556x45_G36,10)
 			MACRO_ADDMAGAZINE(BWA3_200Rnd_556x45,5)
