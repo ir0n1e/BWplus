@@ -1,3 +1,5 @@
+private "_vehicle";
+_vehicle = _this select 0;
 _vehicle spawn {
 	waitUntil {(!isnil "AGM_Logistics_loadedItemsDummy")};
 	_items = _this getVariable "AGM_Logistics_loadedItems";
