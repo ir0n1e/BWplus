@@ -33,11 +33,11 @@ class CfgWeapons {
 		class Single: Mode_SemiAuto {
 			class BaseSoundModeType; 
 			class StandardSound: BaseSoundModeType {
-				begin1[] = {"\bwplus_sounds_weapons\sounds\bwplus_g36_fire.wav", 7, 1, 700};
+				begin1[] = {"bwplus_sounds_weapons\sounds\bwplus_g36_fire.wmv", 5, 1, 700};
 				soundBegin[] = {"begin1", 1};
 			};
 			class SilencedSound: BaseSoundModeType {
-			begin1[] = {"bwplus_sounds_weapons\sounds\SUPPRESSED1", 2, 1, 250};
+				begin1[] = {"bwplus_sounds_weapons\sounds\SUPPRESSED1", 2, 1, 250};
 				begin2[] = {"bwplus_sounds_weapons\sounds\SUPPRESSED2", 2, 1, 250};
 				begin3[] = {"bwplus_sounds_weapons\sounds\SUPPRESSED3", 2, 1, 250};
 				soundBegin[] = {"begin1", 0.333000, "begin2", 0.333000, "begin3", 0.333000};
@@ -46,11 +46,11 @@ class CfgWeapons {
 		class FullAuto: Mode_FullAuto {
 			class BaseSoundModeType;
 			class StandardSound: BaseSoundModeType {
-				begin1[] = {"\bwplus_sounds_weapons\sounds\bwplus_g36_fire.wav", 7, 1, 700};
+				begin1[] = {"bwplus_sounds_weapons\sounds\bwplus_g36_fire.wmv", 7, 1, 700};
 				soundBegin[] = {"begin1", 1};
 			};
 			class SilencedSound: BaseSoundModeType {
-			begin1[] = {"bwplus_sounds_weapons\sounds\SUPPRESSED1", 2, 1, 250};
+				begin1[] = {"bwplus_sounds_weapons\sounds\SUPPRESSED1", 2, 1, 250};
 				begin2[] = {"bwplus_sounds_weapons\sounds\SUPPRESSED2", 2, 1, 250};
 				begin3[] = {"bwplus_sounds_weapons\sounds\SUPPRESSED3", 2, 1, 250};
 				soundBegin[] = {"begin1", 0.333000, "begin2", 0.333000, "begin3", 0.333000};
@@ -61,11 +61,11 @@ class CfgWeapons {
 		class Single: Single {
 			class BaseSoundModeType; 
 			class StandardSound: BaseSoundModeType {
-				begin1[] = {"\bwplus_sounds_weapons\sounds\bwplus_g36_fire.wav", 7, 1, 700};
+				begin1[] = {"bwplus_sounds_weapons\sounds\bwplus_g36_fire.wmv", 5, 1, 700};
 				soundBegin[] = {"begin1", 1};
 			};
 			class SilencedSound: BaseSoundModeType {
-			begin1[] = {"bwplus_sounds_weapons\sounds\SUPPRESSED1", 2, 1, 250};
+				begin1[] = {"bwplus_sounds_weapons\sounds\SUPPRESSED1", 2, 1, 250};
 				begin2[] = {"bwplus_sounds_weapons\sounds\SUPPRESSED2", 2, 1, 250};
 				begin3[] = {"bwplus_sounds_weapons\sounds\SUPPRESSED3", 2, 1, 250};
 				soundBegin[] = {"begin1", 0.333000, "begin2", 0.333000, "begin3", 0.333000};
@@ -74,11 +74,11 @@ class CfgWeapons {
 		class FullAuto: FullAuto {
 			class BaseSoundModeType;
 			class StandardSound: BaseSoundModeType {
-				begin1[] = {"\bwplus_sounds_weapons\sounds\bwplus_g36_fire.wav", 7, 1, 700};
+				begin1[] = {"bwplus_sounds_weapons\sounds\bwplus_g36_fire.wmv", 7, 1, 700};
 				soundBegin[] = {"begin1", 1};
 			};
 			class SilencedSound: BaseSoundModeType {
-			begin1[] = {"bwplus_sounds_weapons\sounds\SUPPRESSED1", 2, 1, 250};
+				begin1[] = {"bwplus_sounds_weapons\sounds\SUPPRESSED1", 2, 1, 250};
 				begin2[] = {"bwplus_sounds_weapons\sounds\SUPPRESSED2", 2, 1, 250};
 				begin3[] = {"bwplus_sounds_weapons\sounds\SUPPRESSED3", 2, 1, 250};
 				soundBegin[] = {"begin1", 0.333000, "begin2", 0.333000, "begin3", 0.333000};
@@ -89,7 +89,7 @@ class CfgWeapons {
 		class Single: Mode_SemiAuto {
 			class BaseSoundModeType; 
 			class StandardSound: BaseSoundModeType {
-				begin1[] = {"\bwplus_sounds_weapons\sounds\bwplus_g36_fire.wav", 7, 1, 700};
+				begin1[] = {"bwplus_sounds_weapons\sounds\bwplus_g36_fire.wmv", 5, 1, 700};
 				soundBegin[] = {"begin1", 1};
 			};
 			class SilencedSound: BaseSoundModeType {
