@@ -10,6 +10,7 @@ BWplus_buildNetCallback = {
  	deletevehicle _net;
  	_net = createVehicle ["BWplus_CamoNet", _pos, [], 0, "CAN_COLLIDE"];
  	_net setdir (getdir player)+180;
+
 };
 
  [BUILDTIME, [_net], "BWplus_buildNetCallback", localize "STR_BWplus_Vehicles_BuildingNet"] call AGM_Core_fnc_progressBar;

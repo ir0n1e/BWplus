@@ -55,34 +55,7 @@
         distance = 4; \
         priority = 5; \
   	};
-  #define MACRO_LOADABLE \
-  class AGM_loadItem { \
-    displayName = "$STR_AGM_Logistics_LoadItem"; \
-    distance = 4; \
-    condition = "[AGM_Interaction_Target] call AGM_Logistics_fnc_canLoadItem"; \
-    statement = "[AGM_Interaction_Target, AGM_Logistics_targetVehicle] call AGM_Logistics_fnc_openLoadUI"; \
-    showDisabled = 1; \
-    priority = 1.6; \
-  };
 
-  #define MACRO_DRAGABLE \
-  class AGM_DragItem { \
-    displayName = "$STR_AGM_Drag_StartDrag"; \
-    distance = 4; \
-    condition = "!(player call AGM_Drag_fnc_isDraggingObject) AND {[AGM_Interaction_Target, player] call AGM_Drag_fnc_isDraggable}"; \
-    statement = "[AGM_Interaction_Target, player] call AGM_Drag_fnc_dragObject"; \
-    showDisabled = 1; \
-    priority = 3; \
-  }; \
-  class AGM_ReleaseItem { \
-    displayName = "$STR_AGM_Drag_EndDrag"; \
-    distance = 4; \
-    condition = "player call AGM_Drag_fnc_isDraggingObject && {AGM_Interaction_Target == player getVariable ['AGM_carriedItem', objNull]}"; \
-    statement = "player call AGM_Drag_fnc_releaseObject"; \
-    exceptions[] = {"AGM_Drag_isNotDragging"}; \
-    showDisabled = 0; \
-    priority = 3; \
-  };
 #define MACRO_ADDITEM(ITEM,COUNT) class _xx_##ITEM { \
   name = #ITEM; \
   count = COUNT; \

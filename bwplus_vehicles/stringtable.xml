@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Project name="BWplus">
   <Package name="Vehicles">
+     <Key ID="STR_BWplus_Item_CamoNet">
+      <English>Camonet (BWplus)</English>
+      <German>Tarnnetz (BWplus)</German>
+    </Key>
     <Key ID="STR_BWplus_Vehicles_Crate">
       <English>Build Trench >></English>
       <German>Stellung ausheben >></German>

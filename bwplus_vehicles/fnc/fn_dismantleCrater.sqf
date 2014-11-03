@@ -16,7 +16,7 @@ BWplus_dismantleCraterCallback = {
 	_player = _this select 1;
 	_crater_count = (_player getvariable "BWplus_crater_count");
 	_builder = (_items select 0) getVariable "BWplus_builder";
-	_pos = position (_items select 0);
+	_pos = getposATL (_items select 1);
 
 	{
 		deleteVehicle _x;
@@ -24,6 +24,7 @@ BWplus_dismantleCraterCallback = {
 
 	if (NET in _items) then {
 		ITEMNET createvehicle _pos;
+		ITEMNET setposATL _pos;
 	};
 
 	if ((_builder == _player) && (_crater_count > 0)) then {

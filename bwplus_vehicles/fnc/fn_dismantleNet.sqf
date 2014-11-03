@@ -7,9 +7,10 @@ _net = _this select 0;
 BWplus_buildNetCallback = {
  	_net = _this select 0;
 
- 	_pos = position _net;
+ 	_pos = getposASL _net;
  	deletevehicle _net;
- 	_net = createVehicle ["BWplus_item_CamoNet", _pos, [], 0, "CAN_COLLIDE"];
+ 	_net = "BWplus_Item_CamoNet" createvehicle _pos;
+ 	_net setposASL _pos;
 
 };
 
