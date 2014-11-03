@@ -1,10 +1,43 @@
 
 class CfgPatches {
 	class BWplus_vehicles {
-		units[] = {"Fennek_Tropentarn","Fennek_Flecktarn","BWplus_Wildcat","BWplus_Box_AMMOgrenade","BWplus_Box_AMMO40mm","BWplus_Box_AMMO762_20Rnd","BWplus_Box_AMMO762_10Rnd","BWplus_Box_AMMO762_10Rnd","BWplus_Box_AMMO762_120Rnd","BWplus_Box_AMMO556_100Rnd","BWplus_CamoNet_Dismantled","BWplus_Box_AMMO556","BWplus_Box_Items","BWplus_CamoNet","BWplus_merlin","BWplus_Lights","Fennek_Flecktarn_pio","Fennek_Tropentarn_pio","Fennek_Tropentarn_mg","Fennek_Flecktarn_mg","Fennek_Tropentarn_gmg","Fennek_Flecktarn_gmg","Fennek_Tropentarn_san","Fennek_Flecktarntarn_san","BWplus_crater"};
+		units[] = {
+			"BWplus_Box_AMMO40mm",
+			"BWplus_Box_AMMO556",
+			"BWplus_Box_AMMO556_100Rnd",
+			"BWplus_Box_AMMO762_10Rnd",
+			"BWplus_Box_AMMO762_10Rnd",
+			"BWplus_Box_AMMO762_120Rnd",
+			"BWplus_Box_AMMO762_20Rnd",
+			"BWplus_Box_AMMOgrenade",
+			"BWplus_Box_Items",
+			"BWplus_CamoNet",
+			"BWplus_CamoNet_Dismanteled",
+			"BWplus_crater",
+			"BWplus_Lights",
+			"BWplus_merlin",
+			"BWplus_Wildcat",
+			"Fennek_Flecktarn",
+			"Fennek_Flecktarn_gmg",
+			"Fennek_Flecktarn_mg",
+			"Fennek_Flecktarn_pio",
+			"Fennek_Flecktarntarn_san",
+			"Fennek_Tropentarn",
+			"Fennek_Tropentarn_gmg",
+			"Fennek_Tropentarn_mg",
+			"Fennek_Tropentarn_pio",
+			"Fennek_Tropentarn_san"
+		};
 		weapons[] = {"BWplus_Item_CamoNet"};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"bwplus_weapons","agm_interaction","bwa3_weapons","agm_logistics","bwplus_agm_patches"};
+		requiredAddons[] = {
+			"agm_core", 
+			"agm_interaction", 
+			"agm_logistics", 
+			"bwa3_weapons", 
+			"bwplus_agm_patches",
+			"bwplus_weapons"
+		};
 	 	version = "1.3";
     	versionStr = "1.3";
     	versionAr[] = {1,3,0};
@@ -75,16 +108,16 @@ class CfgVehicles {
 			    icon = "\A3\Structures_F\Mil\Shelters\Data\UI\map_CamoNet_CA.paa";
 			    distance = 8; 
 			    condition = "not (player getVariable 'BWplus_building') and {[player] call BWplus_vehicles_fnc_canbuildNet}";
-			    statement = "[AGM_Interaction_Target, player] call BWplus_vehicles_fnc_buildNet";
+			    statement = "[player] call BWplus_vehicles_fnc_buildNet";
 			    priority = 3;
     			showDisabled = 0;
 	      	};
 	      		class BWplus_DismantleNet {
 					displayName = "$STR_BWplus_Vehicles_DismanteleNet";
-			    	icon = "BWplus\UI\bwplus_shovel_menu.paa";
+			    	icon = "\A3\Structures_F\Mil\Shelters\Data\UI\map_CamoNet_CA.paa";
 			    	distance = 10; 
-			    	condition = "player getvariable 'BWplus_pio' && {player distance (nearestObject [player, 'BWplus_CamoNet']) < 5}";
-			    	statement = "[(nearestObject [player, 'BWplus_CamoNet']),player] call BWplus_vehicles_fnc_dismentleNet";
+			    	condition = "player getvariable 'BWplus_pio' && {player distance (nearestObject [player, 'BWplus_CamoNet']) < 8}";
+			    	statement = "[(nearestObject [player, 'BWplus_CamoNet']),player] call BWplus_vehicles_fnc_dismantleNet";
 		      		showDisabled = 0; 
 			    	priority = 3;
 	      		};
@@ -511,7 +544,7 @@ class CfgVehicles {
 	class CamoNet_INDP_F;
 	class Item_base_F;
 
-	class BWplus_CamoNet_Dismantled: Item_Base_F {
+	class BWplus_CamoNet_Dismanteled: Item_Base_F {
 		displayName = "$STR_BWplus_Vehicles_Net_Dismanteled";
 		author = "BWplus";
 		vehicleClass = "BWplus_Items";
@@ -524,17 +557,6 @@ class CfgVehicles {
 				name = "BWplus_Item_CamoNet";
 				count = 1;
 			};
-		};
-		class AGM_Actions {
-	    	class BWplus_buildNet {
-				displayName = "$STR_BWplus_Vehicles_buildNet";
-			    icon = "\A3\Structures_F\Mil\Shelters\Data\UI\map_CamoNet_CA.paa";
-			    distance = 8; 
-			    condition = "player getvariable 'BWplus_pio'";
-			    statement = "[AGM_Interaction_Target, player] call BWplus_vehicles_fnc_buildNet";
-			    priority = 3;
-    			showDisabled = 0;
-	      	};
 		};
 	};
 	class BWplus_CamoNet: CamoNet_INDP_F {
@@ -572,7 +594,7 @@ class CfgVehicles {
 		class AGM_Actions {
 	    	class BWplus_DismantleCrater {
 				displayName = "$STR_BWplus_Vehicles_DismanteleCrate";
-			    icon = "BWplus\UI\bwplus_shovel_menu.paa";
+			    icon = "\bwplus_vehicles\UI\bwplus_shovel_menu.paa";
 			    distance = 4; 
 			    condition = "(((AGM_Interaction_Target getVariable ""BWplus_builder"") == player) or (player getvariable ""BWplus_pio""))";
 			    statement = "[AGM_Interaction_Target,player] call BWplus_vehicles_fnc_dismantlecrater";

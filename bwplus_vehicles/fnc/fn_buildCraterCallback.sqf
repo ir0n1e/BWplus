@@ -11,7 +11,7 @@
 	_crater setvariable ["BWplus_crater_items",_craterthings,true];
 	_unit setVariable ["BWplus_crater_count",_crater_count+1,true];
 	if (_buildwithNet) then {
-		_unit removeitem ITEMNET
+		_unit removeitem ITEMNET;
 	};
 
 	_unit setVariable ["BWplus_building",false,true];
