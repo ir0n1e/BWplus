@@ -34,8 +34,7 @@ class CfgPatches {
 			"agm_core", 
 			"agm_interaction", 
 			"agm_logistics", 
-			"bwa3_weapons", 
-			"bwplus_agm_patches",
+			"bwa3_weapons",
 			"bwplus_weapons"
 		};
 	 	version = "1.3";
@@ -82,10 +81,27 @@ class CfgFunctions {
 
 #include <Macros.hpp>
 
+class BWplus_Actions {
+	MACRO_DRAGABLE		// AGM_DragItem
+	MACRO_GETIN_STATIC	// AGM_GetIn
+	MACRO_ROTATE		// AGM_RotateClockwise  AGM_RotateCounterclockwise
+	MACRO_LOADABLE		// AGM_LoadItem
+};
+
+
 class CfgVehicles {
 	class Man;
 	class CAManBase: Man {
 		class AGM_SelfActions {
+			class BWplus_DismantleNet {
+				displayName = "$STR_BWplus_Vehicles_DismanteleNet";
+		    	icon = "\A3\Structures_F\Mil\Shelters\Data\UI\map_CamoNet_CA.paa";
+		    	distance = 10; 
+		    	condition = "player getvariable 'BWplus_pio' && {player distance (nearestObject [player, 'BWplus_CamoNet']) < 8}";
+		    	statement = "[(nearestObject [player, 'BWplus_CamoNet']),player] call BWplus_vehicles_fnc_dismantleNet";
+	      		showDisabled = 0; 
+		    	priority = 3;
+	      	};
 			class AGM_Equipment {
 		      	class BWplus_BuildCrater {
 				    displayName = "$STR_BWplus_Vehicles_buildCrate";
@@ -95,31 +111,22 @@ class CfgVehicles {
 		      		icon = "bwplus_weapons\UI\bwplus_shovel_menu.paa";
 		      		showDisabled = 1; 
 		      	};
-				/*class BWplus_BuildCraterBig {
+				class BWplus_BuildCraterBig {
 				    displayName = "$STR_BWplus_Vehicles_buildCrateNet";
 			    	priority = 0.5;
-	  			    condition = "not (player getVariable 'BWplus_building') and {[player] call BWplus_vehicles_fnc_canbuildPio}";
+	  			    condition = "not (player getVariable 'BWplus_building') and {[player] call BWplus_vehicles_fnc_canbuildNet} and {[player] call BWplus_vehicles_fnc_canbuild}";
 				    statement = "[true] call BWplus_vehicles_fnc_buildCrater";
 		      		icon = "\A3\Structures_F\Mil\Shelters\Data\UI\map_CamoNet_CA.paa";
 		      		showDisabled = 1; 
-	      		};*/
+	      		};
 	      		class BWplus_buildNet {
-				displayName = "$STR_BWplus_Vehicles_buildNet";
-			    icon = "\A3\Structures_F\Mil\Shelters\Data\UI\map_CamoNet_CA.paa";
-			    distance = 8; 
-			    condition = "not (player getVariable 'BWplus_building') and {[player] call BWplus_vehicles_fnc_canbuildNet}";
-			    statement = "[player] call BWplus_vehicles_fnc_buildNet";
-			    priority = 3;
-    			showDisabled = 0;
-	      	};
-	      		class BWplus_DismantleNet {
-					displayName = "$STR_BWplus_Vehicles_DismanteleNet";
+					displayName = "$STR_BWplus_Vehicles_buildNet";
 			    	icon = "\A3\Structures_F\Mil\Shelters\Data\UI\map_CamoNet_CA.paa";
-			    	distance = 10; 
-			    	condition = "player getvariable 'BWplus_pio' && {player distance (nearestObject [player, 'BWplus_CamoNet']) < 8}";
-			    	statement = "[(nearestObject [player, 'BWplus_CamoNet']),player] call BWplus_vehicles_fnc_dismantleNet";
-		      		showDisabled = 0; 
+			    	distance = 8; 
+			    	condition = "not (player getVariable 'BWplus_building') and {[player] call BWplus_vehicles_fnc_canbuildNet}";
+			    	statement = "[player] call BWplus_vehicles_fnc_buildNet";
 			    	priority = 3;
+    				showDisabled = 0;
 	      		};
 	      	};
       	};
@@ -552,6 +559,7 @@ class CfgVehicles {
 		icon = "\A3\Structures_F\Mil\Shelters\Data\UI\map_CamoNet_CA.paa";
 		scope = 2;
 		scopeCurator = 2;
+		simulation = "ItemMineDetector";
 		class TransportItems {
 			class BWplus_item_CamoNet {
 				name = "BWplus_Item_CamoNet";
@@ -571,10 +579,6 @@ class CfgVehicles {
 		class eventHandlers {
 		 	Init = "_this execVM ""BWplus_vehicles\init_CamoNet.sqf"";";
 		};
-		class AGM_SelfActions {
-	    	
-		};
-		
 	};
 
 	class BWplus_crater: craterlong {
@@ -602,12 +606,7 @@ class CfgVehicles {
 	      	};
 		};
 	};
-	class AGM_SpareWheel;
-	class Land_PortableLight_double_F: AGM_SpareWheel {
-		class AGM_Actions; 
-
-	};
-
+	class Land_PortableLight_double_F;
 	class BWplus_Lights: Land_PortableLight_double_F {
 		displayName = "$STR_BWplus_Vehicles_Lights";
 		author = "BWplus";
@@ -622,7 +621,9 @@ class CfgVehicles {
 		class eventHandlers {
 		 	Init = "(_this select 0) execVM ""BWplus_vehicles\init_lights.sqf"";";
 		};
-		class AGM_Actions: AGM_Actions {
+		class AGM_Actions {
+			MACRO_DRAGABLE
+			MACRO_ROTATE
 	    	class BWplus_Lamps_on {
 				displayName = "$STR_BWplus_Vehicles_LightsOn";
 			    icon = "BWplus_vehicles\UI\bwplus_lamp_ca.paa";
@@ -642,6 +643,7 @@ class CfgVehicles {
 		};
 	};
 };
+
 class CfgWeapons {
 	class ItemCore;
 	class InventoryItem_Base_F;
