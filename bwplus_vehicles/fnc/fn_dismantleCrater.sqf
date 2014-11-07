@@ -3,11 +3,17 @@
 #define NET "BWplus_CamoNet"
 #define ITEMNET "BWplus_Item_CamoNet"
 
-private ["_dismantletime"];
+private ["_dismantletime", "_player"];
+
+_player = _this select 1;
+_player setVariable ["BWplus_building", true, true];
 _dismantletime = DISMANTLETIME_NONPIO;
-if (player getVariable "BWplus_pio") then {
+
+if (_player getVariable "BWplus_pio") then {
 	_dismantletime = DISMANTLETIME_PIO;
 };
+[_player, "AinvPknlMstpSnonWnonDr_medic5", 1] call AGM_Core_fnc_doAnimation;
+[_player, "AinvPknlMstpSnonWnonDr_medic5", 1] call AGM_Core_fnc_doAnimation;
 
 BWplus_dismantleCraterCallback = {
 	private ["_items", "_player", "_items", "_crater_count", "_pos"];
@@ -33,8 +39,4 @@ BWplus_dismantleCraterCallback = {
 	};
 };
 
-BWplus_dismantleCraterAbort = {
-	true
-};
-
-[_dismantletime, _this, "BWplus_dismantleCraterCallback", localize "STR_BWplus_Vehicles_DismantelingCrater", "BWplus_dismantleCraterAbort"] call AGM_Core_fnc_progressBar;
+[_dismantletime, _this, "BWplus_dismantleCraterCallback", localize "STR_BWplus_Vehicles_DismantlingCrater", "BWplus_vehicles_fnc_buildAbort"] call AGM_Core_fnc_progressBar;
