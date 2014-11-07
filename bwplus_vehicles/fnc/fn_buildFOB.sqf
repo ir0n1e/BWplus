@@ -4,10 +4,6 @@
 
 _vec = _this select 0;
 
-
-private ["_vec","_pos","_dir","_box","_lights","_engine","_count","_pos_rel"];
-
-
 	_net = ("BWplus_Item_CamoNet" in (itemCargo _vec));
 
 

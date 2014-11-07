@@ -21,14 +21,14 @@ _box allowdamage false;
 
 _box setpos _pos_rel;
 _box setdir _dir;
-/*
+
 _pos_rel = [_pos, 4, _dir-210] call BIS_fnc_relPos;
 
 _lights = FOBLIGHTS createVehicle _pos_rel;
 _lights setpos _pos_rel;
 
 _lights setdir _dir+250;
-*/
+
 waitUntil {alive _box};
 
 if (_net) then {
@@ -50,4 +50,4 @@ _engine setdir _dir+130;
 
 _vec setvariable ["BWplus_FOBon",true,true];
 _vec setVariable ["BWplus_VecEngineer",true,true];
-_vec setVariable ["BWplus_FOBItems",[_box, _net, _engine],true];
+_vec setVariable ["BWplus_FOBItems",[_box, _net, _engine, _lights],true];
