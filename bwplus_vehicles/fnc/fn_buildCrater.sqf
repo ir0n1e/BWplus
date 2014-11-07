@@ -27,7 +27,7 @@ if (_buildwithNet) then {
 
 _items = [_crater,_net];
 _crater_count = (player getvariable "BWplus_crater_count");
-player playMoveNow "AinvPknlMstpSnonWnonDr_medic5";
+
 player setVariable ["BWplus_building",true,true];
 player setVariable ["BWplus_crater_abort",false];
 
@@ -49,6 +49,7 @@ BWplus_buildCrater = {
 
 	for "_i" from 0 to (_time -1) do {
 		scopeName "loop";
+		[player, "AinvPknlMstpSnonWnonDr_medic5", 1] call AGM_Core_fnc_doAnimation;
 		_crater setpos [_pos_rel_crater select 0,_pos_rel_crater select 1,_start_pos_rel - (_start_pos_rel/_time) ];
 
 		_crater setdir _dir_crater+270;
