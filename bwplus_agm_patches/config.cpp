@@ -3,7 +3,7 @@ class CfgPatches {
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.100000;
-		requiredAddons[] = {"BWA3_Weapons", "AGM_Medical", "AGM_Interaction", "AGM_Logistics"};
+		requiredAddons[] = {"BWA3_Weapons", "AGM_Core", "AGM_Overheating", "AGM_Aicraft", "AGM_Medical", "AGM_Interaction", "AGM_Logistics"};
 		version = "1.3";
         versionStr = "1.3";
         versionAr[] = {1,3,0};
