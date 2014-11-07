@@ -49,7 +49,7 @@
         priority = 4; \
   	}; \
  	class BWplus_dismantleFOB { \
-        displayName = "$STR_BWplus_Vehicles_DismanteleFOB"; \
+        displayName = "$STR_BWplus_Vehicles_DismantleFOB"; \
         condition = "(AGM_Interaction_Target getVariable 'BWplus_FOBon') AND {[AGM_Interaction_Target] call BWplus_vehicles_fnc_canbuildFOB}"; \
         statement = "[AGM_Interaction_Target] call BWplus_vehicles_fnc_dismantleFOB"; \
         distance = 4; \

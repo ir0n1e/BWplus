@@ -10,9 +10,10 @@ class CfgPatches {
 			"BWplus_Box_AMMO762_120Rnd",
 			"BWplus_Box_AMMO762_20Rnd",
 			"BWplus_Box_AMMOgrenade",
+			"BWplus_Box_Helipad",
 			"BWplus_Box_Items",
 			"BWplus_CamoNet",
-			"BWplus_CamoNet_Dismanteled",
+			"BWplus_CamoNet_Dismantled",
 			"BWplus_crater",
 			"BWplus_Lights",
 			"BWplus_merlin",
@@ -31,6 +32,7 @@ class CfgPatches {
 		weapons[] = {"BWplus_Item_CamoNet"};
 		requiredVersion = 0.1;
 		requiredAddons[] = {
+			"A3_Structures_F_Heli_Items_Airport",
 			"agm_core", 
 			"agm_interaction", 
 			"agm_logistics", 
@@ -64,13 +66,16 @@ class CfgFunctions {
     		class merlinInit;		
     		class pioFennekInit;
     		class saniFennekInit;
+      		class BuildAbort;
       		class buildCrater;
       		class buildFOB;
+      		class buildHelipad;
       		class canbuild;
       		class canbuildFOB;
       		class canbuildNet;
       		class dismantleCrater;
       		class dismantleFOB;
+      		class dismantleHelipad;
       		class dismantleNet;
       		class getin;
       		class hasLoadedItems;
@@ -94,7 +99,7 @@ class CfgVehicles {
 	class CAManBase: Man {
 		class AGM_SelfActions {
 			class BWplus_DismantleNet {
-				displayName = "$STR_BWplus_Vehicles_DismanteleNet";
+				displayName = "$STR_BWplus_Vehicles_DismantleNet";
 		    	icon = "\A3\Structures_F\Mil\Shelters\Data\UI\map_CamoNet_CA.paa";
 		    	distance = 10; 
 		    	condition = "player getvariable 'BWplus_pio' && {player distance (nearestObject [player, 'BWplus_CamoNet']) < 8}";
@@ -551,8 +556,8 @@ class CfgVehicles {
 	class CamoNet_INDP_F;
 	class Item_base_F;
 
-	class BWplus_CamoNet_Dismanteled: Item_Base_F {
-		displayName = "$STR_BWplus_Vehicles_Net_Dismanteled";
+	class BWplus_CamoNet_Dismantled: Item_Base_F {
+		displayName = "$STR_BWplus_Vehicles_Net_Dismantled";
 		author = "BWplus";
 		vehicleClass = "BWplus_Items";
 		//faction = "Default";
@@ -597,8 +602,8 @@ class CfgVehicles {
 		};
 		class AGM_Actions {
 	    	class BWplus_DismantleCrater {
-				displayName = "$STR_BWplus_Vehicles_DismanteleCrate";
-			    icon = "\bwplus_vehicles\UI\bwplus_shovel_menu.paa";
+				displayName = "$STR_BWplus_Vehicles_DismantleCrate";
+			    icon = "\bwplus_weapons\UI\bwplus_shovel_menu.paa";
 			    distance = 4; 
 			    condition = "(((AGM_Interaction_Target getVariable ""BWplus_builder"") == player) or (player getvariable ""BWplus_pio""))";
 			    statement = "[AGM_Interaction_Target,player] call BWplus_vehicles_fnc_dismantlecrater";
@@ -642,14 +647,75 @@ class CfgVehicles {
 		    };	
 		};
 	};
-};
+	class FloatingStructure_F;
+	class Land_PortableHelipadLight_01_F: FloatingStructure_F {
+		scope = 1;
+		scopeCurator = 0;
+		mapSize = 0.700000;
+		accuracy = 0.200000;
+		camouflage = 1;	
+		AGM_Size = 1;
+		class AGM_Actions {
+			MACRO_DRAGABLE
+		};
+	};
+	class PortableHelipadLight_01_blue_F: Land_PortableHelipadLight_01_F {
+		scope = 2;
+		scopeCurator = 2;
+	};
+	class PortableHelipadLight_01_green_F: Land_PortableHelipadLight_01_F {
+		scope = 2;
+		scopeCurator = 2;
+	};
+	class PortableHelipadLight_01_red_F: Land_PortableHelipadLight_01_F {
+		scope = 2;
+		scopeCurator = 2;
+	};
+	class PortableHelipadLight_01_white_F: Land_PortableHelipadLight_01_F {
+		scope = 2;
+		scopeCurator = 2;
+	};
+	class PortableHelipadLight_01_yellow_F: Land_PortableHelipadLight_01_F {
+		scope = 2;
+		scopeCurator = 2;
+	};
+	class Land_MetalCase_01_medium_F;
+	class BWplus_Box_Helipad: Land_MetalCase_01_medium_F {
+		displayName = "$STR_BWplus_Vehicles_Box_Helipad";
+		author = "BWplus";
+		AGM_Size = 1;
+		mapSize = 0.7;
+		accuracy = 0.2;
+		vehicleClass = "BWplus_Items";
+		destrType = "DesturctNo";
+		class eventHandlers {
+		 	Init = "(_this select 0) setvariable ['BWplus_BoxEmpty', false, true]";
+		};
 
+		class AGM_Actions {
+			MACRO_DRAGABLE		
+			MACRO_LOADABLE
+			class BWplus_buildHelipad {
+				displayName = "$STR_BWplus_Vehicles_buildHelipad";
+			    priority = 0.5;
+			    distance = 5;
+			    condition = "!(AGM_Interaction_Target getVariable 'BWplus_BoxEmpty')";
+			    statement = "[AGM_Interaction_Target, player] call BWplus_vehicles_fnc_buildHelipad";
+	      	};
+			class BWplus_dismantleHelipad {
+			    displayName = "$STR_BWplus_Vehicles_dismantleHelipad";
+			    priority = 0.5;
+		    	distance = 5;
+			    condition = "(AGM_Interaction_Target getVariable 'BWplus_BoxEmpty')";
+			    statement = "[AGM_Interaction_Target, player] call BWplus_vehicles_fnc_dismantleHelipad";
+		    };	
+		};	
+	};
+};
 class CfgWeapons {
 	class ItemCore;
 	class InventoryItem_Base_F;
-	class AGM_Actions {
-		class BWplus_buildNet;
-};
+	
 	class BWplus_Item_CamoNet: ItemCore {
 		displayName = "$STR_BWplus_Item_CamoNet";
 		scope = 2;

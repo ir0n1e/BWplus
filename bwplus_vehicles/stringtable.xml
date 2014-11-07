@@ -13,8 +13,8 @@
       <English>Build Foxhole</English>
       <German>Schützenloch ausheben</German>
     </Key>
-    <Key ID="STR_BWplus_Vehicles_DismanteleCrate">
-      <English>Dismantele Foxhole</English>
+    <Key ID="STR_BWplus_Vehicles_DismantleCrate">
+      <English>Dismantle Foxhole</English>
       <German>Schützenloch abbauen</German>
     </Key>
     <Key ID="STR_BWplus_Vehicles_buildCrateNet">
@@ -25,8 +25,8 @@
       <English>Build Camonet</English>
       <German>Tarnnetz aufbauen</German>
     </Key>
-    <Key ID="STR_BWplus_Vehicles_DismanteleNet">
-      <English>Dismantele Camonet</English>
+    <Key ID="STR_BWplus_Vehicles_DismantleNet">
+      <English>Dismantle Camonet</English>
       <German>Tarnnetz abbauen</German>
     </Key>
     <Key ID="STR_BWplus_Vehicles_LightsOn">
@@ -41,8 +41,8 @@
       <English>Build FOB</English>
       <German>FOB aufbauen</German>
     </Key>
-    <Key ID="STR_BWplus_Vehicles_DismanteleFOB">
-      <English>Dismantele FOB</English>
+    <Key ID="STR_BWplus_Vehicles_DismantleFOB">
+      <English>Dismantle FOB</English>
       <German>FOB abbauen</German>
     </Key>
     <Key ID="STR_BWplus_Vehicles_box_exp">
@@ -81,6 +81,10 @@
       <English>[BWplus] 30 Grenades</English>
       <German>[BWplus] 30 Granaten</German>
     </Key>
+     <Key ID="STR_BWplus_Vehicles_box_Helipad">
+      <English>[BWplus] Helipad Box</English>
+      <German>[BWplus] Helipad Box</German>
+    </Key>
     <Key ID="STR_BWplus_Vehicles_Fennek_pio">
       <English>Fennek Pioneer</English>
       <German>Fennek Pionier</German>
@@ -93,7 +97,7 @@
       <English>Fennek</English>
       <German>Fennek</German>
     </Key>
-   <Key ID="STR_BWplus_Vehicles_Net_Dismanteled">
+   <Key ID="STR_BWplus_Vehicles_Net_Dismantled">
       <English>[BWplus] Camonet Dismantled</English>
       <German>[BWplus] Tarnnetz Demontiert</German>
     </Key>
@@ -113,25 +117,41 @@
       <English>Building FOB</English>
       <German>Baue FOB</German>
     </Key>
-    <Key ID="STR_BWplus_Vehicles_DismantelingFOB">
-      <English>Dismanteling FOB</English>
+    <Key ID="STR_BWplus_Vehicles_DismantlingFOB">
+      <English>Dismantling FOB</English>
       <German>Baue FOB ab</German>
     </Key>
      <Key ID="STR_BWplus_Vehicles_BuildingNet">
       <English>Building Camo Net</English>
       <German>Baue Tarnnetz auf</German>
     </Key>
-     <Key ID="STR_BWplus_Vehicles_DismantelingNet">
-      <English>Dismenteling Camo Net</English>
+     <Key ID="STR_BWplus_Vehicles_DismantlingNet">
+      <English>Dismentling Camo Net</English>
       <German>Baue Tarnnetz ab</German>
     </Key>
     <Key ID="STR_BWplus_Vehicles_BuildingCrater">
       <English>Building foxhole</English>
       <German>Hebe Stellung aus</German>
     </Key>
-     <Key ID="STR_BWplus_Vehicles_DismantelingCrater">
-      <English>Dismenteling foxhole</English>
+     <Key ID="STR_BWplus_Vehicles_DismantlingCrater">
+      <English>Dismentling foxhole</English>
       <German>Baue Stellung ab</German>
+    </Key>
+     <Key ID="STR_BWplus_Vehicles_BuildingHelipad">
+      <English>Building Helipad</English>
+      <German>Baue Helipad</German>
+    </Key>
+     <Key ID="STR_BWplus_Vehicles_DismantlingHelipad">
+      <English>Dismentling Helipad</English>
+      <German>Baue Helipad ab</German>
+    </Key>
+     <Key ID="STR_BWplus_Vehicles_BuildHelipad">
+      <English>Build Helipad</English>
+      <German>Helipad aufbauen</German>
+    </Key>
+     <Key ID="STR_BWplus_Vehicles_DismantleHelipad">
+      <English>Dismentle Helipad</English>
+      <German>Helipad abbauen</German>
     </Key>
   </Package>
 </Project>

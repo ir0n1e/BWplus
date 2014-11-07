@@ -22,5 +22,7 @@ _vehicle spawn {
 		[_this, _item] call AGM_Logistics_fnc_initLoadedObject;
 		_item = ['AGM_SpareWheel', [-1000, -1000, 100]] call AGM_Logistics_fnc_spawnObject;
 		[_this, _item] call AGM_Logistics_fnc_initLoadedObject;
+		 _item = ['BWplus_Box_Helipad', [-1000, -1000, 100]] call AGM_Logistics_fnc_spawnObject;
+  		[_this, _item] call AGM_Logistics_fnc_initLoadedObject;
 	};
 };
