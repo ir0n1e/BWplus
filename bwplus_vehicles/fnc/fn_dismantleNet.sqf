@@ -1,5 +1,5 @@
 #define DISMENTLETIME 5
-#define NET "BWplus_CamoNet_Dismanteled"
+#define NET "BWplus_CamoNet_Dismantled"
 
 private ["_net", "_player"];
 
@@ -22,4 +22,4 @@ BWplus_buildNetCallback = {
  	_player setVariable ["BWplus_building",false,true];
 };
 
- [DISMENTLETIME, [_net, _player], "BWplus_buildNetCallback", localize "STR_BWplus_Vehicles_DismantelingNet"] call AGM_Core_fnc_progressBar;
+ [DISMENTLETIME, [_net, _player], "BWplus_buildNetCallback", localize "STR_BWplus_Vehicles_DismantlingNet"] call AGM_Core_fnc_progressBar;
