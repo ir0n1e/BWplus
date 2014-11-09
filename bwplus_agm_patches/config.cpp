@@ -3,7 +3,7 @@ class CfgPatches {
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.100000;
-		requiredAddons[] = {"BWA3_Weapons", "AGM_Core", "AGM_Overheating", "AGM_Aicraft", "AGM_Medical", "AGM_Interaction", "AGM_Logistics"};
+		requiredAddons[] = {"BWA3_Weapons", "AGM_Core", "AGM_Overheating", "AGM_Aircraft", "AGM_Medical", "AGM_Interaction", "AGM_Logistics"};
 		version = "1.3";
         versionStr = "1.3";
         versionAr[] = {1,3,0};
@@ -45,7 +45,7 @@ class CfgVehicles {
         AGM_Vehicle_Cargo = 8;
         class AGM_SelfActions {
             class AGM_DropCargo {
-                displayName = "BWplus Para";
+                displayName = "$STR_AGM_Paradrop_Unload";
                 condition = "getNumber(configFile >> 'CfgVehicles' >> typeOf vehicle player >> 'AGM_Paradrop') == 1 && {getPosATL vehicle player select 2 > 60} && {count (vehicle player getVariable ['AGM_Logistics_loadedItems', []]) > 0} && {driver vehicle player == player;}";
                 statement = "[vehicle player] call BWplus_Paradrop_fnc_paradrop";
                 showDisabled = 1;
