@@ -98,7 +98,7 @@ class CfgVehicles {
 		items[] =  {"BWA3_ItemKestrel","BWA3_G_Combat_Black","AGM_Morphine","AGM_Morphine","AGM_Morphine","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","NVGoggles_OPFOR","Laserbatteries"};
 		respawnitems[] =  {"BWA3_ItemKestrel","BWA3_G_Combat_Black","AGM_Morphine","AGM_Morphine","AGM_Morphine","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","NVGoggles_OPFOR","Laserbatteries"};
 		class eventHandlers {
-			Init = "(_this select 0) call compile preprocessFileLineNumbers '\BWplus\scripts\Raven.sqf'";
+			Init = "(_this select 0) call compile preprocessFileLineNumbers '\BWplus_units\scripts\Raven.sqf'";
 		};
 	};
 
@@ -126,7 +126,7 @@ class CfgVehicles {
 		respawnmagazines[] = {"BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_15Rnd_9x19_P8","BWA3_15Rnd_9x19_P8","BWA3_15Rnd_9x19_P8","BWA3_DM51A1","BWA3_DM25"};
 		
 		class eventHandlers {
-	 		Init = "(_this select 0) execvm '\BWplus\init_pio.sqf'";
+	 		Init = "(_this select 0) execvm '\BWplus_units\scripts\init_pio.sqf'";
 	 	};
 	};
 
