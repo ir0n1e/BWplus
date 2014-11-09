@@ -706,7 +706,7 @@ class CfgVehicles {
 			    displayName = "$STR_BWplus_Vehicles_dismantleHelipad";
 			    priority = 0.5;
 		    	distance = 5;
-			    condition = "(AGM_Interaction_Target getVariable 'BWplus_BoxEmpty') and {(player getVariable 'BWplus_building')}";
+			    condition = "(AGM_Interaction_Target getVariable 'BWplus_BoxEmpty') and {!(player getVariable 'BWplus_building')}";
 			    statement = "[AGM_Interaction_Target, player] call BWplus_vehicles_fnc_dismantleHelipad";
 		    };	
 		};	

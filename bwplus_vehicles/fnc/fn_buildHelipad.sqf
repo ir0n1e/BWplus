@@ -16,7 +16,7 @@ BWplus_buildHelipadCallback = {
 	_angel = 45;
 	_pos = position _box;
 
-	_pad = HELIPAD createVehicle _pos;
+	_pad = HELIPAD createVehicle [0,0,0];
 	_pad setpos _pos;
 	_dir = getdir _pad;
 	_items = [_pad];
