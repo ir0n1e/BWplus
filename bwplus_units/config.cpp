@@ -20,7 +20,7 @@ class CfgPatches {
 		};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"bwa3_units", "BWplus_weapons"};
+		requiredAddons[] = {"bwa3_units", "BWplus_weapons","BWplus_vehicles"};
 	 	version = "1.3";
     	versionStr = "1.3";
     	versionAr[] = {1,3,0};
@@ -351,10 +351,6 @@ class CfgGroups {
 						position[] = {7, 0, 0};
 					};
 				};
-			};
-		};
-		class Motorized {
-				name = "Motorized Troops";
 				class BWplus_Motorized_Tropen {
 					name = "Motorized Tropen";
 					side = 1;
@@ -367,7 +363,7 @@ class CfgGroups {
 					};
 					class Unit1 {
 						side = 1;
-						vehicle = "Fennek_Tropentarn_mg";
+						vehicle = "Fennek_Tropen_mg";
 						rank = "SERGEANT";
 						position[] = {0, 0, 0};
 					};
@@ -383,7 +379,7 @@ class CfgGroups {
 						rank = "CORPORAL";
 						position[] = {7, 0, 0};
 					};
-				};
+				};	
 			};
 		};
 	};
