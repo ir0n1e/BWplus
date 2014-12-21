@@ -14,7 +14,7 @@ _vehicle spawn {
 	if (isNil "_items") then {
 		_item = ['BWplus_Box_exp', [-1000, -1000, 100]] call AGM_Logistics_fnc_spawnObject;
 		[_this, _item] call AGM_Logistics_fnc_initLoadedObject;
-		_item = ['BWplus_Lights', [-1000, -1000, 100]] call AGM_Logistics_fnc_spawnObject;
+		_item = ['Land_PortableLight_double_F', [-1000, -1000, 100]] call AGM_Logistics_fnc_spawnObject;
 		[_this, _item] call AGM_Logistics_fnc_initLoadedObject;
 		_item = ['AGM_JerryCan', [-1000, -1000, 100]] call AGM_Logistics_fnc_spawnObject;
 		[_this, _item] call AGM_Logistics_fnc_initLoadedObject;

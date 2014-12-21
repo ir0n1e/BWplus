@@ -15,7 +15,7 @@ class CfgPatches {
 			"BWplus_CamoNet",
 			"BWplus_CamoNet_Dismantled",
 			"BWplus_crater",
-			"BWplus_Lights",
+			//"BWplus_Lights",
 			"BWplus_merlin",
 			"BWplus_Wildcat",
 			"Fennek_Flecktarn",
@@ -611,10 +611,10 @@ class CfgVehicles {
 	      	};
 		};
 	};
-	class Land_PortableLight_double_F;
-	class BWplus_Lights: Land_PortableLight_double_F {
-		displayName = "$STR_BWplus_Vehicles_Lights";
-		author = "BWplus";
+	class Lamps_base_F;
+	class Land_PortableLight_single_F: Lamps_base_F {
+		//displayName = "$STR_BWplus_Vehicles_Lights";
+		//author = "BWplus";
 		AGM_Size = 1;
 		icon = "BWplus_vehicles\ui\bwplus_lamp_ca.paa";
 		picture = "BWplus_vehicles\ui\bwplus_lamp_ca.paa";
