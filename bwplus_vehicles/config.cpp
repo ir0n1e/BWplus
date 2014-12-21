@@ -23,11 +23,11 @@ class CfgPatches {
 			"Fennek_Flecktarn_mg",
 			"Fennek_Flecktarn_pio",
 			"Fennek_Flecktarntarn_san",
-			"Fennek_Tropentarn",
-			"Fennek_Tropentarn_gmg",
-			"Fennek_Tropentarn_mg",
-			"Fennek_Tropentarn_pio",
-			"Fennek_Tropentarn_san"
+			"Fennek_Tropen",
+			"Fennek_Tropen_gmg",
+			"Fennek_Tropen_mg",
+			"Fennek_Tropen_pio",
+			"Fennek_Tropen_san"
 		};
 		weapons[] = {"BWplus_Item_CamoNet"};
 		requiredVersion = 0.1;

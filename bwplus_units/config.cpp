@@ -1,6 +1,23 @@
 class CfgPatches {
 	class BWplus_units {
-		units[] = {"SpecOps_Fleck", "SpecOps_Tropen","BWplus_Recon_Marksman_Tropentarn","BWplus_Recon_Marksman_Flecktarn","BWplus_Recon_TL_Tropentarn","BWplus_Recon_TL_Flecktarn","BWplus_Recon_CombatLifeSaver_Tropentarn","BWplus_Recon_CombatLifeSaver_Flecktarn","BWplus_Recon_Pioneer_Tropentarn","BWplus_Recon_Pioneer_Flecktarn","BWplus_Recon_Spotter_Tropentarn","BWplus_Recon_Spotter_Flecktarn","BWplus_Pioneer_Flecktarn","BWplus_Pioneer_Tropentarn"};
+		units[] = {
+			"SpecOps_Fleck", 
+			"SpecOps_Tropen",
+			"BWplus_Recon_Marksman_Tropentarn",
+			"BWplus_Recon_Marksman_Flecktarn",
+			"BWplus_Recon_TL_Tropentarn",
+			"BWplus_Recon_TL_Flecktarn",
+			"BWplus_Recon_CombatLifeSaver_Tropentarn",
+			"BWplus_Recon_CombatLifeSaver_Flecktarn",
+			"BWplus_Recon_Pioneer_Tropentarn",
+			"BWplus_Recon_Pioneer_Flecktarn",
+			"BWplus_Recon_Spotter_Tropentarn",
+			"BWplus_Recon_Spotter_Flecktarn",
+			"BWplus_Pioneer_Flecktarn",
+			"BWplus_Pioneer_Tropentarn",
+			"BWplus_Motorized_Fleck",
+			"BWplus_Motorized_Tropen"
+		};
 		weapons[] = {};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"bwa3_units", "BWplus_weapons"};
