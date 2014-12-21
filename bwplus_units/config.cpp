@@ -353,5 +353,38 @@ class CfgGroups {
 				};
 			};
 		};
+		class Motorized {
+				name = "Motorized Troops";
+				class BWplus_Motorized_Tropen {
+					name = "Motorized Tropen";
+					side = 1;
+					faction = "BWA3_Faction";
+					class Unit0 {
+						side = 1;
+						vehicle = "BWA3_TL_Tropen";
+						rank = "LIEUTENANT";
+						position[] = {0, 5, 0};
+					};
+					class Unit1 {
+						side = 1;
+						vehicle = "Fennek_Tropentarn_mg";
+						rank = "SERGEANT";
+						position[] = {0, 0, 0};
+					};
+					class Unit2 {
+						side = 1;
+						vehicle = "BWA3_RiflemanAT_Pzf3_Tropen";
+						rank = "CORPORAL";
+						position[] = {5, 0, 0};
+					};
+					class Unit3 {
+						side = 1;
+						vehicle = "BWA3_Grenadier_Tropen";
+						rank = "CORPORAL";
+						position[] = {7, 0, 0};
+					};
+				};
+			};
+		};
 	};
 };
