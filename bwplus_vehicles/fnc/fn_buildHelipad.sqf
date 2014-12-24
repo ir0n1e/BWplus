@@ -26,7 +26,7 @@ BWplus_buildHelipadCallback = {
 		_light = LIGHT createVehicle _pos_rel;
 		_light setpos _pos_rel;
 		_angel = (_angel + 90);
-		_items = _items + [_light];
+		_items pushback _light;
 	};
 
 

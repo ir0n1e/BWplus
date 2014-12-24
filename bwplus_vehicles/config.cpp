@@ -10,6 +10,7 @@ class CfgPatches {
 			"BWplus_Box_AMMO762_120Rnd",
 			"BWplus_Box_AMMO762_20Rnd",
 			"BWplus_Box_AMMOgrenade",
+			"BWplus_Box_Cargo",
 			"BWplus_Box_Helipad",
 			"BWplus_Box_Items",
 			"BWplus_CamoNet",
@@ -73,6 +74,7 @@ class CfgFunctions {
       		class canbuild;
       		class canbuildFOB;
       		class canbuildNet;
+      		class clearCargo;
       		class dismantleCrater;
       		class dismantleFOB;
       		class dismantleHelipad;
@@ -135,6 +137,53 @@ class CfgVehicles {
 	      	};
       	};
     };
+	class B_CargoNet_01_ammo_F;
+	class BWplus_Box_Cargo: B_CargoNet_01_ammo_F {
+		author = "BWPlus";
+	    displayName = "[BWplus] CargoBox";
+    	transportmaxmagazines = 9001;
+    	maximumload = 2000;
+		class eventHandlers {
+			Init = "if (isClass(configFile/'CfgPatches'/'MicroAirVehicles')) then {(_this select 0) addBackpackCargoGlobal ['B_MAV_B_BACKPACK', 1];};";
+		};
+		class TransportMagazines {
+        	MACRO_ADDMAGAZINE(BWA3_15Rnd_9x19_P8, 10)
+        	MACRO_ADDMAGAZINE(BWA3_200Rnd_556x45, 5)
+        	MACRO_ADDMAGAZINE(BWA3_20Rnd_762x51_G28, 20)
+        	MACRO_ADDMAGAZINE(BWA3_30Rnd_556x45_G36, 20)
+        	MACRO_ADDMAGAZINE(1rnd_HE_Grenade_shell, 10)
+
+        	MACRO_ADDMAGAZINE(APERSTripMine_Wire_Mag, 5)
+        	MACRO_ADDMAGAZINE(ClaymoreDirectionalMine_Remote_Mag, 5)
+        	MACRO_ADDMAGAZINE(DemoCharge_Remote_Mag, 5)
+        	MACRO_ADDMAGAZINE(SLAMDirectionalMine_Wire_Mag, 5)
+        	MACRO_ADDMAGAZINE(Titan_AA, 5)
+        	MACRO_ADDMAGAZINE(Titan_AP, 5)
+		};
+		class TransportItems {
+			MACRO_ADDITEM(Chemlight_blue, 10)
+			MACRO_ADDITEM(HandGrenade, 10)
+			MACRO_ADDITEM(SmokeShellBlue, 2)
+			MACRO_ADDITEM(BWA3_acc_LLM01_irlaser, 10)
+			MACRO_ADDITEM(BWA3_optic_Shortdot, 10)
+			MACRO_ADDITEM(BWA3_optic_ZO4x30_NSV, 2)
+		};
+		class TransportBackpacks {
+			MACRO_ADDBACKPACK(BWA3_AssaultPack_Medic, 2)
+			MACRO_ADDBACKPACK(B_GMG_01_high_weapon_F, 1)
+			MACRO_ADDBACKPACK(B_HMG_01_high_weapon_F, 1)
+			MACRO_ADDBACKPACK(B_HMG_01_support_high_F, 2)
+			MACRO_ADDBACKPACK(B_Mortar_01_support_F, 1)
+			MACRO_ADDBACKPACK(B_Mortar_01_weapon_F, 1)
+			MACRO_ADDBACKPACK(tf_rt1523g_big_bwmod, 1)			
+		};
+		class TransportWeapons {
+			MACRO_ADDWEAPON(BWA3_Pzf3_Loaded, 2)
+			MACRO_ADDWEAPON(BWA3_RGW90_Loaded, 2)
+		};
+	};
+
+
 	class Box_NATO_Support_F;
 	class BWplus_Box_Exp: Box_NATO_Support_F {
     	author = "BWPlus";
@@ -150,9 +199,11 @@ class CfgVehicles {
         	MACRO_ADDMAGAZINE(DemoCharge_Remote_Mag,10)
 		};
 		class TransportItems {
-			MACRO_ADDITEM(AGM_M26_Clacker,2)
-			MACRO_ADDITEM(AGM_Clacker,2)
-			MACRO_ADDITEM(AGM_DefusalKit,2)
+			MACRO_ADDITEM(AGM_M26_Clacker, 2)
+			MACRO_ADDITEM(AGM_Clacker, 2)
+			MACRO_ADDITEM(AGM_DefusalKit, 2)
+			MACRO_ADDITEM(BWplus_Item_CamoNet, 2)
+			MACRO_ADDITEM(BWplus_Shovel, 2)
 		};
 	};
 	class BWplus_Box_Items: BWplus_Box_Exp {
