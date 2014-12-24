@@ -93,7 +93,6 @@ class BWplus_Actions {
 	MACRO_LOADABLE		// AGM_LoadItem
 };
 
-
 class CfgVehicles {
 	class Man;
 	class CAManBase: Man {
@@ -292,8 +291,6 @@ class CfgVehicles {
 		};
 	};
 
-
-
 	class BWplus_Merlin: I_Heli_Transport_02_F {
 		displayName = "Merlin";
 		author = "EduardLaser, Ir0n1E";
@@ -413,7 +410,6 @@ class CfgVehicles {
 		};
 	};
 	
-    
     class Fennek_Flecktarn_mg: I_MRAP_03_hmg_F {
 		displayName = "Fennek Kal.50";
 		author = "EduardLaser, Ir0n1E";

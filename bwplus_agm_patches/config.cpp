@@ -3,7 +3,7 @@ class CfgPatches {
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.100000;
-		requiredAddons[] = {"BWA3_Weapons", "AGM_Core", "AGM_Overheating", "AGM_Aircraft", "AGM_Medical", "AGM_Interaction", "AGM_Logistics"};
+		requiredAddons[] = {"BWA3_Weapons", "AGM_Core", "AGM_Overheating", "AGM_Aircraft", "AGM_Logistics"};
 		version = "1.3";
         versionStr = "1.3";
         versionAr[] = {1,3,0};
@@ -24,11 +24,7 @@ class CfgFunctions {
 
 
 class CfgVehicles {
-    class AllVehicles;
     class Plane_Base_F;
-    class Air: AllVehicles {
-        AGM_Paradrop = 1;
-    };
     class Plane_CAS_01_base_F: Plane_Base_F {
         envelope[] = {0.8,1.4,2.0,2.4,3.6,3.8,3.7,3.2,2.2,1.7,0.9};
         thrustCoef[] = {1,1.2,1.3,1.25,1.06,1.01,1,0.92,0.75,0.65,0.5,0.25,0};
@@ -41,23 +37,21 @@ class CfgVehicles {
     class Truck_F: Car_F {
         AGM_Vehicle_Cargo = 14;
     };
+    class Air;
     class Helicopter: Air {
         AGM_Vehicle_Cargo = 8;
-        class AGM_SelfActions {
-            class AGM_DropCargo {
-                displayName = "$STR_AGM_Paradrop_Unload";
-                condition = "getNumber(configFile >> 'CfgVehicles' >> typeOf vehicle player >> 'AGM_Paradrop') == 1 && {getPosATL vehicle player select 2 > 60} && {count (vehicle player getVariable ['AGM_Logistics_loadedItems', []]) > 0} && {driver vehicle player == player;}";
-                statement = "[vehicle player] call BWplus_Paradrop_fnc_paradrop";
-                showDisabled = 1;
-                priority = 1;
-                enableInside = 1;
-            };
-        };
+        AGM_Paradrop = 1;
     };
     class Heli_Transport_02_base_F;
-    class I_Heli_Transport_02_F : Heli_Transport_02_base_F {
+    class Helicopter_Base_H;
+    class I_Heli_Transport_02_F: Heli_Transport_02_base_F {
         AGM_Vehicle_Cargo = 20;
        
+    };
+    class B_Heli_Transport_03_base_F;
+    class B_Heli_Transport_03_F: B_Heli_Transport_03_base_F {
+        AGM_Vehicle_Cargo = 20;
+        AGM_Paradrop = 1;
     };
 };
 

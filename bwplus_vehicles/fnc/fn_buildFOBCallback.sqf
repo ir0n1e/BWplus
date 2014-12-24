@@ -11,9 +11,6 @@ _dir = getdir _vec;
 
 _vec setVariable ["BWplus_VecEngineer",false,true];
 
-
-
-
 _pos_rel = [_vec, 5.8, _dir+100] call BIS_fnc_relPos;
 _box = FOBBOX createVehicle _pos;
 _box allowdamage false;
@@ -38,8 +35,6 @@ if (_net) then {
 	_net setdir (_dir+210);
 	_net allowDamage false;
 };
-
-
 
 _pos_rel = [_vec, 10, _dir+10] call BIS_fnc_relPos;
 
