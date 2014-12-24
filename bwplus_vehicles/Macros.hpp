@@ -89,9 +89,9 @@
   class AGM_DragItem { \
     displayName = "$STR_AGM_Drag_StartDrag"; \
     distance = 4; \
-    condition = "!(player call AGM_Drag_fnc_isDraggingObject)"; \
-    conditionShow = "[AGM_Interaction_Target, player] call AGM_Drag_fnc_isDraggable"; \
-    statement = "[AGM_Interaction_Target, player] call AGM_Drag_fnc_dragObject"; \
+    condition = "!(AGM_player call AGM_Drag_fnc_isDraggingObject)"; \
+    conditionShow = "[AGM_Interaction_Target, AGM_player] call AGM_Drag_fnc_isDraggable"; \
+    statement = "[AGM_Interaction_Target, AGM_player] call AGM_Drag_fnc_dragObject"; \
     showDisabled = 0; \
     priority = 3; \
     icon = "\A3\ui_f\data\igui\cfg\actions\gear_ca.paa"; \

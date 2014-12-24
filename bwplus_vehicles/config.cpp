@@ -101,8 +101,8 @@ class CfgVehicles {
 				displayName = "$STR_BWplus_Vehicles_DismantleNet";
 		    	icon = "\A3\Structures_F\Mil\Shelters\Data\UI\map_CamoNet_CA.paa";
 		    	distance = 10; 
-		    	condition = "player getvariable 'BWplus_pio' && {player distance (nearestObject [player, 'BWplus_CamoNet']) < 8} and {!(player getVariable 'BWplus_building')}";
-		    	statement = "[(nearestObject [player, 'BWplus_CamoNet']),player] call BWplus_vehicles_fnc_dismantleNet";
+		    	condition = "AGM_player getvariable 'BWplus_pio' && {AGM_player distance (nearestObject [AGM_player, 'BWplus_CamoNet']) < 8} and {!(AGM_player getVariable 'BWplus_building')}";
+		    	statement = "[(nearestObject [AGM_player, 'BWplus_CamoNet']),AGM_player] call BWplus_vehicles_fnc_dismantleNet";
 	      		showDisabled = 0; 
 		    	priority = 3;
 	      	};
@@ -110,7 +110,7 @@ class CfgVehicles {
 		      	class BWplus_BuildCrater {
 				    displayName = "$STR_BWplus_Vehicles_buildCrate";
 			    	priority = 0.5;
-	  			    condition = "not (player getVariable 'BWplus_building') and {[player] call BWplus_vehicles_fnc_canbuild}";
+	  			    condition = "not (AGM_player getVariable 'BWplus_building') and {[AGM_player] call BWplus_vehicles_fnc_canbuild}";
 				    statement = "[false] call BWplus_vehicles_fnc_buildCrater";
 		      		icon = "bwplus_weapons\UI\bwplus_shovel_menu.paa";
 		      		showDisabled = 1; 
@@ -118,7 +118,7 @@ class CfgVehicles {
 				class BWplus_BuildCraterBig {
 				    displayName = "$STR_BWplus_Vehicles_buildCrateNet";
 			    	priority = 0.5;
-	  			    condition = "not (player getVariable 'BWplus_building') and {[player] call BWplus_vehicles_fnc_canbuildNet} and {[player] call BWplus_vehicles_fnc_canbuild}";
+	  			    condition = "not (AGM_player getVariable 'BWplus_building') and {[AGM_player] call BWplus_vehicles_fnc_canbuildNet} and {[AGM_player] call BWplus_vehicles_fnc_canbuild}";
 				    statement = "[true] call BWplus_vehicles_fnc_buildCrater";
 		      		icon = "\A3\Structures_F\Mil\Shelters\Data\UI\map_CamoNet_CA.paa";
 		      		showDisabled = 1; 
@@ -127,8 +127,8 @@ class CfgVehicles {
 					displayName = "$STR_BWplus_Vehicles_buildNet";
 			    	icon = "\A3\Structures_F\Mil\Shelters\Data\UI\map_CamoNet_CA.paa";
 			    	distance = 8; 
-			    	condition = "not (player getVariable 'BWplus_building') and {[player] call BWplus_vehicles_fnc_canbuildNet}";
-			    	statement = "[player] call BWplus_vehicles_fnc_buildNet";
+			    	condition = "not (AGM_player getVariable 'BWplus_building') and {[AGM_player] call BWplus_vehicles_fnc_canbuildNet}";
+			    	statement = "[AGM_player] call BWplus_vehicles_fnc_buildNet";
 			    	priority = 3;
     				showDisabled = 0;
 	      		};
@@ -601,8 +601,8 @@ class CfgVehicles {
 				displayName = "$STR_BWplus_Vehicles_DismantleCrate";
 			    icon = "\bwplus_weapons\UI\bwplus_shovel_menu.paa";
 			    distance = 4; 
-			    condition = "not (player getVariable 'BWplus_building') and {((AGM_Interaction_Target getVariable ""BWplus_builder"") == player) or (player getvariable ""BWplus_pio"")}";
-			    statement = "[AGM_Interaction_Target,player] call BWplus_vehicles_fnc_dismantlecrater";
+			    condition = "not (AGM_player getVariable 'BWplus_building') and {((AGM_Interaction_Target getVariable ""BWplus_builder"") == AGM_player) or (AGM_player getvariable ""BWplus_pio"")}";
+			    statement = "[AGM_Interaction_Target,AGM_player] call BWplus_vehicles_fnc_dismantlecrater";
 			    priority = 3;
 	      	};
 		};
@@ -695,15 +695,15 @@ class CfgVehicles {
 				displayName = "$STR_BWplus_Vehicles_buildHelipad";
 			    priority = 0.5;
 			    distance = 5;
-			    condition = "!(AGM_Interaction_Target getVariable 'BWplus_BoxEmpty') and {!(player getVariable 'BWplus_building')}";
-			    statement = "[AGM_Interaction_Target, player] call BWplus_vehicles_fnc_buildHelipad";
+			    condition = "!(AGM_Interaction_Target getVariable 'BWplus_BoxEmpty') and {!(AGM_player getVariable 'BWplus_building')}";
+			    statement = "[AGM_Interaction_Target, AGM_player] call BWplus_vehicles_fnc_buildHelipad";
 	      	};
 			class BWplus_dismantleHelipad {
 			    displayName = "$STR_BWplus_Vehicles_dismantleHelipad";
 			    priority = 0.5;
 		    	distance = 5;
-			    condition = "(AGM_Interaction_Target getVariable 'BWplus_BoxEmpty') and {!(player getVariable 'BWplus_building')}";
-			    statement = "[AGM_Interaction_Target, player] call BWplus_vehicles_fnc_dismantleHelipad";
+			    condition = "(AGM_Interaction_Target getVariable 'BWplus_BoxEmpty') and {!(AGM_player getVariable 'BWplus_building')}";
+			    statement = "[AGM_Interaction_Target, AGM_player] call BWplus_vehicles_fnc_dismantleHelipad";
 		    };	
 		};	
 	};

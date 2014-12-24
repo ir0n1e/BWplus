@@ -17,7 +17,7 @@ _crater = CRATER createVehicle [0,0,0];
 _net = objNull;
 
 
-if (player getVariable "BWplus_pio") then {
+if (AGM_player getVariable "BWplus_pio") then {
 	_buildtime = BUILDTIME_PIO;
 	_maxcrater = MAXCRATER_PIO;
 };
@@ -26,10 +26,10 @@ if (_buildwithNet) then {
 };
 
 _items = [_crater,_net];
-_crater_count = (player getvariable "BWplus_crater_count");
+_crater_count = (AGM_player getvariable "BWplus_crater_count");
 
-player setVariable ["BWplus_building",true,true];
-player setVariable ["BWplus_crater_abort",false];
+AGM_player setVariable ["BWplus_building",true,true];
+AGM_player setVariable ["BWplus_crater_abort",false];
 
 BWplus_buildCrater = {
 	private ["_pos","_crater,_count","_crater_count","_dir_crater","_pos_rel_crater","_max_crater","_end_pos_rel","_buildwithNet"];
@@ -37,8 +37,8 @@ BWplus_buildCrater = {
 	_time = _this select 0;
 	_items = _this select 1;
 	_buildwithNet = _this select 2;
-	_dir_crater = getdir player;
-	_pos_rel_crater = [player, 5, _dir_crater] call BIS_fnc_relPos;
+	_dir_crater = getdir AGM_player;
+	_pos_rel_crater = [AGM_player, 5, _dir_crater] call BIS_fnc_relPos;
 	_net = _items select 1;
 	_crater = _items select 0;
 
@@ -49,7 +49,7 @@ BWplus_buildCrater = {
 
 	for "_i" from 0 to (_time -1) do {
 		scopeName "loop";
-		[player, "AinvPknlMstpSnonWnonDr_medic5", 1] call AGM_Core_fnc_doAnimation;
+		[AGM_player, "AinvPknlMstpSnonWnonDr_medic5", 1] call AGM_Core_fnc_doAnimation;
 		_crater setpos [_pos_rel_crater select 0,_pos_rel_crater select 1,_start_pos_rel - (_start_pos_rel/_time) ];
 
 		_crater setdir _dir_crater+270;
@@ -62,12 +62,12 @@ BWplus_buildCrater = {
 		_time = _time -1;
 
 		sleep 1;
-		if (player getVariable ["BWplus_crater_abort",false]) then {
+		if (AGM_player getVariable ["BWplus_crater_abort",false]) then {
 			breakOut "loop";
 		};
 	};
 
-	if (not (player getVariable "BWplus_crater_abort")) then {
+	if (not (AGM_player getVariable "BWplus_crater_abort")) then {
 		_crater setpos [_pos_rel_crater select 0,_pos_rel_crater select 1,_end_pos_rel];
 		_crater setdir _dir_crater+270;
 		if (_buildwithNet) then {
@@ -79,9 +79,9 @@ BWplus_buildCrater = {
 	};
 };
 /*
-if ((player getvariable "BWplus_crater_count") >= _maxcrater) exitwith {
-	[_items, _crater_count, player] call BWplus_fnc_buildCraterAbort
+if ((AGM_player getvariable "BWplus_crater_count") >= _maxcrater) exitwith {
+	[_items, _crater_count, AGM_player] call BWplus_fnc_buildCraterAbort
 };
 */
- [_buildtime, [_items, _crater_count, player, _buildwithNet], "BWplus_vehicles_fnc_buildCraterCallback", localize "STR_BWplus_Vehicles_BuildingCrater","BWplus_vehicles_fnc_buildCraterAbort"] call AGM_Core_fnc_progressBar;
+ [_buildtime, [_items, _crater_count, AGM_player, _buildwithNet], "BWplus_vehicles_fnc_buildCraterCallback", localize "STR_BWplus_Vehicles_BuildingCrater","BWplus_vehicles_fnc_buildCraterAbort"] call AGM_Core_fnc_progressBar;
  [_buildtime,_items, _buildwithNet] spawn  BWplus_buildCrater;

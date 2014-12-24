@@ -3,7 +3,7 @@
 private ["_vec","_state","_relDir"];
 _state="";
 _vec = _this;
-_relDir = [_vec, player] call BIS_fnc_relativeDirTo;
+_relDir = [_vec, AGM_player] call BIS_fnc_relativeDirTo;
 
 //right
 if ( (_relDir > 40) and (_relDir < 130) ) then {

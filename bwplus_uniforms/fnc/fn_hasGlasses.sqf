@@ -1,2 +1,2 @@
-if (goggles player == "" || {getText (configFile >> "CfgGlasses" >> goggles player >> "BWplus_Glassestype") == "Shemagh"}) exitwith {false};
+if (goggles AGM_player == "" || {getText (configFile >> "CfgGlasses" >> goggles AGM_player >> "BWplus_Glassestype") == "Shemagh"}) exitwith {false};
 	true
