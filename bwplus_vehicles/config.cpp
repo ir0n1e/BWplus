@@ -144,7 +144,7 @@ class CfgVehicles {
     	transportmaxmagazines = 9001;
     	maximumload = 2000;
 		class eventHandlers {
-			Init = "if (isClass(configFile/'CfgPatches'/'MicroAirVehicles')) then {(_this select 0) addBackpackCargoGlobal ['B_MAV_B_BACKPACK', 1];};";
+			Init = "(_this select 0) call compile preprocessFileLineNumbers '\BWplus_units\scripts\Raven.sqf'";
 		};
 		class TransportMagazines {
         	MACRO_ADDMAGAZINE(BWA3_15Rnd_9x19_P8, 10)

@@ -26,7 +26,4 @@ _vehicle spawn {
   		[_this, _item] call AGM_Logistics_fnc_initLoadedObject;
 	};
 };
-
-if (isClass(configFile/"CfgPatches"/"MicroAirVehicles")) then {
-	_vehicle addBackpackCargoGlobal ["B_MAV_B_BACKPACK", 1];
-};
+_vheicle call compile preprocessFileLineNumbers "\BWplus_vehicles\scripts\Raven.sqf";
