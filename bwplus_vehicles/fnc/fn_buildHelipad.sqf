@@ -31,9 +31,9 @@ BWplus_buildHelipadCallback = {
 
 
  	[_player, "AmovPknlMstpSrasWrflDnon", 1] call AGM_Core_fnc_doAnimation;
- 	_pad setvariable ["BWplus_padItems", _items, true];
  	_player setVariable ["BWplus_building", false, true];
  	_box setVariable ["BWplus_boxEmpty", true, true];
+ 	_box setvariable ["BWplus_padItems", _items, true];
 };
 
  [BUILDTIME, _this, "BWplus_buildHelipadCallback", localize "STR_BWplus_Vehicles_BuildingHelipad", "BWplus_vehicles_fnc_buildAbort"] call AGM_Core_fnc_progressBar;

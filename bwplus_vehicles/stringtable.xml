@@ -142,7 +142,7 @@
       <German>Baue Helipad</German>
     </Key>
      <Key ID="STR_BWplus_Vehicles_DismantlingHelipad">
-      <English>Dismentling Helipad</English>
+      <English>Dismantling Helipad</English>
       <German>Baue Helipad ab</German>
     </Key>
      <Key ID="STR_BWplus_Vehicles_BuildHelipad">
@@ -150,7 +150,7 @@
       <German>Helipad aufbauen</German>
     </Key>
      <Key ID="STR_BWplus_Vehicles_DismantleHelipad">
-      <English>Dismentle Helipad</English>
+      <English>Dismantle Helipad</English>
       <German>Helipad abbauen</German>
     </Key>
   </Package>
