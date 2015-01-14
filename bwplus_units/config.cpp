@@ -104,7 +104,7 @@ class CfgVehicles {
 	class BWplus_Recon_Spotter_Flecktarn: BWA3_Spotter_Fleck {
 		displayName = "$STR_BWplus_Recon_Spotter";
 		author = "BWplus";
-		camouflage = 0.850000;
+		camouflage = 0.60000;
 		accuracy = 2.000000;
 		vehicleClass = "BWplus_VehClass_SpecOps_Fleck"; 
 		uniformClass = "BWA3_Uniform_Fleck";
@@ -191,7 +191,7 @@ class CfgVehicles {
 	class BWplus_Recon_TL_Flecktarn: BWA3_TL_Fleck {
 		displayName = "$STR_BWplus_Recon_TL";
 		author = "BWplus";
-		camouflage = 0.850000;
+		camouflage = 0.60000;
 		vehicleClass = "BWplus_VehClass_SpecOps_Fleck"; 
 		uniformClass = "BWA3_Uniform_Fleck";
 		weapons[] = {"BWplus_G36K_AG_SF_SD_Fleck","bwa3_P8","Throw","Put","BWA3_Vector"};
