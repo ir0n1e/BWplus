@@ -64,6 +64,7 @@ class CfgFunctions {
     		class buildNet;
     		class lamps_off;
     		class lamps_on;
+    		class lamps_switch;
     		class merlinInit;		
     		class pioFennekInit;
     		class saniFennekInit;
@@ -653,7 +654,7 @@ class CfgVehicles {
 			    icon = "\bwplus_weapons\UI\bwplus_shovel_menu.paa";
 			    distance = 4; 
 			    condition = "not (AGM_player getVariable 'BWplus_building') and {((AGM_Interaction_Target getVariable ""BWplus_builder"") == AGM_player) or (AGM_player getvariable ""BWplus_pio"")}";
-			    statement = "[AGM_Interaction_Target,AGM_player] call BWplus_vehicles_fnc_dismantlecrater";
+			    statement = "[AGM_Interaction_Target, AGM_player] call BWplus_vehicles_fnc_dismantlecrater";
 			    priority = 3;
 	      	};
 		};
@@ -671,7 +672,7 @@ class CfgVehicles {
 		destrType = "DesturctNo";
 		scope = 2;
 		class eventHandlers {
-		 	Init = "(_this select 0) execVM ""BWplus_vehicles\init_lights.sqf"";";
+		 	Init = "_this call BWplus_vehicles_fnc_lamps_switch";
 		};
 		class AGM_Actions {
 			MACRO_DRAGABLE
@@ -681,19 +682,32 @@ class CfgVehicles {
 			    icon = "BWplus_vehicles\UI\bwplus_lamp_ca.paa";
 			    priority = 0.5;
 			    distance = 5;
-			    condition = "!(AGM_Interaction_Target getVariable ""BWplus_lamp_on"")";
-			    statement = "[AGM_Interaction_Target, ""BWplus_vehicles_fnc_lamps_on"",nil,true] spawn BIS_fnc_MP";
+			    condition = "!(AGM_Interaction_Target getVariable ['BWplus_LampOn', false])";
+			    statement = "[[AGM_Interaction_Target], 'BWplus_vehicles_fnc_lamps_switch', nil, true] spawn BIS_fnc_MP";
 	      	};
 			class BWplus_Lamps_off {
 			    displayName = "$STR_BWplus_Vehicles_LightsOff";
 			    icon = "BWplus_vehicles\UI\bwplus_lamp_ca.paa";
 			    priority = 0.5;
 		    	distance = 5;
-			    condition = "(AGM_Interaction_Target getVariable ""BWplus_lamp_on"")";
-			    statement = "[AGM_Interaction_Target, ""BWplus_vehicles_fnc_lamps_off"",nil,true] spawn BIS_fnc_MP";
+			    condition = "AGM_Interaction_Target getVariable ['BWplus_LampOn', false]";
+			    statement = "[[AGM_Interaction_Target], 'BWplus_vehicles_fnc_lamps_switch', nil, true] spawn BIS_fnc_MP";
 		    };	
 		};
 	};
+	class Land_PortableLight_double_F: Land_PortableLight_single_F {
+		AGM_Size = 1;
+		icon = "BWplus_vehicles\ui\bwplus_lamp_ca.paa";
+		picture = "BWplus_vehicles\ui\bwplus_lamp_ca.paa";
+		mapSize = 0.7;
+		accuracy = 0.2;
+		vehicleClass = "BWplus_Items";
+		destrType = "DesturctNo";
+		scope = 2;
+	};
+
+
+
 	class FloatingStructure_F;
 	class Land_PortableHelipadLight_01_F: FloatingStructure_F {
 		scope = 1;
