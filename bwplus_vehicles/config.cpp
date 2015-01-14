@@ -722,6 +722,7 @@ class CfgVehicles {
 			};
 		};
 	};
+	
 	class BWplus_CamoNet: CamoNet_INDP_F {
 		displayName = "$STR_BWplus_Vehicles_Net";
 		descriptionShort = "$STR_BWplus_Vehicles_Net";
@@ -761,6 +762,7 @@ class CfgVehicles {
 	      	};
 		};
 	};
+
 	class Lamps_base_F;
 	class Land_PortableLight_single_F: Lamps_base_F {
 		//displayName = "$STR_BWplus_Vehicles_Lights";
@@ -785,7 +787,7 @@ class CfgVehicles {
 			    priority = 0.5;
 			    distance = 5;
 			    condition = "!(AGM_Interaction_Target getVariable ['BWplus_LampOn', false])";
-			    statement = "[[AGM_Interaction_Target], 'BWplus_vehicles_fnc_lamps_switch', nil, true] spawn BIS_fnc_MP";
+			    statement = "[AGM_Interaction_Target] call BWplus_vehicles_fnc_lamps_switch";
 	      	};
 			class BWplus_Lamps_off {
 			    displayName = "$STR_BWplus_Vehicles_LightsOff";
@@ -793,7 +795,7 @@ class CfgVehicles {
 			    priority = 0.5;
 		    	distance = 5;
 			    condition = "AGM_Interaction_Target getVariable ['BWplus_LampOn', false]";
-			    statement = "[[AGM_Interaction_Target], 'BWplus_vehicles_fnc_lamps_switch', nil, true] spawn BIS_fnc_MP";
+			    statement = "[AGM_Interaction_Target] call BWplus_vehicles_fnc_lamps_switch";
 		    };	
 		};
 	};
@@ -807,8 +809,6 @@ class CfgVehicles {
 		destrType = "DesturctNo";
 		scope = 2;
 	};
-
-
 
 	class FloatingStructure_F;
 	class Land_PortableHelipadLight_01_F: FloatingStructure_F {
