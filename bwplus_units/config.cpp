@@ -75,12 +75,13 @@ class CfgVehicles {
 		hiddenSelections[] = {"camo"};
 		weapons[] = {"BWA3_G36K_equipped","BWA3_P8","Throw","Put","BWA3_Vector"};
 		uniformClass = "BWA3_Uniform3_Fleck";
-		items[] =  {"BWplus_Shovel","AGM_Morphine","AGM_Morphine","AGM_Morphine","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","NVGoggles_OPFOR","Laserbatteries"};
-		respawnitems[] =  {"BWplus_Shovel","AGM_Morphine","AGM_Morphine","AGM_Morphine","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","NVGoggles_OPFOR","Laserbatteries"};
-		respawnLinkedItems[] = {"BWA3_Vest_Rifleman1_Fleck","BWA3_OpsCore_Fleck","BWA3_ItemNavipad","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
+		backpack = "BWplus_Kitbag_pio_Green";
+		items[] =  {"BWplus_Shovel","AGM_Morphine","AGM_Morphine","AGM_Morphine","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_NVG_Wide","Laserbatteries"};
+		respawnitems[] =  {"BWplus_Shovel","AGM_Morphine","AGM_Morphine","AGM_Morphine","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_NVG_Wide","Laserbatteries"};
+		respawnLinkedItems[] = {"BWA3_Vest_Rifleman1_Fleck","BWA3_OpsCore_Fleck","BWA3_ItemNavipad","ItemMap","ItemCompass","ItemWatch","ItemRadio","AGM_NVG_Wide"};
 		respawnMagazines[] = {"BWA3_30Rnd_556x45_G36","BWA3_30Rnd_556x45_G36","BWA3_30Rnd_556x45_G36","BWA3_30Rnd_556x45_G36","BWA3_30Rnd_556x45_G36","BWA3_30Rnd_556x45_G36","BWA3_15Rnd_9x19_P8","BWA3_15Rnd_9x19_P8","BWA3_15Rnd_9x19_P8","BWA3_DM51A1","BWA3_DM25"};
 		respawnWeapons[] = {"BWA3_G36K_equipped","BWA3_P8","Throw","Put","BWA3_Vector"};
-		linkedItems[] = {"BWA3_Vest_Rifleman1_Fleck","BWA3_OpsCore_Fleck","BWA3_ItemNavipad","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
+		linkedItems[] = {"BWA3_Vest_Rifleman1_Fleck","BWA3_OpsCore_Fleck","BWA3_ItemNavipad","ItemMap","ItemCompass","ItemWatch","ItemRadio","AGM_NVG_Wide"};
 		magazines[] = {"BWA3_30Rnd_556x45_G36","BWA3_30Rnd_556x45_G36","BWA3_30Rnd_556x45_G36","BWA3_30Rnd_556x45_G36","BWA3_30Rnd_556x45_G36","BWA3_30Rnd_556x45_G36","BWA3_15Rnd_9x19_P8","BWA3_15Rnd_9x19_P8","BWA3_15Rnd_9x19_P8","BWA3_DM51A1","BWA3_DM25"};
 		class eventHandlers {
 	 		Init = "(_this select 0) execvm 'bwplus_units\scripts\init_pio.sqf'";
@@ -92,10 +93,11 @@ class CfgVehicles {
 		author = "BWplus";
 		vehicleClass = "BWA3_VehClass_Men_Tropen"; 
 		uniformClass = "BWA3_Uniform3_Tropen";
-		respawnLinkedItems[] = {"BWA3_Vest_Rifleman1_Tropen","BWA3_OpsCore_Tropen","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
+		backpack = "BWplus_Kitbag_pio_Sand";
+		respawnLinkedItems[] = {"BWA3_Vest_Rifleman1_Tropen","BWA3_OpsCore_Tropen","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio","AGM_NVG_Wide"};
 		respawnMagazines[] = {"BWA3_30Rnd_556x45_G36","BWA3_30Rnd_556x45_G36","BWA3_30Rnd_556x45_G36","BWA3_30Rnd_556x45_G36","BWA3_30Rnd_556x45_G36","BWA3_30Rnd_556x45_G36","BWA3_15Rnd_9x19_P8","BWA3_15Rnd_9x19_P8","BWA3_15Rnd_9x19_P8","BWA3_DM51A1","BWA3_DM25"};
 		respawnWeapons[] = {"BWA3_G36K_equipped","BWA3_P8","Throw","Put","BWA3_Vector"};
-		linkedItems[] = {"BWA3_Vest_Rifleman1_Tropen","BWA3_OpsCore_Tropen","BWA3_ItemNavipad","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
+		linkedItems[] = {"BWA3_Vest_Rifleman1_Tropen","BWA3_OpsCore_Tropen","BWA3_ItemNavipad","ItemMap","ItemCompass","ItemWatch","ItemRadio","AGM_NVG_Wide"};
 	};
 	
 	class BWA3_Spotter_Fleck;
@@ -112,8 +114,8 @@ class CfgVehicles {
 		respawnMagazines[] = {"BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_15Rnd_9x19_P8","BWA3_15Rnd_9x19_P8","BWA3_15Rnd_9x19_P8","BWA3_DM51A1","BWA3_DM25","1rnd_HE_Grenade_shell","1rnd_HE_Grenade_shell","1rnd_HE_Grenade_shell","1rnd_SmokeRed_Grenade_shell","1rnd_SmokeRed_Grenade_shell","1rnd_SmokeGreen_Grenade_shell","1rnd_SmokeGreen_Grenade_shell"};
 		respawnWeapons[] = {"BWplus_G36K_AG_SF_SD_Fleck","BWA3_P8","Throw","Put","Laserdesignator"};
 		respawnlinkedItems[] = {"BWA3_Vest_Marksman_Fleck", "BWA3_Booniehat_Fleck", "BWA3_ItemNavipad", "ItemMap", "ItemCompass", "ItemWatch", "ItemRadio"};
-		items[] =  {"BWA3_ItemKestrel","BWA3_G_Combat_Black","AGM_Morphine","AGM_Morphine","AGM_Morphine","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","NVGoggles_OPFOR","Laserbatteries"};
-		respawnitems[] =  {"BWA3_ItemKestrel","BWA3_G_Combat_Black","AGM_Morphine","AGM_Morphine","AGM_Morphine","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","NVGoggles_OPFOR","Laserbatteries"};
+		items[] =  {"BWA3_ItemKestrel","BWA3_G_Combat_Black","AGM_Morphine","AGM_Morphine","AGM_Morphine","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_NVG_Wide","Laserbatteries"};
+		respawnitems[] =  {"BWA3_ItemKestrel","BWA3_G_Combat_Black","AGM_Morphine","AGM_Morphine","AGM_Morphine","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_NVG_Wide","Laserbatteries"};
 		class eventHandlers {
 			Init = "(_this select 0) call compile preprocessFileLineNumbers '\BWplus_units\scripts\Raven.sqf'";
 		};
@@ -133,10 +135,11 @@ class CfgVehicles {
 		author = "BWplus";
 		vehicleClass = "BWplus_VehClass_SpecOps_Fleck"; 
 		uniformClass = "BWA3_Uniform3_Fleck";
+		backpack = "BWplus_Kitbag_pio_Green";
 		weapons[] = {"BWplus_G36K_SF_SD_Fleck","BWA3_P8","Throw","Put","BWA3_Vector"};
 		respawnWeapons[] = {"BWplus_G36K_SF_SD_Fleck","BWA3_P8","Throw","Put","BWA3_Vector"};
-		items[] =  {"BWplus_Shovel","AGM_Morphine","AGM_Morphine","AGM_Morphine","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","NVGoggles_OPFOR","Laserbatteries"};
-		respawnitems[] =  {"BWplus_Shovel","AGM_Morphine","AGM_Morphine","AGM_Morphine","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","NVGoggles_OPFOR","Laserbatteries"};
+		items[] =  {"BWplus_Shovel","AGM_Morphine","AGM_Morphine","AGM_Morphine","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_NVG_Wide","Laserbatteries"};
+		respawnitems[] =  {"BWplus_Shovel","AGM_Morphine","AGM_Morphine","AGM_Morphine","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_NVG_Wide","Laserbatteries"};
 		linkedItems[] = {"BWplus_LCG_shemagh_Green","BWA3_Vest_Rifleman1_Fleck","BWplus_Cap_Green","BWA3_ItemNavipad","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 		respawnLinkedItems[] = {"BWplus_LCG_shemagh_Green","BWA3_Vest_Rifleman1_Fleck","BWplus_Cap_Green","BWA3_ItemNavipad","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 		magazines[] = {"BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_15Rnd_9x19_P8","BWA3_15Rnd_9x19_P8","BWA3_15Rnd_9x19_P8","BWA3_DM51A1","BWA3_DM25"};
@@ -151,6 +154,7 @@ class CfgVehicles {
 		author = "BWplus";
 		vehicleClass = "BWplus_VehClass_SpecOps_Tropen"; 
 		uniformClass = "BWA3_Uniform3_Tropen";
+		backpack = "BWplus_Kitbag_pio_Sand";
 		weapons[] = {"BWplus_G36K_SF_SD_Tropen","BWA3_P8","Throw","Put","BWA3_Vector"};
 		respawnWeapons[] = {"BWplus_G36K_SF_SD_Tropen","BWA3_P8","Throw","Put","BWA3_Vector"};
 		linkedItems[] = {"BWplus_LCG_shemagh_Sand","BWA3_Vest_Rifleman1_Tropen","BWplus_Cap_Sand","BWA3_ItemNavipad","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
@@ -165,8 +169,8 @@ class CfgVehicles {
 		uniformClass = "BWA3_Uniform_Fleck";
 		weapons[] = {"BWplus_G36K_SF_SD_Fleck","BWA3_P8","Throw","Put","BWA3_Vector"};
 		respawnWeapons[] = {"BWplus_G36K_SF_SD_Fleck","BWA3_P8","Throw","Put","BWA3_Vector"};
-		items[] =  {"NVGoggles_OPFOR"};
-		respawnitems[] =  {"NVGoggles_OPFOR"};
+		items[] =  {"AGM_NVG_Wide"};
+		respawnitems[] =  {"AGM_NVG_Wide"};
 		linkedItems[] = {"BWA3_G_Combat_Black","BWA3_Vest_Medic_Fleck","BWA3_Booniehat_Fleck","BWA3_ItemNavipad","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 		respawnLinkedItems[] = {"BWA3_G_Combat_Black","BWA3_Vest_Medic_Fleck","BWA3_Booniehat_Fleck","BWA3_ItemNavipad","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 		magazines[] = {"BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_15Rnd_9x19_P8","BWA3_15Rnd_9x19_P8","BWA3_15Rnd_9x19_P8","BWA3_DM51A1","BWA3_DM25"};
@@ -196,8 +200,8 @@ class CfgVehicles {
 		respawnMagazines[] = {"BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_15Rnd_9x19_P8","BWA3_15Rnd_9x19_P8","BWA3_15Rnd_9x19_P8","BWA3_DM51A1","BWA3_DM25","1rnd_HE_Grenade_shell","1rnd_HE_Grenade_shell","1rnd_HE_Grenade_shell","1rnd_SmokeRed_Grenade_shell","1rnd_SmokeRed_Grenade_shell","1rnd_SmokeGreen_Grenade_shell","1rnd_SmokeGreen_Grenade_shell"};
 		respawnWeapons[] = {"BWplus_G36K_AG_SF_SD","BWplus_P8_SD","Throw","Put","BWA3_Vector"};
 		respawnlinkedItems[] = {"BWA3_Vest_Leader_Fleck", "BWA3_Booniehat_Fleck", "BWA3_ItemNavipad", "ItemMap", "ItemCompass", "ItemWatch", "ItemRadio"};
-		items[] =  {"BWA3_G_Combat_Black","AGM_Morphine","AGM_Morphine","AGM_Morphine","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","NVGoggles_OPFOR"};
-		respawnitems[] =  {"BWA3_G_Combat_Black","AGM_Morphine","AGM_Morphine","AGM_Morphine","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","NVGoggles_OPFOR"};
+		items[] =  {"BWA3_G_Combat_Black","AGM_Morphine","AGM_Morphine","AGM_Morphine","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_NVG_Wide"};
+		respawnitems[] =  {"BWA3_G_Combat_Black","AGM_Morphine","AGM_Morphine","AGM_Morphine","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_NVG_Wide"};
 	};
 
 	class BWplus_Recon_TL_Tropentarn: BWplus_Recon_TL_Flecktarn {
@@ -224,8 +228,8 @@ class CfgVehicles {
 		magazines[] = {"BWA3_10Rnd_762x51_G28_SD","BWA3_10Rnd_762x51_G28_SD","BWA3_10Rnd_762x51_G28_SD","BWA3_10Rnd_762x51_G28_SD","BWA3_10Rnd_762x51_G28_SD","BWA3_15Rnd_9x19_P8","BWA3_15Rnd_9x19_P8","BWA3_15Rnd_9x19_P8","BWA3_DM51A1","BWA3_DM25"};
 		linkedItems[] = {"BWA3_G_Combat_Black","BWA3_Vest_Marksman_Fleck", "BWA3_Booniehat_Fleck", "ItemGPS", "ItemMap", "ItemCompass", "ItemWatch", "ItemRadio"};
 		respawnlinkedItems[] = {"BWA3_Vest_Marksman_Fleck", "BWA3_Booniehat_Fleck", "BWA3_ItemNavipad", "ItemMap", "ItemCompass", "ItemWatch", "ItemRadio"};
-		items[] =  {"BWA3_ItemKestrel","AGM_Morphine","AGM_Morphine","AGM_Morphine","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","NVGoggles_OPFOR"};
-		respawnitems[] =  {"BWA3_ItemKestrel","BWplus_shemagh_Green","AGM_Morphine","AGM_Morphine","AGM_Morphine","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","NVGoggles_OPFOR"};
+		items[] =  {"BWA3_ItemKestrel","AGM_Morphine","AGM_Morphine","AGM_Morphine","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_NVG_Wide"};
+		respawnitems[] =  {"BWA3_ItemKestrel","BWplus_shemagh_Green","AGM_Morphine","AGM_Morphine","AGM_Morphine","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_NVG_Wide"};
 	};
 
 	class BWplus_Recon_Marksman_Tropentarn: BWplus_Recon_Marksman_Flecktarn {

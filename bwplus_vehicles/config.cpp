@@ -17,6 +17,8 @@ class CfgPatches {
 			"BWplus_CamoNet_Dismantled",
 			"BWplus_crater",
 			//"BWplus_Lights",
+			"BWplus_Kitbag_pio_Green",
+			"BWplus_Kitbag_pio_Sand",
 			"BWplus_merlin",
 			"BWplus_Wildcat",
 			"BWplus_Offroad_Standard",
@@ -152,7 +154,34 @@ class CfgVehicles {
 			init = "(_this select 0) setFlagTexture '\bwplus_vehicles\data\flag\flagGER.paa'";
 		};
     };
-
+    class B_Kitbag_rgr;
+    class B_Kitbag_cbr;
+    class BWplus_Kitbag_pio_Green: B_Kitbag_rgr {
+    	displayName = "Kitbag Pioneer Green";
+		author = "BWplus";
+		class TransportMagazines {
+			MACRO_ADDMAGAZINE(APERSTripMine_Wire_Mag, 2)
+        	MACRO_ADDMAGAZINE(DemoCharge_Remote_Mag, 3)
+		};
+		class TransportItems {
+			MACRO_ADDITEM(BWplus_Item_CamoNet, 1)
+			MACRO_ADDITEM(AGM_Clacker, 1)
+			MACRO_ADDITEM(AGM_DefusalKit, 1)
+		};
+    };
+    class BWplus_Kitbag_pio_Sand: B_Kitbag_cbr {
+    	displayName = "Kitbag Pioneer Sand";
+		author = "BWplus";
+		class TransportMagazines {
+			MACRO_ADDMAGAZINE(APERSTripMine_Wire_Mag, 2)
+        	MACRO_ADDMAGAZINE(DemoCharge_Remote_Mag, 3)
+		};
+		class TransportItems {
+			MACRO_ADDITEM(BWplus_Item_CamoNet, 1)
+			MACRO_ADDITEM(AGM_Clacker, 1)
+			MACRO_ADDITEM(AGM_DefusalKit, 1)
+		};
+    };
 	class B_CargoNet_01_ammo_F;
 	class BWplus_Box_Cargo: B_CargoNet_01_ammo_F {
 		author = "BWPlus";
@@ -198,7 +227,6 @@ class CfgVehicles {
 			MACRO_ADDWEAPON(BWA3_RGW90_Loaded, 2)
 		};
 	};
-
 
 	class Box_NATO_Support_F;
 	class BWplus_Box_Exp: Box_NATO_Support_F {
@@ -403,6 +431,7 @@ class CfgVehicles {
 		class TransportItems { 
 			MACRO_ADDITEM(ToolKit,1)
 			MACRO_ADDITEM(Rangefinder,1)
+			MACRO_ADDITEM(AGM_NVG_Wide,2)
 		};
 		class TransportBackpacks {
 			MACRO_ADDBACKPACK(BWA3_AssaultPack_Medic,2)
@@ -435,6 +464,7 @@ class CfgVehicles {
 		class TransportItems { 
 			MACRO_ADDITEM(ToolKit,1)
 			MACRO_ADDITEM(Rangefinder,1)
+			MACRO_ADDITEM(AGM_NVG_Wide,2)
 		};
 		class TransportBackpacks {
 			MACRO_ADDBACKPACK(BWA3_AssaultPack_Medic,2)
@@ -477,6 +507,7 @@ class CfgVehicles {
 			MACRO_ADDITEM(AGM_UAVBattery,1)
 			MACRO_ADDITEM(BWplus_Shovel,1)
 			MACRO_ADDITEM(BWplus_Item_CamoNet,2)
+			MACRO_ADDITEM(AGM_NVG_Wide,2)
 		};
 		class TransportBackpacks {
 			MACRO_ADDBACKPACK(BWA3_AssaultPack_Medic,1)   
@@ -518,9 +549,11 @@ class CfgVehicles {
 			MACRO_ADDITEM(AGM_UAVBattery,1)
 			MACRO_ADDITEM(BWplus_Shovel,1)
 			MACRO_ADDITEM(BWplus_Item_CamoNet,2)
+			MACRO_ADDITEM(AGM_NVG_Wide,2)
 		};
 		class TransportBackpacks {
-			MACRO_ADDBACKPACK(BWA3_AssaultPack_Medic,1)   
+			MACRO_ADDBACKPACK(BWA3_AssaultPack_Medic,1)
+			MACRO_ADDBACKPACK(BWplus_Kitbag_pio_Green,1)   
 		};
 		class TransportWeapons {};
 		class AGM_Actions: AGM_Actions {
