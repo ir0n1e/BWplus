@@ -12,17 +12,6 @@ class CfgPatches {
     };
 };
 
-class CfgFunctions {
-    class BWplus_Paradrop {
-        class BWplus_Paradrop {
-            file = "\bwplus_agm_patches\functions\Paradrop";
-            class paradrop;
-        };
-    };
-};
-  //"$STR_AGM_Paradrop_Unload"; 
-
-
 class CfgVehicles {
     class Plane_Base_F;
     class Plane_CAS_01_base_F: Plane_Base_F {
