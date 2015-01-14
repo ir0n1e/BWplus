@@ -97,6 +97,10 @@
       <English>Fennek</English>
       <German>Fennek</German>
     </Key>
+     <Key ID="STR_BWplus_Vehicles_Fldjgr">
+      <English>Offroad Feldjäger</English>
+      <German>Offroad Feldjäger</German>
+    </Key>
    <Key ID="STR_BWplus_Vehicles_Net_Dismantled">
       <English>[BWplus] Camonet Dismantled</English>
       <German>[BWplus] Tarnnetz Demontiert</German>
@@ -152,6 +156,14 @@
      <Key ID="STR_BWplus_Vehicles_DismantleHelipad">
       <English>Dismantle Helipad</English>
       <German>Helipad abbauen</German>
+    </Key>
+    <Key ID="STR_BWplus_Vehicles_BlueLightOff">
+      <English>Blue Light Off</English>
+      <German>Blaulicht aus</German>
+    </Key>
+    <Key ID="STR_BWplus_Vehicles_BlueLightOn">
+      <English>Blue Light On</English>
+      <German>Blaulicht an</German>
     </Key>
   </Package>
 </Project>

@@ -19,6 +19,9 @@ class CfgPatches {
 			//"BWplus_Lights",
 			"BWplus_merlin",
 			"BWplus_Wildcat",
+			"BWplus_Offroad_Standard",
+			"BWplus_Offroad_Fldjgr",
+			"BWplus_Flag_Ger",
 			"Fennek_Flecktarn",
 			"Fennek_Flecktarn_gmg",
 			"Fennek_Flecktarn_mg",
@@ -62,8 +65,6 @@ class CfgFunctions {
     		class buildCraterCallback;
     		class buildFOBCallback;
     		class buildNet;
-    		class lamps_off;
-    		class lamps_on;
     		class lamps_switch;
     		class merlinInit;		
     		class pioFennekInit;
@@ -83,6 +84,7 @@ class CfgFunctions {
       		class getin;
       		class hasLoadedItems;
       		class leftorright;
+      		class offroadfldjgrinit;
     	};
   	};
 };
@@ -138,6 +140,19 @@ class CfgVehicles {
 	      	};
       	};
     };
+    
+    class FlagCarrier;
+    class BWplus_Flag_Ger: FlagCarrier {
+    	displayName = "Flag GER";
+		author = "EduardLaser, Ir0n1E";
+		vehicleClass = "BWplus_Items";
+		scope = 2;
+		scopeCurator = 2;
+		class eventHandlers {
+			init = "(_this select 0) setFlagTexture '\bwplus_vehicles\data\flag\flagGER.paa'";
+		};
+    };
+
 	class B_CargoNet_01_ammo_F;
 	class BWplus_Box_Cargo: B_CargoNet_01_ammo_F {
 		author = "BWPlus";
@@ -307,6 +322,60 @@ class CfgVehicles {
 			MACRO_ADDMAGAZINE(BWA3_DM32_Yellow,10)
 		};
 	};
+
+	class Car_F;
+	class Offroad_01_base_F: Car_F {
+ 		class AGM_SelfActions;
+ 	};
+
+	class BWplus_Offroad_Fldjgr: Offroad_01_base_F {
+		displayName = "$STR_BWplus_Vehicles_Fldjgr";
+		author = "EduardLaser, Ir0n1E";
+		side = 1;
+		faction = "BWA3_Faction";
+		vehicleClass = "BWA3_VehClass_Wheeled_Fleck";
+		crew = "BWA3_crew_fleck";
+		scope = 2;
+		scopeCurator = 2;
+		hiddenSelections[] = {"camo", "camo2"};
+		hiddenSelectionsTextures[] = {"bwplus_vehicles\data\offroad\fldjgr.paa", "bwplus_vehicles\data\offroad\fldjgr.paa"};
+		class eventHandlers {
+			Init = "(_this select 0) call BWplus_vehicles_fnc_offroadFldjgrInit";
+		};
+		class AGM_SelfActions: AGM_SelfActions {
+			class BWplus_FlashOn {
+				displayName = "$STR_BWplus_Vehicles_BlueLightOn";
+			    priority = 0.125;
+			    distance = 5;
+			    condition = "(vehicle AGM_player) animationPhase 'BeaconsStart' < 0.5 && {driver (vehicle AGM_player) == AGM_player}";
+			    statement = "(vehicle AGM_player) animate ['BeaconsStart', 1]";
+			    enableInside = 1;
+	      	};
+			class BWplus_FlashOff {
+			    displayName = "$STR_BWplus_Vehicles_BlueLightOff";
+			    priority = 0.125;
+		    	distance = 5;
+			    condition = "(vehicle AGM_player) animationPhase 'BeaconsStart' > 0.5 && {driver (vehicle AGM_player) == AGM_player}";
+			    statement = "(vehicle AGM_player) animate ['BeaconsStart', 0]";
+			    enableInside = 1;
+		    };	
+
+		};
+	};
+
+	class BWplus_Offroad_Standard: Offroad_01_base_F {
+		displayName = "Offroad BW";
+		author = "EduardLaser, Ir0n1E";
+		side = 1;
+		faction = "BWA3_Faction";
+		vehicleClass = "BWA3_VehClass_Wheeled_Fleck";
+		crew = "BWA3_crew_fleck";
+		scope = 2;
+		scopeCurator = 2;
+		hiddenSelections[] = {"camo", "camo2"};
+		hiddenSelectionsTextures[] = {"bwplus_vehicles\data\offroad\offroad.paa", "bwplus_vehicles\data\offroad\offroad.paa"};
+	};
+
 
 	class I_MRAP_03_hmg_F;
 	class I_MRAP_03_gmg_F;
