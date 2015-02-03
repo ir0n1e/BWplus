@@ -165,5 +165,9 @@
       <English>Blue Light On</English>
       <German>Blaulicht an</German>
     </Key>
+    <Key ID="STR_BWplus_Vehicles_UnloadBoat">
+      <English>Drop Boat</English>
+      <German>Boot abwerfen</German>
+    </Key>
   </Package>
 </Project>

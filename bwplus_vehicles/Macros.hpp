@@ -56,6 +56,34 @@
         priority = 5; \
   	};
 
+#define MACRO_DRAGBOAT \
+  class BWplus_DragBoat { \
+    displayName = "$STR_AGM_Drag_StartDrag"; \
+    distance = 4; \
+    condition = "!(AGM_player call AGM_Drag_fnc_isDraggingObject)"; \
+    conditionShow = "[AGM_Interaction_Target, AGM_player] call AGM_Drag_fnc_isDraggable"; \
+    statement = "[AGM_Interaction_Target, AGM_player] call BWplus_vehicles_fnc_dragBoat"; \
+    showDisabled = 0; \
+    priority = 3; \
+    Icon = "\A3\boat_F\Boat_Transport_01\data\UI\map_Boat_Transport_01_CA.paa"; \
+    hotkey = "R"; \
+  };
+
+#define MACRO_UNLOADBOAT \
+  class BWplus_UnloadBoat { \
+    displayName = "$STR_BWplus_Vehicles_UnloadBoat"; \
+    distance = 4; \
+    condition = "(getPosASL AGM_Logistics_targetVehicle select 2 < 10)"; \
+    conditionShow = "[AGM_Logistics_targetVehicle] call BWplus_vehicles_fnc_hasLoadedBoat"; \
+    statement = "[AGM_Logistics_targetVehicle] call BWplus_vehicles_fnc_unloadBoat"; \
+    showDisabled = 0; \
+    priority = 3; \
+    enableInside = 1; \
+    Icon = "\A3\boat_F\Boat_Transport_01\data\UI\map_Boat_Transport_01_CA.paa"; \
+    hotkey = "D"; \
+  };
+
+
 #define MACRO_ADDITEM(ITEM,COUNT) class _xx_##ITEM { \
   name = #ITEM; \
   count = COUNT; \
@@ -77,7 +105,7 @@
 #define MACRO_LOADABLE \
   class AGM_loadItem { \
     displayName = "$STR_AGM_Logistics_LoadItem"; \
-    distance = 4; \
+    distance = 6; \
     condition = "[AGM_Interaction_Target] call AGM_Logistics_fnc_canLoadItem"; \
     statement = "[AGM_Interaction_Target, AGM_Logistics_targetVehicle] call AGM_Logistics_fnc_openLoadUI"; \
     showDisabled = 1; \

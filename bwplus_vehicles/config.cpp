@@ -83,10 +83,13 @@ class CfgFunctions {
       		class dismantleFOB;
       		class dismantleHelipad;
       		class dismantleNet;
+      		class dragBoat;
       		class getin;
+      		class hasLoadedBoat;
       		class hasLoadedItems;
       		class leftorright;
       		class offroadfldjgrinit;
+      		class unloadBoat;
     	};
   	};
 };
@@ -348,6 +351,19 @@ class CfgVehicles {
 			MACRO_ADDMAGAZINE(BWA3_DM51A1,20)
 			MACRO_ADDMAGAZINE(BWA3_DM32_Orange,10)
 			MACRO_ADDMAGAZINE(BWA3_DM32_Yellow,10)
+		};
+	};
+
+	class Boat_F;
+	class Rubber_duck_base_F: Boat_F {
+		AGM_Vehicle_Cargo = 1;
+		AGM_Size = 12;
+		class eventHandlers {
+		 	Init = "(_this select 0) setVariable ['AGM_useWeight', false];";
+		};
+		class AGM_Actions {
+			MACRO_DRAGBOAT
+			MACRO_LOADABLE
 		};
 	};
 
@@ -732,6 +748,8 @@ class CfgVehicles {
 		icon = "\A3\Structures_F\Mil\Shelters\Data\UI\map_CamoNet_CA.paa";
 		scope = 2;
 		scopeCurator = 2;
+		accuracy = 0.2;
+		camouflage = 1;
 		class eventHandlers {
 		 	Init = "_this execVM ""BWplus_vehicles\init_CamoNet.sqf"";";
 		};
@@ -874,6 +892,20 @@ class CfgVehicles {
 		    };	
 		};	
 	};
+
+
+	class Car_F;
+    class Truck_F: Car_F {
+    	class AGM_SelfActions {
+    		MACRO_UNLOADBOAT
+    	};
+    };
+    class Air;
+    class Helicopter: Air {
+    	class AGM_SelfActions {
+    		MACRO_UNLOADBOAT
+    	};
+    };
 };
 class CfgWeapons {
 	class ItemCore;
