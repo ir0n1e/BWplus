@@ -7,6 +7,7 @@ _player = _this select 1;
 
 [_player, "AinvPknlMstpSnonWnonDr_medic5", 1] call AGM_Core_fnc_doAnimation;
 _player setVariable ["BWplus_building", true, true];
+playSound "BWplus_SprayCan_sound";
 
 BWplus_buildHelipadCallback = {
 	private ["_pad","_pos", "_dir", "_light", "_player", "_items"];
@@ -31,6 +32,7 @@ BWplus_buildHelipadCallback = {
 
 
  	[_player, "AmovPknlMstpSrasWrflDnon", 1] call AGM_Core_fnc_doAnimation;
+
  	_player setVariable ["BWplus_building", false, true];
  	_box setVariable ["BWplus_boxEmpty", true, true];
  	_box setvariable ["BWplus_padItems", _items, true];

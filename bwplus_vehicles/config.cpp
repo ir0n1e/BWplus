@@ -893,7 +893,6 @@ class CfgVehicles {
 		};	
 	};
 
-
 	class Car_F;
     class Truck_F: Car_F {
     	class AGM_SelfActions {
@@ -907,6 +906,7 @@ class CfgVehicles {
     	};
     };
 };
+
 class CfgWeapons {
 	class ItemCore;
 	class InventoryItem_Base_F;
