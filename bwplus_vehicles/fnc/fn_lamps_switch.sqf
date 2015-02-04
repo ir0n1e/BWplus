@@ -69,4 +69,4 @@ fn_lamps_callback = {
 	};
 };
 
-[_this, "fn_lamps_callback", nil, true] call BIS_fnc_MP;
+[_this, "fn_lamps_callback", 2] call AGM_Core_fnc_execRemoteFnc;

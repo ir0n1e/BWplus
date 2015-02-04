@@ -791,7 +791,6 @@ class CfgVehicles {
 		mapSize = 0.7;
 		accuracy = 0.2;
 		vehicleClass = "BWplus_Items";
-		destrType = "DesturctNo";
 		scope = 2;
 		class eventHandlers {
 		 	Init = "_this call BWplus_vehicles_fnc_lamps_switch";
@@ -824,7 +823,6 @@ class CfgVehicles {
 		mapSize = 0.7;
 		accuracy = 0.2;
 		vehicleClass = "BWplus_Items";
-		destrType = "DesturctNo";
 		scope = 2;
 	};
 
