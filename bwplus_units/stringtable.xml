@@ -29,5 +29,9 @@
       <English>Marksman Fernspäher</English>
       <German>Scharfschütze Fernspäher</German>
     </Key>
+    <Key ID="STR_BWplus_Recon_Radioman">
+      <English>Radioman Fernspäher</English>
+      <German>Funker Fernspäher</German>
+    </Key>
   </Package>
 </Project>

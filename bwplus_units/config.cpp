@@ -1,22 +1,24 @@
 class CfgPatches {
 	class BWplus_units {
 		units[] = {
-			"SpecOps_Fleck", 
-			"SpecOps_Tropen",
-			"BWplus_Recon_Marksman_Tropentarn",
-			"BWplus_Recon_Marksman_Flecktarn",
-			"BWplus_Recon_TL_Tropentarn",
-			"BWplus_Recon_TL_Flecktarn",
-			"BWplus_Recon_CombatLifeSaver_Tropentarn",
-			"BWplus_Recon_CombatLifeSaver_Flecktarn",
-			"BWplus_Recon_Pioneer_Tropentarn",
-			"BWplus_Recon_Pioneer_Flecktarn",
-			"BWplus_Recon_Spotter_Tropentarn",
-			"BWplus_Recon_Spotter_Flecktarn",
+			"BWplus_Motorized_Fleck",
+			"BWplus_Motorized_Tropen",
 			"BWplus_Pioneer_Flecktarn",
 			"BWplus_Pioneer_Tropentarn",
-			"BWplus_Motorized_Fleck",
-			"BWplus_Motorized_Tropen"
+			"BWplus_Radioman_Flecktarn",
+			"BWplus_Radioman_Tropentarn",
+			"BWplus_Recon_CombatLifeSaver_Flecktarn",
+			"BWplus_Recon_CombatLifeSaver_Tropentarn",
+			"BWplus_Recon_Marksman_Flecktarn",
+			"BWplus_Recon_Marksman_Tropentarn",
+			"BWplus_Recon_Pioneer_Flecktarn",
+			"BWplus_Recon_Pioneer_Tropentarn",
+			"BWplus_Recon_Spotter_Flecktarn",
+			"BWplus_Recon_Spotter_Tropentarn",
+			"BWplus_Recon_TL_Flecktarn",
+			"BWplus_Recon_TL_Tropentarn",
+			"SpecOps_Fleck", 
+			"SpecOps_Tropen"
 		};
 		weapons[] = {};
 		requiredVersion = 0.1;
@@ -161,6 +163,35 @@ class CfgVehicles {
 		respawnLinkedItems[] = {"BWplus_LCG_shemagh_Sand","BWA3_Vest_Rifleman1_Tropen","BWplus_Cap_Sand","BWA3_ItemNavipad","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 	};
 
+	class BWplus_Recon_Radioman_Flecktarn: BWplus_Recon_Spotter_Flecktarn {
+		displayName = "$STR_BWplus_Recon_Radioman";
+		author = "BWplus";
+		vehicleClass = "BWplus_VehClass_SpecOps_Fleck"; 
+		uniformClass = "BWA3_Uniform3_Fleck";
+		weapons[] = {"BWplus_G36K_SF_SD_Fleck","BWA3_P8","Throw","Put","BWA3_Vector"};
+		respawnWeapons[] = {"BWplus_G36K_SF_SD_Fleck","BWA3_P8","Throw","Put","BWA3_Vector"};
+		items[] =  {"AGM_Morphine","AGM_Morphine","AGM_Morphine","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_NVG_Wide","Laserbatteries"};
+		respawnitems[] =  {"AGM_Morphine","AGM_Morphine","AGM_Morphine","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_NVG_Wide","Laserbatteries"};
+		linkedItems[] = {"BWplus_LCG_shemagh_Green","BWA3_Vest_Rifleman1_Fleck","BWplus_Cap_Green","BWA3_ItemNavipad","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+		respawnLinkedItems[] = {"BWplus_LCG_shemagh_Green","BWA3_Vest_Rifleman1_Fleck","BWA3_Booniehat_Fleck","BWA3_ItemNavipad","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+		magazines[] = {"BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_15Rnd_9x19_P8","BWA3_15Rnd_9x19_P8","BWA3_15Rnd_9x19_P8","BWA3_DM51A1","BWA3_DM25"};
+		respawnmagazines[] = {"BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_15Rnd_9x19_P8","BWA3_15Rnd_9x19_P8","BWA3_15Rnd_9x19_P8","BWA3_DM51A1","BWA3_DM25"};
+		class eventHandlers {
+			Init = "(_this select 0) call compile preprocessFileLineNumbers '\BWplus_units\scripts\Radio.sqf'";
+		};
+	};
+
+	class BWplus_Recon_Radioman_Tropentarn: BWplus_Recon_Radioman_Flecktarn {
+		author = "BWplus";
+		vehicleClass = "BWplus_VehClass_SpecOps_Tropen"; 
+		uniformClass = "BWA3_Uniform3_Tropen";
+		backpack = "BWplus_Kitbag_pio_Sand";
+		weapons[] = {"BWplus_G36K_SF_SD_Tropen","BWA3_P8","Throw","Put","BWA3_Vector"};
+		respawnWeapons[] = {"BWplus_G36K_SF_SD_Tropen","BWA3_P8","Throw","Put","BWA3_Vector"};
+		linkedItems[] = {"BWplus_LCG_shemagh_Sand","BWA3_Vest_Rifleman1_Tropen","BWA3_Booniehat_Tropen","BWA3_ItemNavipad","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+		respawnLinkedItems[] = {"BWplus_LCG_shemagh_Sand","BWA3_Vest_Rifleman1_Tropen","BWplus_Cap_Sand","BWA3_ItemNavipad","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+	};
+
 	class BWA3_CombatLifeSaver_Fleck;
 	class BWplus_Recon_CombatLifeSaver_Flecktarn: BWA3_CombatLifeSaver_Fleck {
 		displayName = "$STR_BWplus_Recon_Medic";
@@ -283,6 +314,12 @@ class CfgGroups {
 						side = 1;
 						vehicle = "BWplus_Recon_Marksman_Flecktarn";
 					};
+					class Unit5 {
+						position[] = {25, 0, 0};
+						rank = "CORPORAL";
+						side = 1;
+						vehicle = "BWplus_Recon_Radioman_Flecktarn";
+					};
 				};
 			};
 			class SpecOps_Tropen {
@@ -321,6 +358,12 @@ class CfgGroups {
 						rank = "CORPORAL";
 						side = 1;
 						vehicle = "BWplus_Recon_Marksman_Tropentarn";
+					};
+					class Unit5 {
+						position[] = {25, 0, 0};
+						rank = "CORPORAL";
+						side = 1;
+						vehicle = "BWplus_Recon_Radioman_Tropentarn";
 					};
 				};
 			};
