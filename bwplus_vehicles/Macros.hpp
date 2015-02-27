@@ -59,7 +59,7 @@
 #define MACRO_DRAGBOAT \
   class BWplus_DragBoat { \
     displayName = "$STR_AGM_Drag_StartDrag"; \
-    distance = 4; \
+    distance = 5; \
     condition = "!(AGM_player call AGM_Drag_fnc_isDraggingObject)"; \
     conditionShow = "[AGM_Interaction_Target, AGM_player] call AGM_Drag_fnc_isDraggable"; \
     statement = "[AGM_Interaction_Target, AGM_player] call BWplus_vehicles_fnc_dragBoat"; \
@@ -73,7 +73,7 @@
   class BWplus_UnloadBoat { \
     displayName = "$STR_BWplus_Vehicles_UnloadBoat"; \
     distance = 4; \
-    condition = "(getPosASL AGM_Logistics_targetVehicle select 2 < 10)"; \
+    condition = "(getPosASL AGM_Logistics_targetVehicle select 2 <= 18)"; \
     conditionShow = "[AGM_Logistics_targetVehicle] call BWplus_vehicles_fnc_hasLoadedBoat"; \
     statement = "[AGM_Logistics_targetVehicle] call BWplus_vehicles_fnc_unloadBoat"; \
     showDisabled = 0; \
