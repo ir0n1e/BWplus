@@ -8,5 +8,5 @@ _player setVariable ["BWplus_communications_isConnected", false];
 _satCom setVariable ["BWplus_communications_isConnected", false];
 
 if (alive _player) then {
-	["Satcom Disconnected", true, 2, 1] call AGM_Core_fnc_displayText;
+	[localize "STR_BWplus_Satcom_disConnected", true, 2, 1] call AGM_Core_fnc_displayText;
 };

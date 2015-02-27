@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project name="BWplus">
+  <Package name="Communications">
+    <Key ID="STR_BWplus_Satcom_Satcom">
+      <English>[BWplus] Satcom</English>
+      <German>[BWplus] Satcom</German>
+    </Key>
+     <Key ID="STR_BWplus_Satcom_checkConnection">
+      <English>Check Connecktion</English>
+      <German>Verbindung übeprüfen</German>
+    </Key>
+    <Key ID="STR_BWplus_Satcom_Connect">
+      <English>Connect Satcom</English>
+      <German>Satcom verbinden</German>
+    </Key>
+     <Key ID="STR_BWplus_Satcom_Disconnect">
+      <English>Disconnect Satcom</English>
+      <German>Satcom trennen</German>
+    </Key>
+    <Key ID="STR_BWplus_Satcom_RotateClockwise">
+      <English>Rotate Satcom (CW)</English>
+      <German>Satcom drehen (rechts)</German>
+    </Key>
+     <Key ID="STR_BWplus_Satcom_RotateCounterclockwise">
+      <English>Rotate Satcom (CCW)</English>
+      <German>Satcom drehen (links)</German>
+    </Key>
+     <Key ID="STR_BWplus_Satcom_Connected">
+      <English>Satcom connected</English>
+      <German>Satcom verbunden</German>
+    </Key>
+     <Key ID="STR_BWplus_Satcom_Connected">
+      <English>Satcom disconnected</English>
+      <German>Satcom getrennt</German>
+    </Key>
+    <Key ID="STR_BWplus_Satcom_Signal">
+      <English>Signal</English>
+      <German>Signal</German>
+    </Key>
+  </Package>
+</Project>
