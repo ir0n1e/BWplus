@@ -34,6 +34,7 @@ BWplus_dropBoatCallback = {
     detach _item;
     _item enableSimulationGlobal true;
     _item hideobjectGlobal false;
+    [_item, "{{_x reveal _this} forEach allUnits}", 2] call AGM_Core_fnc_execRemoteFnc;
     _item setPosASL _position;
 };
 
