@@ -56,7 +56,7 @@ _this spawn {
 	};
 
 	//edit Ir0n1E 'drag boat'
-	_attachPoint = [0, 3, ((_draggedObject modelToWorld [0,0,0]) select 2) - ((_unit modelToWorld [0,0,0]) select 2)];
+	_attachPoint = [0, 3.5, ((_draggedObject modelToWorld [0,0,0]) select 2) - ((_unit modelToWorld [0,0,0]) select 2)];
 	_draggedObject attachTo [_unit, _attachPoint];
 
 	_actionID = _unit getVariable ["AGM_Drag_ReleaseActionID", -1];

@@ -145,7 +145,7 @@ class CfgVehicles {
 	      	};
       	};
     };
-    
+  
     class FlagCarrier;
     class BWplus_Flag_Ger: FlagCarrier {
     	displayName = "Flag GER";
@@ -354,14 +354,18 @@ class CfgVehicles {
 		};
 	};
 
-	class Boat_F;
+	class Ship_F;
+	class Boat_F: Ship_F {
+		class AGM_Actions;
+	};
+	
 	class Rubber_duck_base_F: Boat_F {
 		AGM_Vehicle_Cargo = 1;
 		AGM_Size = 12;
 		class eventHandlers {
 		 	Init = "(_this select 0) setVariable ['AGM_useWeight', false];";
 		};
-		class AGM_Actions {
+		class AGM_Actions: AGM_Actions {
 			MACRO_DRAGBOAT
 			MACRO_LOADABLE
 		};
@@ -726,13 +730,13 @@ class CfgVehicles {
 		displayName = "$STR_BWplus_Vehicles_Net_Dismantled";
 		author = "BWplus";
 		vehicleClass = "BWplus_Items";
-		//faction = "Default";
+		faction = "Default";
 		icon = "\A3\Structures_F\Mil\Shelters\Data\UI\map_CamoNet_CA.paa";
 		scope = 2;
 		scopeCurator = 2;
-		simulation = "ItemMineDetector";
+		simulation = "house";
 		class TransportItems {
-			class BWplus_item_CamoNet {
+			class BWplus_Item_CamoNet {
 				name = "BWplus_Item_CamoNet";
 				count = 1;
 			};
@@ -891,7 +895,6 @@ class CfgVehicles {
 		};	
 	};
 
-	class Car_F;
     class Truck_F: Car_F {
     	class AGM_SelfActions {
     		MACRO_UNLOADBOAT
@@ -912,13 +915,12 @@ class CfgWeapons {
 	class BWplus_Item_CamoNet: ItemCore {
 		displayName = "$STR_BWplus_Item_CamoNet";
 		scope = 2;
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
 		picture = "\A3\Structures_F\Mil\Shelters\Data\UI\map_CamoNet_CA.paa";
+		simulation = "ItemMineDetector";
+		type = 4096;		
 		class ItemInfo: InventoryItem_Base_F {
       		mass = 80;
-     		type = 401;//4;
-      		uniformModel = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
-      		simulation = "ItemMineDetector";
       	};
 	};
 };
