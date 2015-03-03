@@ -253,14 +253,16 @@ class CfgVehicles {
 			MACRO_ADDITEM(BWplus_Shovel, 2)
 		};
 	};
-	class BWplus_Box_Items: BWplus_Box_Exp {
+	class BWplus_Box_Items: Box_NATO_Support_F {
     	author = "BWPlus";
 	    displayName = "$STR_BWplus_Vehicles_box_items";
+	    transportmaxmagazines = 9001;
+    	transportmaxbackbacks = 0;
+    	maximumload = 2000;
 		class TransportMagazines {};
 		class TransportWeapons {};
 		class TransportItems {
 			MACRO_ADDITEM(BWplus_Item_CamoNet,10)
-			MACRO_ADDITEM(BWplus_Shovel,10)
 		};
 	};
 	class BWplus_Box_AMMO556: BWplus_Box_Exp {

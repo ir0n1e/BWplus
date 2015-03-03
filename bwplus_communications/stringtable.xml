@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Project name="BWplus">
   <Package name="Communications">
-    <Key ID="STR_BWplus_Satcom_Satcom">
+    <Key ID="STR_BWplus_Satcom">
       <English>[BWplus] Satcom</English>
       <German>[BWplus] Satcom</German>
+    </Key>
+    <Key ID="STR_BWplus_Item_Satcom">
+      <English>[BWplus] Satcom Bag</English>
+      <German>[BWplus] Satcom Tasche</German>
     </Key>
      <Key ID="STR_BWplus_Satcom_checkConnection">
       <English>Check Connecktion</English>
@@ -36,6 +40,22 @@
     <Key ID="STR_BWplus_Satcom_Signal">
       <English>Signal</English>
       <German>Signal</German>
+    </Key>
+    <Key ID="STR_BWplus_communications_buildSatcom">
+      <English>Build Satcom</English>
+      <German>Satcom aufbauen</German>
+    </Key>
+     <Key ID="STR_BWplus_communications_buildingSatcom">
+      <English>Building Satcom</English>
+      <German>Baue Satcom auf</German>
+    </Key>
+    <Key ID="STR_BWplus_communications_dismantleSatcom">
+      <English>Dismantle Satcom</English>
+      <German>Satcom abbauen</German>
+    </Key>
+    <Key ID="STR_BWplus_communications_dismantlingSatcom">
+      <English>Dismantling Satcom</English>
+      <German>Baue Satcom ab</German>
     </Key>
   </Package>
 </Project>
