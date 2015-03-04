@@ -2,12 +2,24 @@
 <Project name="BWplus">
   <Package name="toolsandstructures">
     <Key ID="STR_BWplus_Shovel">
-      <English>Folding Shovel (BWplus)</English>
-      <German>Klappspaten (BWplus)</German>
+      <English>[BW.plus] Folding Shovel</English>
+      <German>[BW.plus] Klappspaten</German>
+    </Key>
+    <Key ID="STR_BWplus_Shovel_Description">
+      <English>Builds trenches and foxholes</English>
+      <German>Baut Unterstände und Schützenlöcher</German>
     </Key>
     <Key ID="STR_BWplus_SprayCan">
-      <English>Spray Can White (BWplus)</English>
-      <German>Sprühdose weiß (BWplus)</German>
+      <English>[BW.plus] Spray Can White</English>
+      <German>[BW.plus] Sprühdose weiß</German>
+    </Key>
+     <Key ID="STR_BWplus_SprayCan_Empty">
+      <English>[BW.plus] Spray Can empty</English>
+      <German>[BW.plus] Sprühdose leer</German>
+    </Key>
+    <Key ID="STR_BWplus_SprayCan_Description">
+      <English>nipa Markierungslack, Kreide weiß</English>
+      <German>nipa Markierungslack, Kreide weiß</German>
     </Key>
     <Key ID="STR_BWplus_CamoNet">
       <English>Camonet (BWplus)</English>

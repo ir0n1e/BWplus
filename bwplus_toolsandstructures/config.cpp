@@ -9,6 +9,7 @@ class CfgPatches {
 			BWplus_Flag_Ger,
 			BWplus_Item_Shovel, 
 			BWplus_Item_Spraycan,
+			BWplus_Spraycan_Empty,
 			BWplus_Kitbag_pio_Green,
 			BWplus_Kitbag_pio_Sand
 		};
@@ -341,17 +342,26 @@ class CfgWeapons {
 	class InventoryItem_Base_F;
 
   	class BWplus_Spraycan: AGM_ItemCore {
-	    displayname = "Spraycan";
-	   // descriptionshort = "$STR_AGM_Medical_Bandage_Description";
+	    displayname = "$STR_BWplus_SprayCan";
+	    descriptionshort = "$TR_BWplus_SprayCan_Description";
 	    model = "\bwplus_toolsandstructures\bwplus_spraycan.p3d";
 	    picture = "\bwplus_toolsandstructures\UI\bwplus_spraycan_ca.paa";
 	    scope = 2;
 	    class ItemInfo: InventoryItem_Base_F {
-	    	mass = 11.5;
+	    	mass = 13.5;
     	};
   	};
+
+  	class BWplus_Spraycan_Empty: BWplus_Spraycan {
+  		displayname = "$STR_BWplus_SprayCan_empty";
+  		class ItemInfo: InventoryItem_Base_F {
+	    	mass = 2.5;
+    	};
+  	};
+
   	class BWplus_Shovel: AGM_ItemCore {
 		displayName = "$STR_BWplus_Shovel";
+	    descriptionshort = "$STR_BWplus_Shovel_Description";
 		scope = 2;
 		model = "\A3\Structures_F_EPA\Items\Tools\Shovel_F.p3d";
 		picture = "\bwplus_toolsandstructures\UI\BWplus_Shovel_ca.paa";
