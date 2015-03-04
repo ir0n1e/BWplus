@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project name="BWplus">
+  <Package name="toolsandstructures">
+    <Key ID="STR_BWplus_Shovel">
+      <English>Folding Shovel (BWplus)</English>
+      <German>Klappspaten (BWplus)</German>
+    </Key>
+    <Key ID="STR_BWplus_SprayCan">
+      <English>Spray Can White (BWplus)</English>
+      <German>Sprühdose weiß (BWplus)</German>
+    </Key>
+    <Key ID="STR_BWplus_CamoNet">
+      <English>Camonet (BWplus)</English>
+      <German>Tarnnetz (BWplus)</German>
+    </Key>
+    <Key ID="STR_BWplus_toolsandstructures_Crate">
+      <English>Build Trench >></English>
+      <German>Stellung ausheben >></German>
+    </Key>
+    <Key ID="STR_BWplus_toolsandstructures_buildCrate">
+      <English>Build Foxhole</English>
+      <German>Schützenloch ausheben</German>
+    </Key>
+    <Key ID="STR_BWplus_toolsandstructures_DismantleCrate">
+      <English>Dismantle Foxhole</English>
+      <German>Schützenloch abbauen</German>
+    </Key>
+    <Key ID="STR_BWplus_toolsandstructures_Crater">
+      <English>[BWplus] Trench</English>
+      <German>[BWplus] Schützenloch</German>
+    </Key>
+    <Key ID="STR_BWplus_toolsandstructures_DismantlingCrater">
+      <English>Dismentling foxhole</English>
+      <German>Baue Stellung ab</German>
+    </Key>
+    <Key ID="STR_BWplus_toolsandstructures_buildCrateNet">
+      <English>Build Trench (Net)</English>
+      <German>Unterstand ausheben</German>
+    </Key>
+     <Key ID="STR_BWplus_toolsandstructures_buildNet">
+      <English>Build Camonet</English>
+      <German>Tarnnetz aufbauen</German>
+    </Key>
+    <Key ID="STR_BWplus_toolsandstructures_DismantleNet">
+      <English>Dismantle Camonet</English>
+      <German>Tarnnetz abbauen</German>
+    </Key>
+    <Key ID="STR_BWplus_toolsandstructures_LightsOn">
+      <English>Lights on</English>
+      <German>Strahler an</German>
+    </Key>
+    <Key ID="STR_BWplus_toolsandstructures_Net_Dismantled">
+      <English>[BWplus] Camonet Dismantled</English>
+      <German>[BWplus] Tarnnetz Demontiert</German>
+    </Key>
+     <Key ID="STR_BWplus_toolsandstructures_Net">
+      <English>[BWplus] Camonet</English>
+      <German>[BWplus] Tarnnetz</German>
+    </Key>
+     <Key ID="STR_BWplus_toolsandstructures_Lights">
+      <English>[BWplus] Lights</English>
+      <German>[BWplus] 2000 Watt Strahler</German>
+    </Key>
+    <Key ID="STR_BWplus_toolsandstructures_BuildingNet">
+      <English>Building Camo Net</English>
+      <German>Baue Tarnnetz auf</German>
+    </Key>
+     <Key ID="STR_BWplus_toolsandstructures_DismantlingNet">
+      <English>Dismentling Camo Net</English>
+      <German>Baue Tarnnetz ab</German>
+    </Key>
+    <Key ID="STR_BWplus_toolsandstructures_BuildingCrater">
+      <English>Building foxhole</English>
+      <German>Hebe Stellung aus</German>
+    </Key>
+     <Key ID="STR_BWplus_toolsandstructures_BuildingHelipad">
+      <English>Building Helipad</English>
+      <German>Baue Helipad</German>
+    </Key>
+     <Key ID="STR_BWplus_toolsandstructures_DismantlingHelipad">
+      <English>Dismantling Helipad</English>
+      <German>Baue Helipad ab</German>
+    </Key>
+     <Key ID="STR_BWplus_toolsandstructures_BuildHelipad">
+      <English>Build Helipad</English>
+      <German>Helipad aufbauen</German>
+    </Key>
+     <Key ID="STR_BWplus_toolsandstructures_DismantleHelipad">
+      <English>Dismantle Helipad</English>
+      <German>Helipad abbauen</German>
+    </Key>
+      <Key ID="STR_BWplus_toolsandstructures_LightsOff">
+      <English>Lights off</English>
+      <German>Strahler aus</German>
+    </Key>
+    <Key ID="STR_BWplus_toolsandstructures_box_Helipad">
+      <English>[BWplus] Helipad Box</English>
+      <German>[BWplus] Helipad Box</German>
+    </Key>
+    <Key ID="STR_BWplus_toolsandstructures_box_items">
+      <English>[BWplus] Items</English>
+      <German>[BWplus] Items</German>
+    </Key>
+  </Package>
+</Project>

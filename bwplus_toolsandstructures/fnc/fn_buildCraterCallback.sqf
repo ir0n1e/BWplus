@@ -1,4 +1,4 @@
-#define ITEMNET "BWplus_Item_CamoNet"
+#define ITEMNET "BWplus_CamoNet_Dismantled"
 
 _craterthings = _this select 0;
 _crater = _craterthings select 0;

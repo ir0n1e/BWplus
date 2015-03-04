@@ -83,5 +83,5 @@ if ((AGM_player getvariable "BWplus_crater_count") >= _maxcrater) exitwith {
 	[_items, _crater_count, AGM_player] call BWplus_fnc_buildCraterAbort
 };
 */
- [_buildtime, [_items, _crater_count, AGM_player, _buildwithNet], "BWplus_vehicles_fnc_buildCraterCallback", localize "STR_BWplus_Vehicles_BuildingCrater","BWplus_vehicles_fnc_buildCraterAbort"] call AGM_Core_fnc_progressBar;
+ [_buildtime, [_items, _crater_count, AGM_player, _buildwithNet], "BWplus_toolsandstructures_fnc_buildCraterCallback", localize "STR_BWplus_toolsandstructures_BuildingCrater","BWplus_toolsandstructures_fnc_buildCraterAbort"] call AGM_Core_fnc_progressBar;
  [_buildtime,_items, _buildwithNet] spawn  BWplus_buildCrater;

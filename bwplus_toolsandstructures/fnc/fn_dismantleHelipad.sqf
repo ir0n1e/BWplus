@@ -21,4 +21,4 @@ BWplus_dismantleHelipadCallback = {
 	_box setVariable ["BWplus_boxEmpty", false, true];
 };
 
-[DISMANTLETIME, _this, "BWplus_dismantleHelipadCallback", localize "STR_BWplus_Vehicles_DismantlingHelipad", "BWplus_vehicles_fnc_buildAbort"] call AGM_Core_fnc_progressBar;
+[DISMANTLETIME, _this, "BWplus_dismantleHelipadCallback", localize "STR_BWplus_toolsandstructures_DismantlingHelipad", "BWplus_core_fnc_BuildAbort"] call AGM_Core_fnc_progressBar;

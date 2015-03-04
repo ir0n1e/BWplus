@@ -15,7 +15,7 @@ BWplus_dismantleSatcomCallback = {
  	_satcom = _this select 0;
  	_player = _this select 1;
 
- 	_pos = position _player;
+ 	_pos = getpos _satcom;
  	deletevehicle _satcom;
  	_net = createVehicle [SATCOM, _pos, [], 0, "CAN_COLLIDE"];
  	[_player, "AmovPknlMstpSrasWrflDnon", 1] call AGM_Core_fnc_doAnimation;

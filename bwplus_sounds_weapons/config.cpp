@@ -3,10 +3,10 @@ class CfgPatches {
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.100000;
-		requiredAddons[] = {"A3_Weapons_F","BWA3_Weapons"};
-		version = "1.3";
-    	versionStr = "1.3";
-    	versionAr[] = {1,3,0};
+		requiredAddons[] = {BWplus_core, A3_Weapons_F};
+		version = "1.4";
+    	versionStr = "1.4";
+    	versionAr[] = {1,4,0};
     	author[] = {"EduardLaser", "Ir0n1E"};
     	authorUrl = "http://ntalpha.de";
 	};

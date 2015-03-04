@@ -1,31 +1,37 @@
 class CfgPatches {
 	class BWplus_units {
 		units[] = {
-			"BWplus_Motorized_Fleck",
-			"BWplus_Motorized_Tropen",
-			"BWplus_Pioneer_Flecktarn",
-			"BWplus_Pioneer_Tropentarn",
-			"BWplus_Radioman_Flecktarn",
-			"BWplus_Radioman_Tropentarn",
-			"BWplus_Recon_CombatLifeSaver_Flecktarn",
-			"BWplus_Recon_CombatLifeSaver_Tropentarn",
-			"BWplus_Recon_Marksman_Flecktarn",
-			"BWplus_Recon_Marksman_Tropentarn",
-			"BWplus_Recon_Pioneer_Flecktarn",
-			"BWplus_Recon_Pioneer_Tropentarn",
-			"BWplus_Recon_Spotter_Flecktarn",
-			"BWplus_Recon_Spotter_Tropentarn",
-			"BWplus_Recon_TL_Flecktarn",
-			"BWplus_Recon_TL_Tropentarn",
-			"SpecOps_Fleck", 
-			"SpecOps_Tropen"
+			BWplus_Motorized_Fleck,
+			BWplus_Motorized_Tropen,
+			BWplus_Pioneer_Flecktarn,
+			BWplus_Pioneer_Tropentarn,
+			BWplus_Radioman_Flecktarn,
+			BWplus_Radioman_Tropentarn,
+			BWplus_Recon_CombatLifeSaver_Flecktarn,
+			BWplus_Recon_CombatLifeSaver_Tropentarn,
+			BWplus_Recon_Marksman_Flecktarn,
+			BWplus_Recon_Marksman_Tropentarn,
+			BWplus_Recon_Pioneer_Flecktarn,
+			BWplus_Recon_Pioneer_Tropentarn,
+			BWplus_Recon_Spotter_Flecktarn,
+			BWplus_Recon_Spotter_Tropentarn,
+			BWplus_Recon_TL_Flecktarn,
+			BWplus_Recon_TL_Tropentarn,
+			SpecOps_Fleck, 
+			SpecOps_Tropen,
+			BWplus_Kitbag_pio_Green,
+			BWplus_Kitbag_pio_Sand
 		};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"bwa3_units", "BWplus_weapons","BWplus_vehicles"};
-	 	version = "1.3";
-    	versionStr = "1.3";
-    	versionAr[] = {1,3,0};
+		requiredAddons[] = {
+			BWplus_core,
+			BWplus_weapons,
+			BWplus_vehicles
+		};
+	 	version = "1.4";
+    	versionStr = "1.4";
+    	versionAr[] = {1,4,0};
     	author[] = {"EduardLaser", "Ir0n1E"};
     	authorUrl = "http://ntalpha.de";
 	};
@@ -58,11 +64,40 @@ class CfgVehicleClasses {
 	};
 };
 
+#include <Macros.hpp>
+
 class CfgVehicles {
 	class Man;
 	class CAManBase: Man {
 		class eventHandlers {
 		 	Init = "(_this select 0) execVM 'bwplus_units\scripts\init.sqf';";
+		};
+    };
+    
+    class B_Kitbag_rgr;
+    class B_Kitbag_cbr;
+    class BWplus_Kitbag_pio_Green: B_Kitbag_rgr {
+    	displayName = "Kitbag Pioneer Green";
+		author = "BWplus";
+		class TransportMagazines {
+			MACRO_ADDMAGAZINE(APERSTripMine_Wire_Mag, 2)
+        	MACRO_ADDMAGAZINE(DemoCharge_Remote_Mag, 3)
+		};
+		class TransportItems {
+			MACRO_ADDITEM(AGM_Clacker, 1)
+			MACRO_ADDITEM(AGM_DefusalKit, 1)
+		};
+    };
+    class BWplus_Kitbag_pio_Sand: B_Kitbag_cbr {
+    	displayName = "Kitbag Pioneer Sand";
+		author = "BWplus";
+		class TransportMagazines {
+			MACRO_ADDMAGAZINE(APERSTripMine_Wire_Mag, 2)
+        	MACRO_ADDMAGAZINE(DemoCharge_Remote_Mag, 3)
+		};
+		class TransportItems {
+			MACRO_ADDITEM(AGM_Clacker, 1)
+			MACRO_ADDITEM(AGM_DefusalKit, 1)
 		};
     };
 

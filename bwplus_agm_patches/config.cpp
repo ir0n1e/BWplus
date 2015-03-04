@@ -3,10 +3,10 @@ class CfgPatches {
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.100000;
-		requiredAddons[] = {"BWA3_Weapons", "AGM_Core", "AGM_Overheating", "AGM_Aircraft", "AGM_Logistics"};
-		version = "1.3";
-        versionStr = "1.3";
-        versionAr[] = {1,3,0};
+		requiredAddons[] = {BWplus_core, AGM_Overheating, AGM_Aircraft, AGM_Logistics};
+		version = "1.4";
+        versionStr = "1.4";
+        versionAr[] = {1,4,0};
         author[] = {"EduardLaser", "Ir0n1E"};
         authorUrl = "http://ntalpha.de";
     };

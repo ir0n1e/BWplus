@@ -8,7 +8,7 @@ _player = _this select 1;
 [_player, "AinvPknlMstpSnonWnonDr_medic5", 1] call AGM_Core_fnc_doAnimation;
 _player setVariable ["BWplus_building", true, true];
 
-playSound3D ["BWplus_weapons\sounds\spray.wss", _player, false, getPosASL _player, 10, 1, 3];
+playSound3D ["BWplus_weapons\sounds\Spray.wss", _player, false, getPosASL _player, 15, 1, 4];
 
 BWplus_buildHelipadCallback = {
 	private ["_pad","_pos", "_dir", "_light", "_player", "_items"];
@@ -39,4 +39,4 @@ BWplus_buildHelipadCallback = {
  	_box setvariable ["BWplus_padItems", _items, true];
 };
 
- [BUILDTIME, _this, "BWplus_buildHelipadCallback", localize "STR_BWplus_Vehicles_BuildingHelipad", "BWplus_vehicles_fnc_buildAbort"] call AGM_Core_fnc_progressBar;
+ [BUILDTIME, _this, "BWplus_buildHelipadCallback", localize "STR_BWplus_toolsandstructures_BuildingHelipad", "BWplus_core_fnc_BuildAbort"] call AGM_Core_fnc_progressBar;

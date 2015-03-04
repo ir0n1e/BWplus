@@ -8,16 +8,17 @@ _player = _this select 0;
 _player setVariable ["BWplus_building", true, true];
 
 BWplus_buildSatcomCallback = {
-	private ["_player", "_pos", "_net"];
+	private ["_player", "_net"];
  	_player = _this select 1;
-
+ 	_dir = getdir _player;
 	_player removeitem ITEMSATBAG;
- 	_pos = position _player;
- 	_net = createVehicle ["BWplus_Satcom", _pos, [], 0, "CAN_COLLIDE"];
- 	_net setdir (getdir _player)+180;
+
+
+ 	_net = createVehicle ["BWplus_Satcom", [_player, 0.6, _dir] call BIS_fnc_relPos, [], 0, "CAN_COLLIDE"];
+ 	_net setdir _dir;
  	[_player, "AmovPknlMstpSrasWrflDnon", 1] call AGM_Core_fnc_doAnimation;
  	_player setVariable ["BWplus_building", false, true];
 
 };
 
- [BUILDTIME, ["", _player], "BWplus_buildSatcomCallback", localize "STR_BWplus_communications_BuildingSatcom", "BWplus_vehicles_fnc_buildAbort"] call AGM_Core_fnc_progressBar;
+ [BUILDTIME, ["", _player], "BWplus_buildSatcomCallback", localize "STR_BWplus_communications_BuildingSatcom", "BWplus_core_fnc_BuildAbort"] call AGM_Core_fnc_progressBar;

@@ -3,7 +3,7 @@ class CfgPatches {
         units[] = {BWplus_SatCom, BWplus_Box_Items, BWplus_Item_Satbag};
         weapons[] = {BWplus_Satbag};
         requiredVersion = 0.1;
-        requiredAddons[] = {AGM_core, AGM_Interaction};
+        requiredAddons[] = {BWplus_core, AGM_Interaction};
         version = "1.4";
         versionStr = "1.4";
         versionAr[] = {1,4,0};

@@ -1,5 +1,5 @@
 #define BUILDTIME 10
-#define ITEMNET "BWplus_Item_CamoNet"
+#define ITEMNET "BWplus_CamoNet_Dismantled"
 
 private "_player";
 _player = _this select 0;
@@ -20,4 +20,4 @@ BWplus_buildNetCallback = {
 
 };
 
- [BUILDTIME, ["",_player], "BWplus_buildNetCallback", localize "STR_BWplus_Vehicles_BuildingNet", "BWplus_vehicles_fnc_buildAbort"] call AGM_Core_fnc_progressBar;
+ [BUILDTIME, ["",_player], "BWplus_buildNetCallback", localize "STR_BWplus_toolsandstructures_BuildingNet", "BWplus_core_fnc_BuildAbort"] call AGM_Core_fnc_progressBar;
