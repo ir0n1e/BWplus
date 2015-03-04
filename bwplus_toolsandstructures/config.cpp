@@ -37,11 +37,12 @@ class CfgFunctions {
 			class buildCrater;
 			class buildCraterCallback;
 			class buildNet;
-			class canbuildNet;
 			class canbuild;
+			class canbuildNet;
       		class buildCraterAbort;
       		class buildHelipad;
       		class dismantleCrater;
+      		class dismantleHelipad;
       		class dismantleNet;
       		class initCamoNet;
       		class initCrater;
@@ -77,7 +78,7 @@ class CfgVehicles {
 	  			    condition = "not (AGM_player getVariable 'BWplus_building') and {[AGM_player] call BWplus_toolsandstructures_fnc_canbuild}";
 				    statement = "[false] call BWplus_toolsandstructures_fnc_buildCrater";
 		      		icon = "bwplus_toolsandstructures\UI\bwplus_shovel_ca.paa";
-		      		showDisabled = 1; 
+		      		showDisabled = 0; 
 		      	};
 				class BWplus_BuildCraterBig {
 				    displayName = "$STR_BWplus_toolsandstructures_buildCrateNet";
@@ -85,7 +86,7 @@ class CfgVehicles {
 	  			    condition = "not (AGM_player getVariable 'BWplus_building') and {[AGM_player] call BWplus_toolsandstructures_fnc_canbuildNet} and {[AGM_player] call BWplus_toolsandstructures_fnc_canbuild}";
 				    statement = "[true] call BWplus_toolsandstructures_fnc_buildCrater";
 		      		icon = "\A3\Structures_F\Mil\Shelters\Data\UI\map_CamoNet_CA.paa";
-		      		showDisabled = 1; 
+		      		showDisabled = 0; 
 	      		};
 	      		class BWplus_buildNet {
 					displayName = "$STR_BWplus_toolsandstructures_buildNet";
@@ -147,6 +148,7 @@ class CfgVehicles {
 		scopeCurator = 2;
 		displayName = "$STR_BWplus_SprayCan";
 		vehicleClass = "BWplus_Items";
+		destrType = "DestructBuilding";
 
 		class TransportItems {
 			MACRO_ADDITEM(BWplus_Spraycan, 1)
@@ -208,8 +210,8 @@ class CfgVehicles {
 	
 	class CamoNet_INDP_F;
 	class BWplus_CamoNet: CamoNet_INDP_F {
-		displayName = "$STR_BWplus_Vehicles_Net";
-		descriptionShort = "$STR_BWplus_Vehicles_Net";
+		displayName = "$STR_BWplus_CamoNet";
+		descriptionShort = "$STR_BWplus_CamoNet";
 		author = "BWplus";
 		vehicleClass = "BWplus_Items";
 		faction = "Default";
@@ -225,8 +227,6 @@ class CfgVehicles {
 
 	class Lamps_base_F;
 	class Land_PortableLight_single_F: Lamps_base_F {
-		//displayName = "$STR_BWplus_Vehicles_Lights";
-		//author = "BWplus";
 		AGM_Size = 1;
 		icon = "BWplus_toolsandstructures\ui\bwplus_lamp_ca.paa";
 		picture = "BWplus_toolsandstructures\ui\bwplus_lamp_ca.paa";
@@ -241,7 +241,7 @@ class CfgVehicles {
 			MACRO_DRAGABLE
 			MACRO_ROTATE
 	    	class BWplus_Lamps_on {
-				displayName = "$STR_BWplus_Vehicles_LightsOn";
+				displayName = "$STR_BWplus_toolsandstructures_LightsOn";
 			    icon = "BWplus_toolsandstructures\UI\bwplus_lamp_ca.paa";
 			    priority = 0.5;
 			    distance = 5;
@@ -249,7 +249,7 @@ class CfgVehicles {
 			    statement = "[AGM_Interaction_Target] call BWplus_toolsandstructures_fnc_lamps_switch";
 	      	};
 			class BWplus_Lamps_off {
-			    displayName = "$STR_BWplus_Vehicles_LightsOff";
+			    displayName = "$STR_BWplus_toolsandstructures_LightsOff";
 			    icon = "BWplus_toolsandstructures\UI\bwplus_lamp_ca.paa";
 			    priority = 0.5;
 		    	distance = 5;
@@ -312,6 +312,8 @@ class CfgVehicles {
 		accuracy = 0.2;
 		vehicleClass = "BWplus_Items";
 		destrType = "DesturctNo";
+		transportmaxmagazines = 50;
+		maximumload = 2000;
 		class eventHandlers {
 		 	Init = "(_this select 0) setvariable ['BWplus_BoxEmpty', false, true]";
 		};
@@ -323,17 +325,26 @@ class CfgVehicles {
 				displayName = "$STR_BWplus_toolsandstructures_buildHelipad";
 			    priority = 0.5;
 			    distance = 5;
-			    condition = "!(AGM_Interaction_Target getVariable 'BWplus_BoxEmpty') and {!(AGM_player getVariable 'BWplus_building')}";
+			    conditionShow = "'BWplus_Spraycan' in (items AGM_Player) && {!(AGM_Interaction_Target getVariable ['BWplus_BoxEmpty', false])}";
+			    condition = "!(AGM_Interaction_Target getVariable ['BWplus_BoxEmpty', false]) && {!(AGM_player getVariable ['BWplus_building', false])} && {'BWplus_Spraycan' in (items AGM_Player)}";
 			    statement = "[AGM_Interaction_Target, AGM_player] call BWplus_toolsandstructures_fnc_buildHelipad";
 	      	};
 			class BWplus_dismantleHelipad {
 			    displayName = "$STR_BWplus_toolsandstructures_dismantleHelipad";
 			    priority = 0.5;
 		    	distance = 5;
-			    condition = "(AGM_Interaction_Target getVariable 'BWplus_BoxEmpty') and {!(AGM_player getVariable 'BWplus_building')}";
+		    	conditionShow = "'BWplus_Shovel' in (items AGM_Player) && {AGM_Interaction_Target getVariable ['BWplus_BoxEmpty', false]}";
+			    condition = "(AGM_Interaction_Target getVariable ['BWplus_BoxEmpty', false]) and {!(AGM_player getVariable ['BWplus_building', false])} && {'BWplus_Shovel' in (items AGM_Player)}";
 			    statement = "[AGM_Interaction_Target, AGM_player] call BWplus_toolsandstructures_fnc_dismantleHelipad";
 		    };	
 		};	
+		class TransportMagazines {};
+		class TransportBackpacks {};
+		class TransportWeapons {};
+		class TransportItems { 
+			MACRO_ADDITEM(BWplus_Spraycan, 2)
+			MACRO_ADDITEM(BWplus_Shovel, 1)
+		};
 	};
 };
 
@@ -343,7 +354,7 @@ class CfgWeapons {
 
   	class BWplus_Spraycan: AGM_ItemCore {
 	    displayname = "$STR_BWplus_SprayCan";
-	    descriptionshort = "$TR_BWplus_SprayCan_Description";
+	    descriptionshort = "$STR_BWplus_SprayCan_Description";
 	    model = "\bwplus_toolsandstructures\bwplus_spraycan.p3d";
 	    picture = "\bwplus_toolsandstructures\UI\bwplus_spraycan_ca.paa";
 	    scope = 2;

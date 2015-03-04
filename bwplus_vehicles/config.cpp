@@ -55,12 +55,10 @@ class CfgFunctions {
     	class BWplus_vehicles {
       		file = "BWplus_vehicles\fnc";
     		class buildFOBCallback;
-    		
     		class merlinInit;		
     		class pioFennekInit;
     		class saniFennekInit;
       		class buildFOB;
-
       		class canbuildFOB;
       		class clearCargo;
       		class dismantleFOB;

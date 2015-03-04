@@ -30,6 +30,8 @@ BWplus_buildHelipadCallback = {
 		_angel = (_angel + 90);
 		_items pushback _light;
 	};
+	_player removeitem "BWplus_Spraycan";
+	_player additem "BWplus_Spraycan_Empty";
 
 
  	[_player, "AmovPknlMstpSrasWrflDnon", 1] call AGM_Core_fnc_doAnimation;
