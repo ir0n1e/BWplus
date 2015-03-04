@@ -86,6 +86,7 @@ class CfgVehicles {
 		scope = 1;
 		scopecurator = 0;
 	};
+
 	class BWplus_Item_CamoNet_Dismantled;
 	class BWplus_CamoNet_Dismantled: BWplus_Item_CamoNet_Dismantled {
 		scope = 1;
