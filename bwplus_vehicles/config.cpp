@@ -2,30 +2,30 @@
 class CfgPatches {
 	class BWplus_vehicles {
 		units[] = {
-			"BWplus_Box_AMMO40mm",
-			"BWplus_Box_AMMO556",
-			"BWplus_Box_AMMO556_100Rnd",
-			"BWplus_Box_AMMO762_10Rnd",
-			"BWplus_Box_AMMO762_10Rnd",
-			"BWplus_Box_AMMO762_120Rnd",
-			"BWplus_Box_AMMO762_20Rnd",
-			"BWplus_Box_AMMOgrenade",
-			"BWplus_Box_Cargo",
-			"BWplus_Box_Items",
-			"BWplus_merlin",
-			"BWplus_Wildcat",
-			"BWplus_Offroad_Standard",
-			"BWplus_Offroad_Fldjgr",
-			"Fennek_Flecktarn",
-			"Fennek_Flecktarn_gmg",
-			"Fennek_Flecktarn_mg",
-			"Fennek_Flecktarn_pio",
-			"Fennek_Flecktarntarn_san",
-			"Fennek_Tropen",
-			"Fennek_Tropen_gmg",
-			"Fennek_Tropen_mg",
-			"Fennek_Tropen_pio",
-			"Fennek_Tropen_san"
+			BWplus_Box_AMMO40mm,
+			BWplus_Box_AMMO556,
+			BWplus_Box_AMMO556_100Rnd,
+			BWplus_Box_AMMO762_10Rnd,
+			BWplus_Box_AMMO762_10Rnd,
+			BWplus_Box_AMMO762_120Rnd,
+			BWplus_Box_AMMO762_20Rnd,
+			BWplus_Box_AMMOgrenade,
+			BWplus_Box_Cargo,
+			BWplus_Box_Items,
+			BWplus_merlin,
+			BWplus_Wildcat,
+			BWplus_Offroad_Standard,
+			BWplus_Offroad_Fldjgr,
+			BWplus_Fennek_Flecktarn,
+			BWplus_Fennek_Flecktarn_gmg,
+			BWplus_Fennek_Flecktarn_mg,
+			BWplus_Fennek_Flecktarn_pio,
+			BWplus_Fennek_Flecktarntarn_san,
+			BWplus_Fennek_Tropen,
+			BWplus_Fennek_Tropen_gmg,
+			BWplus_Fennek_Tropen_mg,
+			BWplus_Fennek_Tropen_pio,
+			BWplus_Fennek_Tropen_san
 		};
 		weapons[] = {};
 		requiredVersion = 0.1;
@@ -380,7 +380,7 @@ class CfgVehicles {
  	class I_MRAP_03_F: MRAP_03_base_F {
  		class AGM_Actions;
  	};
-	class Fennek_Flecktarn: I_MRAP_03_F {
+	class BWplus_Fennek_Flecktarn: I_MRAP_03_F {
 		displayName = "$STR_BWplus_Vehicles_Fennek";
 		author = "EduardLaser, Ir0n1E";
 		side = 1;
@@ -421,7 +421,7 @@ class CfgVehicles {
 			MACRO_OPENDOOR
 		};
 	};
-	class Fennek_Flecktarn_pio: I_MRAP_03_F {
+	class BWplus_Fennek_Flecktarn_pio: I_MRAP_03_F {
 		displayName = "$STR_BWplus_Vehicles_Fennek_pio";
 		author = "EduardLaser, Ir0n1E";
 		side = 1;
@@ -436,8 +436,8 @@ class CfgVehicles {
 		AGM_Vehicle_Cargo = 8;
 
 		class eventHandlers {
-			Init = "_this call BWplus_vehicles_fnc_pioFennekInit";
-		 	getin = "_this call BWplus_vehicles_fnc_getin";
+			Init = "_this call BWplus_vehicles_fnc_pioFennekInit;";
+		 	getin = "_this call BWplus_vehicles_fnc_getin;";
 		};
 		class TransportMagazines {
 			class _xx_BWA3_DM32_Orange {
@@ -468,7 +468,7 @@ class CfgVehicles {
 		};
 	};
 	
-    class Fennek_Flecktarn_mg: I_MRAP_03_hmg_F {
+    class BWplus_Fennek_Flecktarn_mg: I_MRAP_03_hmg_F {
 		displayName = "Fennek Kal.50";
 		author = "EduardLaser, Ir0n1E";
 		side = 1;
@@ -477,9 +477,6 @@ class CfgVehicles {
 		crew = "BWA3_Rifleman_Fleck";
 		hiddenSelections[] = {"camo1","camo2"};
 		hiddenSelectionsTextures[] = {"BWplus_vehicles\data\Fleck\fleck.paa","BWplus_vehicles\data\Fleck\fleck2.paa"};
-		class eventHandlers {
-			Init = "(_this select 0) setVariable [""left_door_open"",false,true];(_this select 0) setVariable [""right_door_open"",false,true];";
-		};
 		class TransportMagazines {
 			MACRO_ADDMAGAZINE(BWA3_30Rnd_556x45_G36,10)
 			MACRO_ADDMAGAZINE(BWA3_200Rnd_556x45,5)
@@ -500,7 +497,7 @@ class CfgVehicles {
 		};
 	};	
 
-	class Fennek_Flecktarn_gmg: I_MRAP_03_gmg_F {
+	class BWplus_Fennek_Flecktarn_gmg: I_MRAP_03_gmg_F {
 		displayName = "Fennek GMG";
 		author = "EduardLaser, Ir0n1E";
 		side = 1;
@@ -510,7 +507,6 @@ class CfgVehicles {
         hiddenSelections[] = {"camo1","camo2"};
 		hiddenSelectionsTextures[] = {"BWplus_vehicles\data\Fleck\fleck.paa","BWplus_vehicles\data\Fleck\fleck2.paa"};
 		class eventHandlers {
-			Init = "_this call BWplus_vehicles_fnc_saniFennecInit";
 		 	getin = "_this call BWplus_vehicles_fnc_getin";
 		};
 		class TransportMagazines {
@@ -532,7 +528,7 @@ class CfgVehicles {
 			MACRO_ADDWEAPON(BWA3_Pzf3_Loaded,2)
 		};
 	};
-	class Fennek_Flecktarn_san: I_MRAP_03_F {
+	class BWplus_Fennek_Flecktarn_san: I_MRAP_03_F {
 		displayName = "$STR_BWplus_Vehicles_Fennek_medic";
 		author = "EduardLaser, Ir0n1E";
 		side = 1;
@@ -545,9 +541,8 @@ class CfgVehicles {
 		transportMaxBackpacks = 4;
 		transportMaxWeapons = 20;
 		class eventHandlers {
-		 	Init = "(_this select 0) setVariable [""AGM_IsMedic"", true,true];(_this select 0) setVariable [""left_door_open"",false,true];(_this select 0) setVariable [""right_door_open"",false,true];";
-		 	//(_this select 0) execVM ""BWplus\scripts\sani.sqf"";";
-		 	getin = "_this call BWplus_vehicles_fnc_getin";
+		 	Init = "_this call BWplus_vehicles_fnc_saniFennecInit;";
+		 	getin = "_this call BWplus_vehicles_fnc_getin;";
 		};
 		class TransportMagazines {
 			MACRO_ADDMAGAZINE(BWA3_DM51A1,3)
@@ -565,7 +560,7 @@ class CfgVehicles {
 			MACRO_OPENDOOR
 		};
 	};
-	class Fennek_Tropen: Fennek_Flecktarn {
+	class BWplus_Fennek_Tropen: BWplus_Fennek_Flecktarn {
 		displayName = "$STR_BWplus_Vehicles_Fennek";
 		author = "EduardLaser, Ir0n1E";
 		vehicleClass = "BWA3_VehClass_Wheeled_Tropen";
@@ -573,7 +568,7 @@ class CfgVehicles {
 		hiddenSelections[] = {"camo1","camo2"};
 		hiddenSelectionsTextures[] = {"BWplus_vehicles\data\Tropen\trop.paa","BWplus_vehicles\data\Tropen\trop2.paa"};
 	};
-	class Fennek_Tropen_pio: Fennek_Flecktarn_pio {
+	class BWplus_Fennek_Tropen_pio: BWplus_Fennek_Flecktarn_pio {
 		displayName = "$STR_BWplus_Vehicles_Fennek_pio";
 		author = "EduardLaser, Ir0n1E";
 		vehicleClass = "BWA3_VehClass_Wheeled_Tropen";
@@ -581,7 +576,7 @@ class CfgVehicles {
 		hiddenSelections[] = {"camo1","camo2"};
 		hiddenSelectionsTextures[] = {"BWplus_vehicles\data\Tropen\piotrop.paa","BWplus_vehicles\data\Tropen\trop2.paa"};
 	};
-	class Fennek_Tropen_mg: Fennek_Flecktarn_mg {
+	class BWplus_Fennek_Tropen_mg: BWplus_Fennek_Flecktarn_mg {
 		displayName = "Fennek Kal.50";
 		author = "EduardLaser, Ir0n1E";
 		vehicleClass = "BWA3_VehClass_Wheeled_Tropen";
@@ -589,7 +584,7 @@ class CfgVehicles {
 		hiddenSelections[] = {"camo1","camo2"};
 		hiddenSelectionsTextures[] = {"BWplus_vehicles\data\Tropen\trop.paa","BWplus_vehicles\data\Tropen\trop2.paa"};
 	};	
-    class Fennek_Tropen_gmg: Fennek_Flecktarn_gmg {
+    class BWplus_Fennek_Tropen_gmg: BWplus_Fennek_Flecktarn_gmg {
 		displayName = "Fennek GMG";
 		author = "EduardLaser, Ir0n1E";
 		vehicleClass = "BWA3_VehClass_Wheeled_Tropen";
@@ -597,7 +592,7 @@ class CfgVehicles {
         hiddenSelections[] = {"camo1","camo2"};
 		hiddenSelectionsTextures[] = {"BWplus_vehicles\data\Tropen\trop.paa","BWplus_vehicles\data\Tropen\trop2.paa"};
 	};
-	class Fennek_Tropen_san: Fennek_Flecktarn_san {
+	class BWplus_Fennek_Tropen_san: BWplus_Fennek_Flecktarn_san {
 		displayName = "$STR_BWplus_Vehicles_Fennek_medic";
 		author = "EduardLaser, Ir0n1E";
 		vehicleClass = "BWA3_VehClass_Wheeled_Tropen";
