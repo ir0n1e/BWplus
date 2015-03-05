@@ -66,10 +66,10 @@ class CfgVehicles {
         };
     };
 
-    class Box_NATO_Support_F;
-    class BWplus_Box_Items: Box_NATO_Support_F {
+    class BWplus_Box_Empty;
+    class BWplus_Box_Items: BWplus_Box_Empty {
         author = "BW.plus";
-        displayName = "$STR_BWplus_Vehicles_box_items";
+        displayName = "$STR_BWplus_toolsandstructures_box_items";
         class TransportItems {
             MACRO_ADDITEM(BWplus_Satbag, 4)
         };
@@ -80,7 +80,6 @@ class CfgVehicles {
         author = "TheDog / BWplus";
         scope = 2;
         scopeCurator = 2;
-        displayName = "$STR_BWplus_Item_Satbag";
         vehicleClass = "BWplus_Items";
         class TransportItems {
             MACRO_ADDITEM(BWplus_Satbag, 1)
@@ -180,7 +179,7 @@ class CfgWeapons {
     class InventoryItem_Base_F;
 
     class BWplus_Satbag: AGM_ItemCore {
-        displayname = "$STR_BWplus_Item_Satcom";
+        displayname = "$STR_BWplus_Satbag";
         author = "TheDog / BWplus";
        // descriptionshort = "$STR_AGM_Medical_Bandage_Description";
         model = "\bwplus_communications\bwplus_satbag.p3d";
