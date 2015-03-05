@@ -96,14 +96,58 @@ class CfgVehicles {
         };
     };
 
-    class Box_NATO_Support_F;
-    class BWplus_Box_Items: Box_NATO_Support_F {
+    class BWplus_Box_Empty;
+    class BWplus_Box_Items: BWplus_Box_Empty {
         author = "BW.plus";
         displayName = "$STR_BWplus_toolsandstructures_box_items";
         class TransportItems {
             MACRO_ADDITEM(BWplus_Spraycan, 4)
             MACRO_ADDITEM(BWplus_Shovel, 10)
             MACRO_ADDITEM(BWplus_CamoNet_Dismantled, 4)
+        };
+    };
+
+    class Land_MetalCase_01_medium_F;
+    class BWplus_Box_Helipad: Land_MetalCase_01_medium_F {
+        displayName = "$STR_BWplus_toolsandstructures_Box_Helipad";
+        author = "BW.plus";
+        AGM_Size = 1;
+        mapSize = 0.7;
+        accuracy = 0.2;
+        vehicleClass = "BWplus_Items";
+        destrType = "DesturctNo";
+        transportmaxmagazines = 50;
+        maximumload = 2000;
+        class eventHandlers {
+            Init = "(_this select 0) setvariable ['BWplus_BoxEmpty', false, true]";
+        };
+
+        class AGM_Actions {
+            MACRO_DRAGABLE      
+            MACRO_LOADABLE
+            class BWplus_buildHelipad {
+                displayName = "$STR_BWplus_toolsandstructures_buildHelipad";
+                priority = 0.5;
+                distance = 5;
+                conditionShow = "'BWplus_Spraycan' in (items AGM_Player) && {!(AGM_Interaction_Target getVariable ['BWplus_BoxEmpty', false])}";
+                condition = "!(AGM_Interaction_Target getVariable ['BWplus_BoxEmpty', false]) && {!(AGM_player getVariable ['BWplus_building', false])} && {'BWplus_Spraycan' in (items AGM_Player)}";
+                statement = "[AGM_Interaction_Target, AGM_player] call BWplus_toolsandstructures_fnc_buildHelipad";
+            };
+            class BWplus_dismantleHelipad {
+                displayName = "$STR_BWplus_toolsandstructures_dismantleHelipad";
+                priority = 0.5;
+                distance = 5;
+                conditionShow = "'BWplus_Shovel' in (items AGM_Player) && {AGM_Interaction_Target getVariable ['BWplus_BoxEmpty', false]}";
+                condition = "(AGM_Interaction_Target getVariable ['BWplus_BoxEmpty', false]) and {!(AGM_player getVariable ['BWplus_building', false])} && {'BWplus_Shovel' in (items AGM_Player)}";
+                statement = "[AGM_Interaction_Target, AGM_player] call BWplus_toolsandstructures_fnc_dismantleHelipad";
+            };  
+        };  
+        class TransportMagazines {};
+        class TransportBackpacks {};
+        class TransportWeapons {};
+        class TransportItems { 
+            MACRO_ADDITEM(BWplus_Spraycan, 2)
+            MACRO_ADDITEM(BWplus_Shovel, 1)
         };
     };
 
@@ -297,50 +341,6 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
     };
-
-    class Land_MetalCase_01_medium_F;
-    class BWplus_Box_Helipad: Land_MetalCase_01_medium_F {
-        displayName = "$STR_BWplus_toolsandstructures_Box_Helipad";
-        author = "BW.plus";
-        AGM_Size = 1;
-        mapSize = 0.7;
-        accuracy = 0.2;
-        vehicleClass = "BWplus_Items";
-        destrType = "DesturctNo";
-        transportmaxmagazines = 50;
-        maximumload = 2000;
-        class eventHandlers {
-            Init = "(_this select 0) setvariable ['BWplus_BoxEmpty', false, true]";
-        };
-
-        class AGM_Actions {
-            MACRO_DRAGABLE      
-            MACRO_LOADABLE
-            class BWplus_buildHelipad {
-                displayName = "$STR_BWplus_toolsandstructures_buildHelipad";
-                priority = 0.5;
-                distance = 5;
-                conditionShow = "'BWplus_Spraycan' in (items AGM_Player) && {!(AGM_Interaction_Target getVariable ['BWplus_BoxEmpty', false])}";
-                condition = "!(AGM_Interaction_Target getVariable ['BWplus_BoxEmpty', false]) && {!(AGM_player getVariable ['BWplus_building', false])} && {'BWplus_Spraycan' in (items AGM_Player)}";
-                statement = "[AGM_Interaction_Target, AGM_player] call BWplus_toolsandstructures_fnc_buildHelipad";
-            };
-            class BWplus_dismantleHelipad {
-                displayName = "$STR_BWplus_toolsandstructures_dismantleHelipad";
-                priority = 0.5;
-                distance = 5;
-                conditionShow = "'BWplus_Shovel' in (items AGM_Player) && {AGM_Interaction_Target getVariable ['BWplus_BoxEmpty', false]}";
-                condition = "(AGM_Interaction_Target getVariable ['BWplus_BoxEmpty', false]) and {!(AGM_player getVariable ['BWplus_building', false])} && {'BWplus_Shovel' in (items AGM_Player)}";
-                statement = "[AGM_Interaction_Target, AGM_player] call BWplus_toolsandstructures_fnc_dismantleHelipad";
-            };  
-        };  
-        class TransportMagazines {};
-        class TransportBackpacks {};
-        class TransportWeapons {};
-        class TransportItems { 
-            MACRO_ADDITEM(BWplus_Spraycan, 2)
-            MACRO_ADDITEM(BWplus_Shovel, 1)
-        };
-    };
 };
 
 class CfgWeapons {
@@ -378,7 +378,7 @@ class CfgWeapons {
             uniformModel = "\A3\Structures_F_EPA\Items\Tools\Shovel_F.p3d";
         };
     };
-    
+
     class BWplus_CamoNet_Dismantled: AGM_ItemCore {
         displayName = "$STR_BWplus_CamoNet";
         scope = 2;

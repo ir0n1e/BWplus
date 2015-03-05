@@ -123,8 +123,8 @@ class CfgVehicles {
 		};
 	};
 
-	class Box_NATO_Support_F;
-	class BWplus_Box_Exp: Box_NATO_Support_F {
+	class BWplus_Box_Empty;
+	class BWplus_Box_Exp: BWplus_Box_Empty {
     	author = "BW.plus";
 	    displayName = "$STR_BWplus_Vehicles_box_exp";
     	transportmaxmagazines = 9001;
@@ -145,7 +145,7 @@ class CfgVehicles {
 			MACRO_ADDITEM(BWplus_Shovel, 2)
 		};
 	};
-	class BWplus_Box_AMMO556: BWplus_Box_Exp {
+	class BWplus_Box_AMMO556: BWplus_Box_Empty {
 		author = "BW.plus";
 	    displayName = "$STR_BWplus_Vehicles_box_556";
 		transportmaxmagazines = 150;
@@ -157,7 +157,7 @@ class CfgVehicles {
 			MACRO_ADDMAGAZINE(BWA3_30Rnd_556x45_G36,100)
 		};
 	};
-	class BWplus_Box_AMMO556_100Rnd: BWplus_Box_Exp {
+	class BWplus_Box_AMMO556_100Rnd: BWplus_Box_Empty {
 		author = "BW.plus";
 	    displayName = "$STR_BWplus_Vehicles_box_100_Rnd_556";
 		transportmaxmagazines = 100;
@@ -170,7 +170,7 @@ class CfgVehicles {
 			MACRO_ADDMAGAZINE(BWA3_100Rnd_556x45_G36,15)
 		};
 	};
-	class BWplus_Box_AMMO762_120Rnd: BWplus_Box_Exp {
+	class BWplus_Box_AMMO762_120Rnd: BWplus_Box_Empty {
 		author = "BW.plus";
 	    displayName = "$STR_BWplus_Vehicles_box_120Rnd_762";
 		transportmaxmagazines = 50;
@@ -182,7 +182,7 @@ class CfgVehicles {
 			MACRO_ADDMAGAZINE(BWA3_120Rnd_762x51,25)
 		};
 	};
-	class BWplus_Box_AMMO762_10Rnd: BWplus_Box_Exp {
+	class BWplus_Box_AMMO762_10Rnd: BWplus_Box_Empty {
 		author = "BW.plus";
 	    displayName = "$STR_BWplus_Vehicles_box_10Rnd_762";
 		transportmaxmagazines = 120;
@@ -194,7 +194,7 @@ class CfgVehicles {
 			MACRO_ADDMAGAZINE(BWA3_10Rnd_762x51_G28,100)
 		};
 	};
-	class BWplus_Box_AMMO762_20Rnd: BWplus_Box_Exp {
+	class BWplus_Box_AMMO762_20Rnd: BWplus_Box_Empty {
 		author = "BW.plus";
 	    displayName = "$STR_BWplus_Vehicles_box_20Rnd_762";
 		transportmaxmagazines = 100;
@@ -207,7 +207,7 @@ class CfgVehicles {
 		};
 	};
 
-	class BWplus_Box_AMMO40mm: BWplus_Box_Exp {
+	class BWplus_Box_AMMO40mm: BWplus_Box_Empty {
 		author = "BW.plus";
 	    displayName = "$STR_BWplus_Vehicles_box_40mm";
 		transportmaxmagazines = 100;
@@ -221,7 +221,7 @@ class CfgVehicles {
 			MACRO_ADDMAGAZINE(1rnd_SmokeGreen_Grenade_shell,15)
 		};
 	};
-	class BWplus_Box_AMMOgrenade: BWplus_Box_Exp {
+	class BWplus_Box_AMMOgrenade: BWplus_Box_Empty {
 		author = "BW.plus";
 	    displayName = "$STR_BWplus_Vehicles_box_Grenade";
 		transportmaxmagazines = 100;
