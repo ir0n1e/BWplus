@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Project name="BWplus">
+<Project name="BW.plus">
   <Package name="Weapons">
     <Key ID="STR_BWplus_Box_weapons_SF">
       <English>[BW.plus] SF Weapons</English>
