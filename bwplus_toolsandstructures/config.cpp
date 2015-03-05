@@ -52,12 +52,7 @@ class CfgFunctions {
 };
 
 #include <Macros.hpp>
-/*
-#define MACRO_ADDITEM(ITEM,COUNT) class _xx_##ITEM { \
-    name = #ITEM; \
-    count = COUNT; \
-};
-*/
+
 class CfgVehicles {
     class Man;
     class CAManBase: Man {
@@ -103,7 +98,7 @@ class CfgVehicles {
 
     class Box_NATO_Support_F;
     class BWplus_Box_Items: Box_NATO_Support_F {
-        author = "BWPlus";
+        author = "BW.plus";
         displayName = "$STR_BWplus_toolsandstructures_box_items";
         class TransportItems {
             MACRO_ADDITEM(BWplus_Spraycan, 4)
@@ -116,14 +111,14 @@ class CfgVehicles {
     class B_Kitbag_cbr;
     class BWplus_Kitbag_pio_Green: B_Kitbag_rgr {
         displayName = "Kitbag Pioneer Green";
-        author = "BWplus";
+        author = "BW.plus";
         class TransportItems {
             MACRO_ADDITEM(BWplus_CamoNet_Dismantled, 1)
         };
     };
     class BWplus_Kitbag_pio_Sand: B_Kitbag_cbr {
         displayName = "Kitbag Pioneer Sand";
-        author = "BWplus";
+        author = "BW.plus";
         class TransportItems {
             MACRO_ADDITEM(BWplus_CamoNet_Dismantled, 1)
         };
@@ -131,7 +126,7 @@ class CfgVehicles {
 
     class Item_Base_F;
     class BWplus_Item_Shovel: Item_Base_F {
-        author = "BWplus";
+        author = "BW.plus";
         scope = 2;
         scopeCurator = 2;
         displayName = "$STR_BWplus_Shovel";
@@ -143,7 +138,7 @@ class CfgVehicles {
     };
     
     class BWplus_Item_SprayCan: Item_Base_F {
-        author = "BWplus";
+        author = "BW.plus";
         scope = 2;
         scopeCurator = 2;
         displayName = "$STR_BWplus_SprayCan";
@@ -157,7 +152,7 @@ class CfgVehicles {
 
     class BWplus_Item_CamoNet_Dismantled: Item_Base_F {
         displayName = "$STR_BWplus_toolsandstructures_Net_Dismantled";
-        author = "BWplus";
+        author = "BW.plus";
         vehicleClass = "BWplus_Items";
         faction = "Default";
         icon = "\A3\Structures_F\Mil\Shelters\Data\UI\map_CamoNet_CA.paa";
@@ -172,7 +167,7 @@ class CfgVehicles {
     class craterlong;
     class BWplus_crater: craterlong {
         displayName = "$STR_BWplus_toolsandstructures_Crater";
-        author = "BWplus";
+        author = "BW.plus";
         icon = "iconObject_circle";
         mapSize = 0.7;
         accuracy = 0.2;
@@ -212,7 +207,7 @@ class CfgVehicles {
     class BWplus_CamoNet: CamoNet_INDP_F {
         displayName = "$STR_BWplus_CamoNet";
         descriptionShort = "$STR_BWplus_CamoNet";
-        author = "BWplus";
+        author = "BW.plus";
         vehicleClass = "BWplus_Items";
         faction = "Default";
         icon = "\A3\Structures_F\Mil\Shelters\Data\UI\map_CamoNet_CA.paa";
@@ -306,7 +301,7 @@ class CfgVehicles {
     class Land_MetalCase_01_medium_F;
     class BWplus_Box_Helipad: Land_MetalCase_01_medium_F {
         displayName = "$STR_BWplus_toolsandstructures_Box_Helipad";
-        author = "BWplus";
+        author = "BW.plus";
         AGM_Size = 1;
         mapSize = 0.7;
         accuracy = 0.2;
@@ -383,6 +378,7 @@ class CfgWeapons {
             uniformModel = "\A3\Structures_F_EPA\Items\Tools\Shovel_F.p3d";
         };
     };
+    
     class BWplus_CamoNet_Dismantled: AGM_ItemCore {
         displayName = "$STR_BWplus_CamoNet";
         scope = 2;

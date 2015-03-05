@@ -68,7 +68,7 @@ class CfgVehicles {
 
     class Box_NATO_Support_F;
     class BWplus_Box_Items: Box_NATO_Support_F {
-        author = "BWPlus";
+        author = "BW.plus";
         displayName = "$STR_BWplus_Vehicles_box_items";
         class TransportItems {
             MACRO_ADDITEM(BWplus_Satbag, 4)

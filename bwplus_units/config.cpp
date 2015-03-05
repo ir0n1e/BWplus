@@ -39,7 +39,7 @@ class CfgPatches {
 
 class CfgFactionClasses {
 	class BWplus {
-    	displayName = "BWplus";
+    	displayName = "BW.plus";
     	priority = 0.1;
     	side = 1;
   	};
@@ -78,7 +78,7 @@ class CfgVehicles {
     class B_Kitbag_cbr;
     class BWplus_Kitbag_pio_Green: B_Kitbag_rgr {
     	displayName = "Kitbag Pioneer Green";
-		author = "BWplus";
+		author = "BW.plus";
 		class TransportMagazines {
 			MACRO_ADDMAGAZINE(APERSTripMine_Wire_Mag, 2)
         	MACRO_ADDMAGAZINE(DemoCharge_Remote_Mag, 3)
@@ -90,7 +90,7 @@ class CfgVehicles {
     };
     class BWplus_Kitbag_pio_Sand: B_Kitbag_cbr {
     	displayName = "Kitbag Pioneer Sand";
-		author = "BWplus";
+		author = "BW.plus";
 		class TransportMagazines {
 			MACRO_ADDMAGAZINE(APERSTripMine_Wire_Mag, 2)
         	MACRO_ADDMAGAZINE(DemoCharge_Remote_Mag, 3)
@@ -104,7 +104,7 @@ class CfgVehicles {
 	class B_soldier_exp_F;
 	class BWplus_Pioneer_Flecktarn: B_soldier_exp_F {
 		displayName = "$STR_BWplus_Pioneer";
-		author = "BWplus";
+		author = "BW.plus";
 		side = 1;
 		faction = "BWA3_Faction";
 		vehicleClass = "BWA3_VehClass_Men_Fleck"; 
@@ -127,7 +127,7 @@ class CfgVehicles {
 	
 	class BWplus_Pioneer_Tropentarn: BWplus_Pioneer_Flecktarn {
 		displayName = "$STR_BWplus_Pioneer";
-		author = "BWplus";
+		author = "BW.plus";
 		vehicleClass = "BWA3_VehClass_Men_Tropen"; 
 		uniformClass = "BWA3_Uniform3_Tropen";
 		backpack = "BWplus_Kitbag_pio_Sand";
@@ -140,7 +140,7 @@ class CfgVehicles {
 	class BWA3_Spotter_Fleck;
 	class BWplus_Recon_Spotter_Flecktarn: BWA3_Spotter_Fleck {
 		displayName = "$STR_BWplus_Recon_Spotter";
-		author = "BWplus";
+		author = "BW.plus";
 		camouflage = 0.60000;
 		accuracy = 2.000000;
 		vehicleClass = "BWplus_VehClass_SpecOps_Fleck"; 
@@ -169,7 +169,7 @@ class CfgVehicles {
 
 	class BWplus_Recon_Pioneer_Flecktarn: BWplus_Recon_Spotter_Flecktarn {
 		displayName = "$STR_BWplus_Recon_Pioneer";
-		author = "BWplus";
+		author = "BW.plus";
 		vehicleClass = "BWplus_VehClass_SpecOps_Fleck"; 
 		uniformClass = "BWA3_Uniform3_Fleck";
 		backpack = "BWplus_Kitbag_pio_Green";
@@ -188,7 +188,7 @@ class CfgVehicles {
 	};
 
 	class BWplus_Recon_Pioneer_Tropentarn: BWplus_Recon_Pioneer_Flecktarn {
-		author = "BWplus";
+		author = "BW.plus";
 		vehicleClass = "BWplus_VehClass_SpecOps_Tropen"; 
 		uniformClass = "BWA3_Uniform3_Tropen";
 		backpack = "BWplus_Kitbag_pio_Sand";
@@ -200,7 +200,7 @@ class CfgVehicles {
 
 	class BWplus_Recon_Radioman_Flecktarn: BWplus_Recon_Spotter_Flecktarn {
 		displayName = "$STR_BWplus_Recon_Radioman";
-		author = "BWplus";
+		author = "BW.plus";
 		vehicleClass = "BWplus_VehClass_SpecOps_Fleck"; 
 		uniformClass = "BWA3_Uniform3_Fleck";
 		weapons[] = {"BWplus_G36K_SF_SD_Fleck","BWA3_P8","Throw","Put","BWA3_Vector"};
@@ -217,7 +217,7 @@ class CfgVehicles {
 	};
 
 	class BWplus_Recon_Radioman_Tropentarn: BWplus_Recon_Radioman_Flecktarn {
-		author = "BWplus";
+		author = "BW.plus";
 		vehicleClass = "BWplus_VehClass_SpecOps_Tropen"; 
 		uniformClass = "BWA3_Uniform3_Tropen";
 		backpack = "BWplus_Kitbag_pio_Sand";
@@ -230,7 +230,7 @@ class CfgVehicles {
 	class BWA3_CombatLifeSaver_Fleck;
 	class BWplus_Recon_CombatLifeSaver_Flecktarn: BWA3_CombatLifeSaver_Fleck {
 		displayName = "$STR_BWplus_Recon_Medic";
-		author = "BWplus";
+		author = "BW.plus";
 		vehicleClass = "BWplus_VehClass_SpecOps_Fleck"; 
 		uniformClass = "BWA3_Uniform_Fleck";
 		weapons[] = {"BWplus_G36K_SF_SD_Fleck","BWA3_P8","Throw","Put","BWA3_Vector"};
@@ -244,7 +244,7 @@ class CfgVehicles {
 	};
 
 	class BWplus_Recon_CombatLifeSaver_Tropentarn: BWplus_Recon_CombatLifeSaver_Flecktarn {
-		author = "BWplus";
+		author = "BW.plus";
 		vehicleClass = "BWplus_VehClass_SpecOps_Tropen"; 
 		uniformClass = "BWA3_Uniform_Tropen";
 		weapons[] = {"BWplus_G36K_SF_SD_Tropen","BWA3_P8","Throw","Put","BWA3_Vector"};
@@ -256,7 +256,7 @@ class CfgVehicles {
 	class BWA3_TL_Fleck;
 	class BWplus_Recon_TL_Flecktarn: BWA3_TL_Fleck {
 		displayName = "$STR_BWplus_Recon_TL";
-		author = "BWplus";
+		author = "BW.plus";
 		camouflage = 0.60000;
 		vehicleClass = "BWplus_VehClass_SpecOps_Fleck"; 
 		uniformClass = "BWA3_Uniform_Fleck";
@@ -271,7 +271,7 @@ class CfgVehicles {
 	};
 
 	class BWplus_Recon_TL_Tropentarn: BWplus_Recon_TL_Flecktarn {
-		author = "BWplus";
+		author = "BW.plus";
 		vehicleClass = "BWplus_VehClass_SpecOps_Tropen"; 
 		uniformClass = "BWA3_Uniform_Tropen";
 		weapons[] = {"BWplus_G36K_AG_SF_SD_Tropen","bwa3_P8","Throw","Put","BWA3_Vector"};
@@ -283,7 +283,7 @@ class CfgVehicles {
 	class BWA3_Marksman_Fleck;
 	class BWplus_Recon_Marksman_Flecktarn: BWA3_Marksman_Fleck {
 		displayName = "$STR_BWplus_Recon_Marksman";
-		author = "BWplus";
+		author = "BW.plus";
 		scopeCurator = 2;
 		camouflage = 0.60000;
 		accuracy = 3.500000;
@@ -299,7 +299,7 @@ class CfgVehicles {
 	};
 
 	class BWplus_Recon_Marksman_Tropentarn: BWplus_Recon_Marksman_Flecktarn {
-		author = "BWplus";
+		author = "BW.plus";
 		camouflage = 0.60000;
 		accuracy = 3.500000;
 		vehicleClass = "BWplus_VehClass_SpecOps_Tropen"; 

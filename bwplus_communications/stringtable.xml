@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Project name="BWplus">
+<Project name="BW.plus">
   <Package name="Communications">
     <Key ID="STR_BWplus_Satcom">
       <English>[BW.plus] Satcom</English>

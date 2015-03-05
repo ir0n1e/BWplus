@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Project name="BWplus">
+<Project name="BW.plus">
   <Package name="Units">
     <Key ID="STR_BWplus_Pioneer">
       <English>Pioneer (BWplus)</English>

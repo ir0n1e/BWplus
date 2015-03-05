@@ -46,7 +46,7 @@ class CfgPatches {
 
 class CfgVehicleClasses {
 	class BWplus_Items {
-		displayName = "BWplus";
+		displayName = "BW.plus";
 	};
 };
 
@@ -79,7 +79,7 @@ class CfgVehicles {
     
 	class B_CargoNet_01_ammo_F;
 	class BWplus_Box_Cargo: B_CargoNet_01_ammo_F {
-		author = "BWPlus";
+		author = "BW.plus";
 	    displayName = "[BW.plus] CargoBox";
     	transportmaxmagazines = 9001;
     	maximumload = 2000;
@@ -125,7 +125,7 @@ class CfgVehicles {
 
 	class Box_NATO_Support_F;
 	class BWplus_Box_Exp: Box_NATO_Support_F {
-    	author = "BWPlus";
+    	author = "BW.plus";
 	    displayName = "$STR_BWplus_Vehicles_box_exp";
     	transportmaxmagazines = 9001;
     	transportmaxbackbacks = 0;
@@ -146,7 +146,7 @@ class CfgVehicles {
 		};
 	};
 	class BWplus_Box_AMMO556: BWplus_Box_Exp {
-		author = "BWPlus";
+		author = "BW.plus";
 	    displayName = "$STR_BWplus_Vehicles_box_556";
 		transportmaxmagazines = 150;
 		maximumload = 2000;
@@ -158,7 +158,7 @@ class CfgVehicles {
 		};
 	};
 	class BWplus_Box_AMMO556_100Rnd: BWplus_Box_Exp {
-		author = "BWPlus";
+		author = "BW.plus";
 	    displayName = "$STR_BWplus_Vehicles_box_100_Rnd_556";
 		transportmaxmagazines = 100;
 		maximumload = 2000;
@@ -171,7 +171,7 @@ class CfgVehicles {
 		};
 	};
 	class BWplus_Box_AMMO762_120Rnd: BWplus_Box_Exp {
-		author = "BWPlus";
+		author = "BW.plus";
 	    displayName = "$STR_BWplus_Vehicles_box_120Rnd_762";
 		transportmaxmagazines = 50;
 		maximumload = 2000;
@@ -183,7 +183,7 @@ class CfgVehicles {
 		};
 	};
 	class BWplus_Box_AMMO762_10Rnd: BWplus_Box_Exp {
-		author = "BWPlus";
+		author = "BW.plus";
 	    displayName = "$STR_BWplus_Vehicles_box_10Rnd_762";
 		transportmaxmagazines = 120;
 		maximumload = 2000;
@@ -195,7 +195,7 @@ class CfgVehicles {
 		};
 	};
 	class BWplus_Box_AMMO762_20Rnd: BWplus_Box_Exp {
-		author = "BWPlus";
+		author = "BW.plus";
 	    displayName = "$STR_BWplus_Vehicles_box_20Rnd_762";
 		transportmaxmagazines = 100;
 		maximumload = 2000;
@@ -208,7 +208,7 @@ class CfgVehicles {
 	};
 
 	class BWplus_Box_AMMO40mm: BWplus_Box_Exp {
-		author = "BWPlus";
+		author = "BW.plus";
 	    displayName = "$STR_BWplus_Vehicles_box_40mm";
 		transportmaxmagazines = 100;
 		maximumload = 2000;
@@ -222,7 +222,7 @@ class CfgVehicles {
 		};
 	};
 	class BWplus_Box_AMMOgrenade: BWplus_Box_Exp {
-		author = "BWPlus";
+		author = "BW.plus";
 	    displayName = "$STR_BWplus_Vehicles_box_Grenade";
 		transportmaxmagazines = 100;
 		maximumload = 2000;
