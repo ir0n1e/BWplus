@@ -10,36 +10,36 @@
       <German>FOB abbauen</German>
     </Key>
     <Key ID="STR_BWplus_Vehicles_box_exp">
-      <English>[BWplus] Explosives</English>
-      <German>[BWplus] Sprengladungen</German>
+      <English>[BW.plus] Explosives</English>
+      <German>[BW.plus] Sprengladungen</German>
     </Key>
     <Key ID="STR_BWplus_Vehicles_box_556">
-      <English>[BWplus] 5.56 3000 Shots</English>
-      <German>[BWplus] 5.56 3000 Schuss</German>
+      <English>[BW.plus] 5.56 3000 Shots</English>
+      <German>[BW.plus] 5.56 3000 Schuss</German>
     </Key>
     <Key ID="STR_BWplus_Vehicles_box_100_Rnd_556">
-      <English>[BWplus] 100Rnd 5.56 3000 Shots</English>
-      <German>[BWplus] 100Rnd 5.56 3000 Schuss</German>
+      <English>[BW.plus] 100Rnd 5.56 3000 Shots</English>
+      <German>[BW.plus] 100Rnd 5.56 3000 Schuss</German>
     </Key>
     <Key ID="STR_BWplus_Vehicles_box_120Rnd_762">
-      <English>[BWplus] 120Rnd 7.62 3000 Shots</English>
-      <German>[BWplus] 120Rnd 7.62 3000 Schuss</German>
+      <English>[BW.plus] 120Rnd 7.62 3000 Shots</English>
+      <German>[BW.plus] 120Rnd 7.62 3000 Schuss</German>
     </Key>
     <Key ID="STR_BWplus_Vehicles_box_10Rnd_762">
-      <English>[BWplus] 10Rnd 7.62 1000 Shots</English>
-      <German>[BWplus] 10Rnd 7.62 1000 Schuss</German>
+      <English>[BW.plus] 10Rnd 7.62 1000 Shots</English>
+      <German>[BW.plus] 10Rnd 7.62 1000 Schuss</German>
     </Key>
     <Key ID="STR_BWplus_Vehicles_box_20Rnd_762">
-      <English>[BWplus] 20Rnd 7.62 1000 Shots</English>
-      <German>[BWplus] 20Rnd 7.62 1000 Schuss</German>
+      <English>[BW.plus] 20Rnd 7.62 1000 Shots</English>
+      <German>[BW.plus] 20Rnd 7.62 1000 Schuss</German>
     </Key>
     <Key ID="STR_BWplus_Vehicles_box_40mm">
-      <English>[BWplus] 40mm 20 Shots</English>
-      <German>[BWplus] 40mm 20 Schuss</German>
+      <English>[BW.plus] 40mm 20 Shots</English>
+      <German>[BW.plus] 40mm 20 Schuss</German>
     </Key>
     <Key ID="STR_BWplus_Vehicles_box_Grenade">
-      <English>[BWplus] 30 Grenades</English>
-      <German>[BWplus] 30 Granaten</German>
+      <English>[BW.plus] 30 Grenades</English>
+      <German>[BW.plus] 30 Granaten</German>
     </Key>
     <Key ID="STR_BWplus_Vehicles_Fennek_pio">
       <English>Fennek Pioneer</English>

@@ -1,3 +1,4 @@
+private ["_items","_crater","_net","_unit"];
 
 _items = _this select 0;
 _crater = _items select 0;

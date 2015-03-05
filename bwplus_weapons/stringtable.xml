@@ -2,8 +2,8 @@
 <Project name="BWplus">
   <Package name="Weapons">
     <Key ID="STR_BWplus_Box_weapons_SF">
-      <English>[BWplus] SF Weapons</English>
-      <German>[BWplus] SF Waffen</German>
+      <English>[BW.plus] SF Weapons</English>
+      <German>[BW.plus] SF Waffen</German>
     </Key>
      <Key ID="STR_BWplus_Weapon_G36K_SF_SD_Fleck">
       <English>G36K IdZ-ES SF Green</English>

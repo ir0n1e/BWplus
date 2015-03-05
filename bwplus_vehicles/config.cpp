@@ -80,7 +80,7 @@ class CfgVehicles {
 	class B_CargoNet_01_ammo_F;
 	class BWplus_Box_Cargo: B_CargoNet_01_ammo_F {
 		author = "BWPlus";
-	    displayName = "[BWplus] CargoBox";
+	    displayName = "[BW.plus] CargoBox";
     	transportmaxmagazines = 9001;
     	maximumload = 2000;
 		class eventHandlers {

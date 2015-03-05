@@ -2,12 +2,12 @@
 <Project name="BWplus">
   <Package name="Communications">
     <Key ID="STR_BWplus_Satcom">
-      <English>[BWplus] Satcom</English>
-      <German>[BWplus] Satcom</German>
+      <English>[BW.plus] Satcom</English>
+      <German>[BW.plus] Satcom</German>
     </Key>
     <Key ID="STR_BWplus_Item_Satcom">
-      <English>[BWplus] Satcom Bag</English>
-      <German>[BWplus] Satcom Tasche</German>
+      <English>[BW.plus] Satcom Bag</English>
+      <German>[BW.plus] Satcom Tasche</German>
     </Key>
      <Key ID="STR_BWplus_Satcom_checkConnection">
       <English>Check Connecktion</English>

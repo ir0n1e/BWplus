@@ -1,5 +1,7 @@
 #define ITEMNET "BWplus_CamoNet_Dismantled"
 
+private ["_craterthings","_crater","_crater_count","_unit","_buildwithNet"];
+
 _craterthings = _this select 0;
 _crater = _craterthings select 0;
 _crater_count = _this select 1;
