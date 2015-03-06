@@ -191,7 +191,6 @@ class CfgVehicles {
 		author = "BW.plus";
 		vehicleClass = "BWplus_VehClass_SpecOps_Tropen"; 
 		uniformClass = "BWA3_Uniform3_Tropen";
-		backpack = "BWplus_Kitbag_pio_Sand";
 		weapons[] = {"BWplus_G36K_SF_SD_Tropen","BWA3_P8","Throw","Put","BWA3_Vector"};
 		respawnWeapons[] = {"BWplus_G36K_SF_SD_Tropen","BWA3_P8","Throw","Put","BWA3_Vector"};
 		linkedItems[] = {"BWplus_LCG_shemagh_Sand","BWA3_Vest_Rifleman1_Tropen","BWplus_Cap_Sand","BWA3_ItemNavipad","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
@@ -220,7 +219,6 @@ class CfgVehicles {
 		author = "BW.plus";
 		vehicleClass = "BWplus_VehClass_SpecOps_Tropen"; 
 		uniformClass = "BWA3_Uniform3_Tropen";
-		backpack = "BWplus_Kitbag_pio_Sand";
 		weapons[] = {"BWplus_G36K_SF_SD_Tropen","BWA3_P8","Throw","Put","BWA3_Vector"};
 		respawnWeapons[] = {"BWplus_G36K_SF_SD_Tropen","BWA3_P8","Throw","Put","BWA3_Vector"};
 		linkedItems[] = {"BWplus_LCG_shemagh_Sand","BWA3_Vest_Rifleman1_Tropen","BWA3_Booniehat_Tropen","BWA3_ItemNavipad","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
