@@ -387,7 +387,7 @@ class CfgVehicles {
 		crew = "BWA3_Rifleman_Fleck";
 		typicalCargo[] = {"BWA3_Rifleman_Fleck", "BWA3_Rifleman_Fleck"};
 		hiddenSelections[] = {"camo1","camo2"};
-		hiddenSelectionsTextures[] = {"BWplus_vehicles\data\Fleck\piofleck.paa","BWplus_vehicles\data\Fleck\fleck2.paa"};
+		hiddenSelectionsTextures[] = {"BWplus_vehicles\data\Fleck\fleck.paa","BWplus_vehicles\data\Fleck\fleck2.paa"};
 		transportMaxBackpacks = 3;
 		transportMaxWeapons = 20;
 		AGM_Vehicle_Cargo = 8;
