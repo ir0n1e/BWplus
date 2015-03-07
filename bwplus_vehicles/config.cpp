@@ -387,13 +387,12 @@ class CfgVehicles {
 		crew = "BWA3_Rifleman_Fleck";
 		typicalCargo[] = {"BWA3_Rifleman_Fleck", "BWA3_Rifleman_Fleck"};
 		hiddenSelections[] = {"camo1","camo2"};
-		hiddenSelectionsTextures[] = {"BWplus_vehicles\data\Fleck\fleck.paa","BWplus_vehicles\data\Fleck\fleck2.paa"};
+		hiddenSelectionsTextures[] = {"BWplus_vehicles\data\mrap_fleck_fue_co.paa","BWplus_vehicles\data\mrap_fleck2_co.paa"};
 		transportMaxBackpacks = 3;
 		transportMaxWeapons = 20;
 		AGM_Vehicle_Cargo = 8;
 		class eventHandlers {
 			Init = "_this call BWplus_vehicles_fnc_pioFennekInit";
-		 	getin = "_this call BWplus_vehicles_fnc_getin";
 		};
 		class TransportMagazines {
 			class _xx_BWA3_DM32_Orange {
@@ -415,9 +414,6 @@ class CfgVehicles {
 			MACRO_ADDBACKPACK(BWA3_AssaultPack_Medic,1)   
 		};
 		class TransportWeapons {};
-		class UserActions {
-			MACRO_OPENDOOR
-		};
 	};
 	class BWplus_Fennek_Flecktarn_pio: I_MRAP_03_F {
 		displayName = "$STR_BWplus_Vehicles_Fennek_pio";
@@ -428,14 +424,13 @@ class CfgVehicles {
 		crew = "BWplus_Pioneer_Flecktarn";
 		typicalCargo[] = {"BWA3_Rifleman_Fleck", "BWA3_Rifleman_Fleck"};
 		hiddenSelections[] = {"camo1","camo2"};
-		hiddenSelectionsTextures[] = {"BWplus_vehicles\data\Fleck\piofleck.paa","BWplus_vehicles\data\Fleck\fleck2.paa"};
+		hiddenSelectionsTextures[] = {"BWplus_vehicles\data\mrap_fleck_pio_co.paa","BWplus_vehicles\data\mrap_fleck2_co.paa"};
 		transportMaxBackpacks = 3;
 		transportMaxWeapons = 20;
 		AGM_Vehicle_Cargo = 8;
 
 		class eventHandlers {
 			Init = "_this call BWplus_vehicles_fnc_pioFennekInit;";
-		 	getin = "_this call BWplus_vehicles_fnc_getin;";
 		};
 		class TransportMagazines {
 			class _xx_BWA3_DM32_Orange {
@@ -461,9 +456,6 @@ class CfgVehicles {
 		class AGM_Actions: AGM_Actions {
 			MACRO_ACTIONFOB
 		};
-		class UserActions {
-			MACRO_OPENDOOR
-		};
 	};
 	
     class BWplus_Fennek_Flecktarn_mg: I_MRAP_03_hmg_F {
@@ -474,7 +466,7 @@ class CfgVehicles {
 		vehicleClass = "BWA3_VehClass_Wheeled_Fleck";
 		crew = "BWA3_Rifleman_Fleck";
 		hiddenSelections[] = {"camo1","camo2"};
-		hiddenSelectionsTextures[] = {"BWplus_vehicles\data\Fleck\fleck.paa","BWplus_vehicles\data\Fleck\fleck2.paa"};
+		hiddenSelectionsTextures[] = {"BWplus_vehicles\data\mrap_fleck_co.paa","BWplus_vehicles\data\mrap_fleck2_co.paa"};
 		class TransportMagazines {
 			MACRO_ADDMAGAZINE(BWA3_30Rnd_556x45_G36,10)
 			MACRO_ADDMAGAZINE(BWA3_200Rnd_556x45,5)
@@ -503,10 +495,7 @@ class CfgVehicles {
 		vehicleClass = "BWA3_VehClass_Wheeled_Fleck";
 		crew = "BWA3_Rifleman_Fleck";
         hiddenSelections[] = {"camo1","camo2"};
-		hiddenSelectionsTextures[] = {"BWplus_vehicles\data\Fleck\fleck.paa","BWplus_vehicles\data\Fleck\fleck2.paa"};
-		class eventHandlers {
-		 	getin = "_this call BWplus_vehicles_fnc_getin";
-		};
+		hiddenSelectionsTextures[] = {"BWplus_vehicles\data\mrap_fleck_co.paa","BWplus_vehicles\data\mrap_fleck2_co.paa"};
 		class TransportMagazines {
 			MACRO_ADDMAGAZINE(BWA3_30Rnd_556x45_G36,10)
 			MACRO_ADDMAGAZINE(BWA3_200Rnd_556x45,5)
@@ -534,13 +523,12 @@ class CfgVehicles {
 		crew = "BWA3_CombatLifeSaver_Fleck";
 		vehicleClass = "BWA3_VehClass_Wheeled_Fleck";
         hiddenSelections[] = {"camo1","camo2"};
-		hiddenSelectionsTextures[] = {"BWplus_vehicles\data\Fleck\sanfleck.paa","BWplus_vehicles\data\Fleck\fleck2.paa"};
+		hiddenSelectionsTextures[] = {"BWplus_vehicles\data\mrap_fleck_san_co.paa","BWplus_vehicles\data\mrap_fleck2_co.paa"};
 		AGM_Vehicle_Cargo = 6;
 		transportMaxBackpacks = 4;
 		transportMaxWeapons = 20;
 		class eventHandlers {
 		 	Init = "_this call BWplus_vehicles_fnc_saniFennecInit;";
-		 	getin = "_this call BWplus_vehicles_fnc_getin;";
 		};
 		class TransportMagazines {
 			MACRO_ADDMAGAZINE(BWA3_DM51A1,3)
@@ -554,9 +542,6 @@ class CfgVehicles {
 			MACRO_ADDITEM(ToolKit,1)
 		};
 		class TransportWeapons {};	
-		class UserActions {
-			MACRO_OPENDOOR
-		};
 	};
 	class BWplus_Fennek_Tropen: BWplus_Fennek_Flecktarn {
 		displayName = "$STR_BWplus_Vehicles_Fennek";
@@ -564,7 +549,7 @@ class CfgVehicles {
 		vehicleClass = "BWA3_VehClass_Wheeled_Tropen";
 		crew = "BWA3_Rifleman_Tropen";
 		hiddenSelections[] = {"camo1","camo2"};
-		hiddenSelectionsTextures[] = {"BWplus_vehicles\data\Tropen\trop.paa","BWplus_vehicles\data\Tropen\trop2.paa"};
+		hiddenSelectionsTextures[] = {"BWplus_vehicles\data\mrap_trop_fue_co.paa","BWplus_vehicles\data\mrap_trop2_co.paa"};
 	};
 	class BWplus_Fennek_Tropen_pio: BWplus_Fennek_Flecktarn_pio {
 		displayName = "$STR_BWplus_Vehicles_Fennek_pio";
@@ -572,7 +557,7 @@ class CfgVehicles {
 		vehicleClass = "BWA3_VehClass_Wheeled_Tropen";
 		crew = "BWplus_Pioneer_Tropentarn";
 		hiddenSelections[] = {"camo1","camo2"};
-		hiddenSelectionsTextures[] = {"BWplus_vehicles\data\Tropen\piotrop.paa","BWplus_vehicles\data\Tropen\trop2.paa"};
+		hiddenSelectionsTextures[] = {"BWplus_vehicles\data\mrap_fleck_pio_co.paa","BWplus_vehicles\data\mrap_trop2_co.paa"};
 	};
 	class BWplus_Fennek_Tropen_mg: BWplus_Fennek_Flecktarn_mg {
 		displayName = "Fennek Kal.50";
@@ -580,7 +565,7 @@ class CfgVehicles {
 		vehicleClass = "BWA3_VehClass_Wheeled_Tropen";
 		crew = "BWA3_Rifleman_Tropen";
 		hiddenSelections[] = {"camo1","camo2"};
-		hiddenSelectionsTextures[] = {"BWplus_vehicles\data\Tropen\trop.paa","BWplus_vehicles\data\Tropen\trop2.paa"};
+		hiddenSelectionsTextures[] = {"BWplus_vehicles\data\mrap_trop_co.paa","BWplus_vehicles\data\mrap_trop2_co.paa"};
 	};	
     class BWplus_Fennek_Tropen_gmg: BWplus_Fennek_Flecktarn_gmg {
 		displayName = "Fennek GMG";
@@ -588,7 +573,7 @@ class CfgVehicles {
 		vehicleClass = "BWA3_VehClass_Wheeled_Tropen";
 		crew = "BWA3_Rifleman_Tropen";
         hiddenSelections[] = {"camo1","camo2"};
-		hiddenSelectionsTextures[] = {"BWplus_vehicles\data\Tropen\trop.paa","BWplus_vehicles\data\Tropen\trop2.paa"};
+		hiddenSelectionsTextures[] = {"BWplus_vehicles\data\mrap_trop_co.paa","BWplus_vehicles\data\mrap_trop2_co.paa"};
 	};
 	class BWplus_Fennek_Tropen_san: BWplus_Fennek_Flecktarn_san {
 		displayName = "$STR_BWplus_Vehicles_Fennek_medic";
@@ -596,7 +581,7 @@ class CfgVehicles {
 		vehicleClass = "BWA3_VehClass_Wheeled_Tropen";
 		crew = "BWA3_CombatLifeSaver_Tropen";
         hiddenSelections[] = {"camo1","camo2"};
-		hiddenSelectionsTextures[] = {"BWplus_vehicles\data\Tropen\santrop.paa","BWplus_vehicles\data\Tropen\trop2.paa"};
+		hiddenSelectionsTextures[] = {"BWplus_vehicles\data\mrap_trop_san_co.paa","BWplus_vehicles\data\mrap_trop2_co.paa"};
 	};
 
     class Truck_F: Car_F {
