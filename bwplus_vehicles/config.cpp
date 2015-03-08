@@ -519,7 +519,7 @@ class CfgVehicles {
 		transportMaxBackpacks = 4;
 		transportMaxWeapons = 20;
 		class eventHandlers {
-		 	Init = "_this call BWplus_vehicles_fnc_saniFennecInit;";
+		 	Init = "_this call BWplus_vehicles_fnc_saniFennekInit;";
 		};
 		class TransportMagazines {
 			MACRO_ADDMAGAZINE(BWA3_DM51A1,3)
@@ -527,7 +527,7 @@ class CfgVehicles {
 			MACRO_ADDMAGAZINE(BWA3_30Rnd_556x45_G36,10)
         };
         class TransportBackpacks {
-			MACRO_ADDBACKPACK(BWA3_AssaultPack_Medic,1);  
+			MACRO_ADDBACKPACK(BWA3_AssaultPack_Medic,2);  
 		};
 		class TransportItems {
 			MACRO_ADDITEM(ToolKit,1)

@@ -4,8 +4,7 @@ _vehicle = _this select 0;
 
 _vehicle setVariable ["BWplus_VecEngineer", true, true];
 _vehicle setVariable ["BWplus_FOBon", false, true];
-_vehicle setVariable ["left_door_open", false, true];
-_vehicle setVariable ["right_door_open", false, true];
+
 
 _vehicle spawn {
 	waitUntil {(!isnil "AGM_Logistics_loadedItemsDummy")};
