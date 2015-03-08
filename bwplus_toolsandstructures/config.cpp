@@ -1,17 +1,19 @@
 class CfgPatches {
     class BWplus_toolsandstructures {
         units[] = {
+            BWplus_Box_Exp,
             BWplus_Box_Helipad,
             BWplus_Box_Items, 
             BWplus_CamoNet,
-            BWplus_Item_CamoNet_Dismantled,
             BWplus_crater,
             BWplus_Flag_Ger,
+            BWplus_Item_CamoNet_Dismantled,
             BWplus_Item_Shovel, 
             BWplus_Item_Spraycan,
-            BWplus_Spraycan_Empty,
             BWplus_Kitbag_pio_Green,
-            BWplus_Kitbag_pio_Sand
+            BWplus_Kitbag_pio_Sand,
+            BWplus_Spraycan_Empty,
+            BWplus_Fennek_Flecktarn_pio
         };
         weapons[] = {
             BWplus_Spraycan, 
@@ -70,7 +72,7 @@ class CfgVehicles {
                 class BWplus_BuildCrater {
                     displayName = "$STR_BWplus_toolsandstructures_buildCrate";
                     priority = 0.5;
-                    condition = "not (AGM_player getVariable 'BWplus_building') and {[AGM_player] call BWplus_toolsandstructures_fnc_canbuild}";
+                    condition = "!(AGM_player getVariable 'BWplus_building') && {[AGM_player] call BWplus_toolsandstructures_fnc_canbuild}";
                     statement = "[false] call BWplus_toolsandstructures_fnc_buildCrater";
                     icon = "bwplus_toolsandstructures\UI\bwplus_shovel_ca.paa";
                     showDisabled = 0; 
@@ -78,7 +80,7 @@ class CfgVehicles {
                 class BWplus_BuildCraterBig {
                     displayName = "$STR_BWplus_toolsandstructures_buildCrateNet";
                     priority = 0.5;
-                    condition = "not (AGM_player getVariable 'BWplus_building') and {[AGM_player] call BWplus_toolsandstructures_fnc_canbuildNet} and {[AGM_player] call BWplus_toolsandstructures_fnc_canbuild}";
+                    condition = "!(AGM_player getVariable ['BWplus_building', false]) && {[AGM_player] call BWplus_toolsandstructures_fnc_canbuildNet} && {[AGM_player] call BWplus_toolsandstructures_fnc_canbuild}";
                     statement = "[true] call BWplus_toolsandstructures_fnc_buildCrater";
                     icon = "\A3\Structures_F\Mil\Shelters\Data\UI\map_CamoNet_CA.paa";
                     showDisabled = 0; 
@@ -104,6 +106,13 @@ class CfgVehicles {
             MACRO_ADDITEM(BWplus_Spraycan, 4)
             MACRO_ADDITEM(BWplus_Shovel, 10)
             MACRO_ADDITEM(BWplus_CamoNet_Dismantled, 4)
+        };
+    };
+
+    class BWplus_Box_Exp: BWplus_Box_Empty {
+        class TransportItems {
+            MACRO_ADDITEM(BWplus_CamoNet_Dismantled, 2)
+            MACRO_ADDITEM(BWplus_Shovel, 2)
         };
     };
 
@@ -147,6 +156,13 @@ class CfgVehicles {
         class TransportWeapons {};
         class TransportItems { 
             MACRO_ADDITEM(BWplus_Spraycan, 2)
+            MACRO_ADDITEM(BWplus_Shovel, 1)
+        };
+    };
+
+    class I_MRAP_03_F;
+    class BWplus_Fennek_Flecktarn_pio: I_MRAP_03_F {
+        class TransportItems {
             MACRO_ADDITEM(BWplus_Shovel, 1)
         };
     };
@@ -353,6 +369,7 @@ class CfgWeapons {
         model = "\bwplus_toolsandstructures\bwplus_spraycan.p3d";
         picture = "\bwplus_toolsandstructures\UI\bwplus_spraycan_ca.paa";
         scope = 2;
+        destrType = "DestructBuilding";
         class ItemInfo: InventoryItem_Base_F {
             mass = 13.5;
         };
@@ -391,3 +408,19 @@ class CfgWeapons {
         };
     };
 };
+
+enum {
+    destructengine = 2,
+    destructdefault = 6,
+    destructwreck = 7,
+    destructtree = 3,
+    destructtent = 4,
+    stabilizedinaxisx = 1,
+    stabilizedinaxesxyz = 4,
+    stabilizedinaxisy = 2,
+    destructno = 0,
+    stabilizedinaxesboth = 3,
+    stabilizedinaxesnone = 0,
+    destructman = 5,
+    destructbuilding = 1
+}

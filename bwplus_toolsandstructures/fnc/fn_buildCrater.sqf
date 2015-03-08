@@ -16,7 +16,7 @@ _crater = CRATER createVehicle [0,0,0];
 _net = objNull;
 
 
-if (AGM_player getVariable "BWplus_pio") then {
+if (AGM_player getVariable ["BWplus_pio", false]) then {
     _buildtime = BUILDTIME_PIO;
     _maxcrater = MAXCRATER_PIO;
 };
@@ -25,7 +25,7 @@ if (_buildwithNet) then {
 };
 
 _items = [_crater,_net];
-_crater_count = (AGM_player getvariable "BWplus_crater_count");
+_crater_count = (AGM_player getvariable ["BWplus_crater_count", 0]);
 
 AGM_player setVariable ["BWplus_building",true,true];
 AGM_player setVariable ["BWplus_crater_abort",false];

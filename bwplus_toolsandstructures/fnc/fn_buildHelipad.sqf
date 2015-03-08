@@ -8,7 +8,7 @@ _player = _this select 1;
 [_player, "AinvPknlMstpSnonWnonDr_medic5", 1] call AGM_Core_fnc_doAnimation;
 _player setVariable ["BWplus_building", true, true];
 
-playSound3D ["BWplus_weapons\sounds\Spray.wss", _player, false, getPosASL _player, 15, 1, 4];
+playSound3D ["BWplus_weapons\sounds\Spray.wss", _player, false, getPosASL _player, 20, 1, 6];
 
 BWplus_buildHelipadCallback = {
 	private ["_pad","_pos", "_dir", "_light", "_player", "_items"];
@@ -30,6 +30,7 @@ BWplus_buildHelipadCallback = {
 		_angel = (_angel + 90);
 		_items pushback _light;
 	};
+
 	_player removeitem "BWplus_Spraycan";
 	_player additem "BWplus_Spraycan_Empty";
 

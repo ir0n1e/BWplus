@@ -5,20 +5,15 @@
     Switch Lamps ON/OFF
 
     Parameter(s):
-    #0 ARRAY - Lamps Array
-    #1 BOOL  - true = on
+    #0 ARRAY - Object
 
     Returns:
-    BOOL - TRUE when done
+    none
 */
 fn_lamps_callback = {
     _this spawn {
         _lamp       = _this select 0;
-        _switchOff  = _lamp getVariable "BWplus_LampOn";
-
-        if (isnil "_switchOff") then {
-            _switchOff = true;
-        };
+        _switchOff  = _lamp getVariable ["BWplus_LampOn", true];
 
         _reflectors = getarray (configfile >> "CfgVehicles" >> typeof _lamp >> "aggregateReflectors");
 
