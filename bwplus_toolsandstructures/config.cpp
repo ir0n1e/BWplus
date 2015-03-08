@@ -18,7 +18,7 @@ class CfgPatches {
         weapons[] = {
             BWplus_Spraycan, 
             BWplus_Shovel,
-            BWplus_Item_CamoNet
+            BWplus_CamoNet_Dismantled
         };
         requiredVersion = 0.1;
         requiredAddons[] = {

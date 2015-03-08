@@ -30,8 +30,8 @@ class CfgPatches {
 		weapons[] = {};
 		requiredVersion = 0.1;
 		requiredAddons[] = {
-			A3_Structures_F_Heli_Items_Airport,
 			BWplus_core,
+			A3_Structures_F_Heli_Items_Airport,
 			AGM_Interaction, 
 			AGM_Logistics
 		};
@@ -81,9 +81,9 @@ class CfgVehicles {
 		author = "BW.plus";
 	    displayName = "[BW.plus] CargoBox";
     	transportmaxmagazines = 9001;
-    	maximumload = 2000;
+    	maximumload = 4000;
 		class eventHandlers {
-			Init = "[(_this select 0), 1] call BWplus_core_fnc_addRavenBAckpack; [(_this select 0), 'tf_rt1523g_big_bwmod', 1] call BWplus_core_fnc_addTFRbackpack;'";
+			Init = "[(_this select 0), 1] call BWplus_core_fnc_addRavenBAckpack; [(_this select 0), 'tf_rt1523g_big_bwmod', 1] call BWplus_core_fnc_addTFRbackpack;";
 		};
 		class TransportMagazines {
         	MACRO_ADDMAGAZINE(BWA3_15Rnd_9x19_P8, 10)
@@ -96,15 +96,15 @@ class CfgVehicles {
         	MACRO_ADDMAGAZINE(ClaymoreDirectionalMine_Remote_Mag, 5)
         	MACRO_ADDMAGAZINE(DemoCharge_Remote_Mag, 5)
         	MACRO_ADDMAGAZINE(SLAMDirectionalMine_Wire_Mag, 5)
-        	MACRO_ADDMAGAZINE(Titan_AA, 5)
-        	MACRO_ADDMAGAZINE(Titan_AP, 5)
+        	MACRO_ADDMAGAZINE(Titan_AA, 3)
+        	MACRO_ADDMAGAZINE(Titan_AP, 3)
 		};
 		class TransportItems {
-			MACRO_ADDITEM(Chemlight_blue, 10)
-			MACRO_ADDITEM(HandGrenade, 10)
+			MACRO_ADDITEM(Chemlight_blue, 5)
+			MACRO_ADDITEM(HandGrenade, 5)
 			MACRO_ADDITEM(SmokeShellBlue, 2)
-			MACRO_ADDITEM(BWA3_acc_LLM01_irlaser, 10)
-			MACRO_ADDITEM(BWA3_optic_Shortdot, 10)
+			MACRO_ADDITEM(BWA3_acc_LLM01_irlaser, 5)
+			MACRO_ADDITEM(BWA3_optic_Shortdot, 5)
 			MACRO_ADDITEM(BWA3_optic_ZO4x30_NSV, 2)
 		};
 		class TransportBackpacks {

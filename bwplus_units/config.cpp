@@ -315,7 +315,7 @@ class CfgVehicles {
 		vehicleClass = "BWA3_VehClass_Men_Fleck"; 
 		genericNames = "BundeswehrMen";
 		uniformClass = "BWA3_Uniform_Fleck";
-		weapons[] = {"BWplus_G36","bwa3_P8","Throw","Put","BWA3_Vector"};
+		weapons[] = {"BWA3_G36","bwa3_P8","Throw","Put","BWA3_Vector"};
 		magazines[] = {"BWA3_30Rnd_556x45_G36","BWA3_30Rnd_556x45_G36","BWA3_30Rnd_556x45_G36","BWA3_30Rnd_556x45_G36","BWA3_30Rnd_556x45_G36","BWA3_15Rnd_9x19_P8","BWA3_15Rnd_9x19_P8","BWA3_15Rnd_9x19_P8"};
 		linkedItems[] = {"BWA3_G_Combat_Black","BWA3_Vest_Leader_Fleck", "BWplus_Beret_Fldjgr", "ItemGPS", "ItemMap", "ItemCompass", "ItemWatch", "ItemRadio"};
 		respawnMagazines[] = {"BWA3_30Rnd_556x45_G36","BWA3_30Rnd_556x45_G36","BWA3_30Rnd_556x45_G36","BWA3_30Rnd_556x45_G36","BWA3_30Rnd_556x45_G36","BWA3_15Rnd_9x19_P8","BWA3_15Rnd_9x19_P8","BWA3_15Rnd_9x19_P8"};
