@@ -33,8 +33,7 @@ class CfgPatches {
 			A3_Structures_F_Heli_Items_Airport,
 			BWplus_core,
 			AGM_Interaction, 
-			AGM_Logistics,
-			BWplus_weapons
+			AGM_Logistics
 		};
 	 	version = "1.4";
     	versionStr = "1.4";
@@ -84,7 +83,7 @@ class CfgVehicles {
     	transportmaxmagazines = 9001;
     	maximumload = 2000;
 		class eventHandlers {
-			Init = "(_this select 0) call compile preprocessFileLineNumbers '\BWplus_units\scripts\Raven.sqf'";
+			Init = "[(_this select 0), 1] call BWplus_core_fnc_addRavenBAckpack; [(_this select 0), 'tf_rt1523g_big_bwmod', 1] call BWplus_core_fnc_addTFRbackpack;'";
 		};
 		class TransportMagazines {
         	MACRO_ADDMAGAZINE(BWA3_15Rnd_9x19_P8, 10)
@@ -114,8 +113,7 @@ class CfgVehicles {
 			MACRO_ADDBACKPACK(B_HMG_01_high_weapon_F, 1)
 			MACRO_ADDBACKPACK(B_HMG_01_support_high_F, 2)
 			MACRO_ADDBACKPACK(B_Mortar_01_support_F, 1)
-			MACRO_ADDBACKPACK(B_Mortar_01_weapon_F, 1)
-			MACRO_ADDBACKPACK(tf_rt1523g_big_bwmod, 1)			
+			MACRO_ADDBACKPACK(B_Mortar_01_weapon_F, 1)	
 		};
 		class TransportWeapons {
 			MACRO_ADDWEAPON(BWA3_Pzf3_Loaded, 2)
@@ -264,7 +262,7 @@ class CfgVehicles {
 		side = 1;
 		faction = "BWA3_Faction";
 		vehicleClass = "BWA3_VehClass_Wheeled_Fleck";
-		crew = "BWA3_crew_fleck";
+		crew = "BWplus_Feldjgr_Flecktarn";
 		scope = 2;
 		scopeCurator = 2;
 		hiddenSelections[] = {"camo", "camo2"};
@@ -299,7 +297,7 @@ class CfgVehicles {
 		side = 1;
 		faction = "BWA3_Faction";
 		vehicleClass = "BWA3_VehClass_Wheeled_Fleck";
-		crew = "BWA3_crew_fleck";
+		crew = "BWA3_Rifleman_Fleck";
 		scope = 2;
 		scopeCurator = 2;
 		hiddenSelections[] = {"camo", "camo2"};
@@ -355,12 +353,11 @@ class CfgVehicles {
 			Init = "_this call BWplus_vehicles_fnc_merlinInit";
 		};
 		class TransportMagazines {
-			MACRO_ADDMAGAZINE(BWA3_30Rnd_556x45_G36,10)
-			MACRO_ADDMAGAZINE(BWA3_200Rnd_556x45,5)
-			MACRO_ADDMAGAZINE(BWA3_DM51A1,5)
-			MACRO_ADDMAGAZINE(BWA3_DM32_Orange,5)
-			MACRO_ADDMAGAZINE(1rnd_HE_Grenade_shell,5)
-			MACRO_ADDMAGAZINE(BWA3_10Rnd_762x51_G28,5)
+			MACRO_ADDMAGAZINE(BWA3_30Rnd_556x45_G36,5)
+			MACRO_ADDMAGAZINE(BWA3_200Rnd_556x45,2)
+			MACRO_ADDMAGAZINE(BWA3_DM51A1,2)
+			MACRO_ADDMAGAZINE(BWA3_DM32_Orange,2)
+			MACRO_ADDMAGAZINE(BWA3_10Rnd_762x51_G28,2)
 			MACRO_ADDMAGAZINE(DemoCharge_Remote_Mag,2)
 		};
 		class TransportItems { 
@@ -406,8 +403,6 @@ class CfgVehicles {
 			MACRO_ADDITEM(BWA3_ItemKestrel,1)
 			MACRO_ADDITEM(BWA3_ItemNavipad,1)
 			MACRO_ADDITEM(AGM_UAVBattery,1)
-			MACRO_ADDITEM(BWplus_Shovel,1)
-			MACRO_ADDITEM(BWplus_Item_CamoNet,2)
 			MACRO_ADDITEM(AGM_NVG_Wide,2)
 		};
 		class TransportBackpacks {

@@ -5,6 +5,10 @@
       <English>Pioneer (BWplus)</English>
       <German>Pionier (BWplus)</German>
     </Key>
+    <Key ID="STR_BWplus_Feldjgr">
+      <English>Feldjäger</English>
+      <German>Feldjäger</German>
+    </Key>
     <Key ID="STR_BWplus_Recon_Spotter">
       <English>Recon Fernspäher</English>
       <German>Aufklärer Fernspäher</German>

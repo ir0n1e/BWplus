@@ -22,6 +22,8 @@ class CfgFunctions {
         class BWplus_core {
             file = "BWplus_core\fnc";
             class BuildAbort;
+            class addTFRbackpack;
+            class addRavenbackpack;
         };
     };
 };

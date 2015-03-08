@@ -1,6 +1,10 @@
 class CfgPatches {
 	class BWplus_units {
 		units[] = {
+			BWplus_Feldjgr_Flecktarn,
+			BWplus_Feldjgr_Tropentarn,
+			BWplus_Kitbag_pio_Green,
+			BWplus_Kitbag_pio_Sand,
 			BWplus_Motorized_Fleck,
 			BWplus_Motorized_Tropen,
 			BWplus_Pioneer_Flecktarn,
@@ -18,16 +22,15 @@ class CfgPatches {
 			BWplus_Recon_TL_Flecktarn,
 			BWplus_Recon_TL_Tropentarn,
 			SpecOps_Fleck, 
-			SpecOps_Tropen,
-			BWplus_Kitbag_pio_Green,
-			BWplus_Kitbag_pio_Sand
+			SpecOps_Tropen
 		};
 		weapons[] = {};
 		requiredVersion = 0.1;
 		requiredAddons[] = {
 			BWplus_core,
 			BWplus_weapons,
-			BWplus_vehicles
+			BWplus_vehicles,
+			BWplus_uniforms
 		};
 	 	version = "1.4";
     	versionStr = "1.4";
@@ -154,7 +157,7 @@ class CfgVehicles {
 		items[] =  {"BWA3_ItemKestrel","BWA3_G_Combat_Black","AGM_Morphine","AGM_Morphine","AGM_Morphine","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_NVG_Wide","Laserbatteries"};
 		respawnitems[] =  {"BWA3_ItemKestrel","BWA3_G_Combat_Black","AGM_Morphine","AGM_Morphine","AGM_Morphine","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_NVG_Wide","Laserbatteries"};
 		class eventHandlers {
-			Init = "(_this select 0) call compile preprocessFileLineNumbers '\BWplus_units\scripts\Raven.sqf'";
+			Init = "[_this select 0] call BWplus_core_fnc_addRavenbackpack";
 		};
 	};
 
@@ -211,7 +214,7 @@ class CfgVehicles {
 		magazines[] = {"BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_15Rnd_9x19_P8","BWA3_15Rnd_9x19_P8","BWA3_15Rnd_9x19_P8","BWA3_DM51A1","BWA3_DM25"};
 		respawnmagazines[] = {"BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_15Rnd_9x19_P8","BWA3_15Rnd_9x19_P8","BWA3_15Rnd_9x19_P8","BWA3_DM51A1","BWA3_DM25"};
 		class eventHandlers {
-			Init = "(_this select 0) call compile preprocessFileLineNumbers '\BWplus_units\scripts\Radio.sqf'";
+			Init = "[(_this select 0), 'tf_rt1523g_big_bwmod'] call BWplus_core_fnc_addTFRbackpack;";
 		};
 	};
 
@@ -304,6 +307,27 @@ class CfgVehicles {
 		uniformClass = "BWA3_Uniform_Tropen";
 		linkedItems[] = {"BWA3_Vest_Marksman_Tropen", "BWA3_Booniehat_Tropen", "ItemGPS", "ItemMap", "ItemCompass", "ItemWatch", "ItemRadio"};
 		respawnlinkedItems[] = {"BWplus_shemagh_Sand","BWA3_Vest_Marksman_Tropen", "BWA3_Booniehat_Tropen", "BWA3_ItemNavipad", "ItemMap", "ItemCompass", "ItemWatch", "ItemRadio"};
+	};
+
+	class BWplus_Feldjgr_Flecktarn: BWA3_TL_Fleck {
+		displayName = "$STR_BWplus_Feldjgr";
+		author = "BW.plus";
+		vehicleClass = "BWA3_VehClass_Men_Fleck"; 
+		genericNames = "BundeswehrMen";
+		uniformClass = "BWA3_Uniform_Fleck";
+		weapons[] = {"BWplus_G36","bwa3_P8","Throw","Put","BWA3_Vector"};
+		magazines[] = {"BWA3_30Rnd_556x45_G36","BWA3_30Rnd_556x45_G36","BWA3_30Rnd_556x45_G36","BWA3_30Rnd_556x45_G36","BWA3_30Rnd_556x45_G36","BWA3_15Rnd_9x19_P8","BWA3_15Rnd_9x19_P8","BWA3_15Rnd_9x19_P8"};
+		linkedItems[] = {"BWA3_G_Combat_Black","BWA3_Vest_Leader_Fleck", "BWplus_Beret_Fldjgr", "ItemGPS", "ItemMap", "ItemCompass", "ItemWatch", "ItemRadio"};
+		respawnMagazines[] = {"BWA3_30Rnd_556x45_G36","BWA3_30Rnd_556x45_G36","BWA3_30Rnd_556x45_G36","BWA3_30Rnd_556x45_G36","BWA3_30Rnd_556x45_G36","BWA3_15Rnd_9x19_P8","BWA3_15Rnd_9x19_P8","BWA3_15Rnd_9x19_P8"};
+		respawnWeapons[] = {"BWplus_G36K_AG_SF_SD","BWplus_P8_SD","Throw","Put","BWA3_Vector"};
+		respawnlinkedItems[] = {"BWA3_Vest_Leader_Fleck", "BWplus_Beret_Fldjgr", "BWA3_ItemNavipad", "ItemMap", "ItemCompass", "ItemWatch", "ItemRadio"};
+		items[] =  {"BWA3_G_Combat_Black","AGM_Morphine","AGM_Morphine","AGM_Morphine","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_NVG_Wide"};
+		respawnitems[] =  {"BWA3_G_Combat_Black","AGM_Morphine","AGM_Morphine","AGM_Morphine","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_Bandage","AGM_NVG_Wide"};
+	};
+	class BWplus_Feldjgr_Tropentarn: BWplus_Feldjgr_Flecktarn {
+		author = "BW.plus";
+		vehicleClass = "BWA3_VehClass_Men_Tropen"; 
+		uniformClass = "BWA3_Uniform_Tropen";
 	};
 };
 
