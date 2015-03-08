@@ -26,4 +26,3 @@ _vehicle spawn {
   		[_this, _item] call AGM_Logistics_fnc_initLoadedObject;
 	};
 };
-_vheicle call compile preprocessFileLineNumbers "\BWplus_vehicles\scripts\Raven.sqf";

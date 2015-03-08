@@ -139,8 +139,6 @@ class CfgVehicles {
 			MACRO_ADDITEM(AGM_M26_Clacker, 2)
 			MACRO_ADDITEM(AGM_Clacker, 2)
 			MACRO_ADDITEM(AGM_DefusalKit, 2)
-			MACRO_ADDITEM(BWplus_Item_CamoNet, 2)
-			MACRO_ADDITEM(BWplus_Shovel, 2)
 		};
 	};
 	class BWplus_Box_AMMO556: BWplus_Box_Empty {
@@ -439,8 +437,6 @@ class CfgVehicles {
 			MACRO_ADDITEM(BWA3_ItemKestrel,1)
 			MACRO_ADDITEM(BWA3_ItemNavipad,1)
 			MACRO_ADDITEM(AGM_UAVBattery,1)
-			MACRO_ADDITEM(BWplus_Shovel,1)
-			MACRO_ADDITEM(BWplus_Item_CamoNet,2)
 			MACRO_ADDITEM(AGM_NVG_Wide,2)
 		};
 		class TransportBackpacks {
