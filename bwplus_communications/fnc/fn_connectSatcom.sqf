@@ -7,5 +7,6 @@ _player = _this select 1;
 _player setVariable ["BWplus_communications_satcomObj", _satCom, true];
 _player setVariable ["BWplus_communications_isConnected", true];
 _satCom setVariable ["BWplus_communications_isConnected", true, true];
+[_satCom, _player] call BWplus_communications_fnc_setTFRmulti;
 
 [localize "STR_BWplus_Satcom_Connected", true, 2, 1] call AGM_Core_fnc_displayText;

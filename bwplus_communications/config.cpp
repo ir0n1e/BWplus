@@ -24,6 +24,7 @@ class CfgFunctions {
             class isConnected;
             class buildSatcom;
             class dismantleSatcom;
+            class setTFRmulti;
         };
     };
 };
@@ -57,7 +58,7 @@ class CfgVehicles {
                     displayName = "$STR_BWplus_communications_buildSatcom";
                     priority = 0.5;
                     conditionShow = "('BWplus_Satbag' in (items AGM_player))";
-                    condition = "!(AGM_player getVariable ['BWplus_building', false])";
+                    condition = "!(AGM_player getVariable ['BWplus_building', false]) && {'BWplus_Satbag' in (items AGM_player)}";
                     statement = "[AGM_player] call BWplus_communications_fnc_buildSatcom";
                     icon = "\a3\ui_f\data\gui\Rsc\RscDisplayArsenal\gps_ca.paa";
                     showDisabled = 0; 
@@ -95,12 +96,17 @@ class CfgVehicles {
         scopeCurator = 2;
         mapSize = 0.700000;
         accuracy = 0.200000;
+        camouflage = 1;
         faction = "Default";
         vehicleClass = "BWplus_Items";
         picture = "\a3\ui_f\data\gui\Rsc\RscDisplayArsenal\gps_ca.paa";
         icon = "\a3\ui_f\data\gui\Rsc\RscDisplayArsenal\gps_ca.paa";
         simulation = "house";
         AGM_Size = 1;
+        class eventHandlers {
+            // mercenary  <NULL-object> fix
+            Init = "{_x reveal (_this select 0)} foreach allunits;";
+        };
         class AGM_Actions { 
             class AGM_DragItem { 
                 displayName = "$STR_AGM_Drag_StartDrag"; 
@@ -117,7 +123,7 @@ class CfgVehicles {
                 displayName = "$STR_BWplus_Satcom_RotateClockwise";
                 distance = 4;
                 condition = "alive AGM_Interaction_Target";
-                statement = "[AGM_Interaction_Target, true] call AGM_StaticWeapons_fnc_rotate";
+                statement = "[AGM_Interaction_Target, true] call AGM_StaticWeapons_fnc_rotate;";
                 showDisabled = 1; 
                 priority = 2.1; 
                 icon = "AGM_Logistics\ui\rotate_cw_ca.paa"; 
@@ -126,7 +132,7 @@ class CfgVehicles {
                 displayName = "$STR_BWplus_Satcom_RotateCounterclockwise"; 
                 distance = 4; 
                 condition = "alive AGM_Interaction_Target"; 
-                statement = "[AGM_Interaction_Target, false] call AGM_StaticWeapons_fnc_rotate";
+                statement = "[AGM_Interaction_Target, false] call AGM_StaticWeapons_fnc_rotate;";
                 showDisabled = 1; 
                 priority = 2; 
                 icon = "AGM_Logistics\ui\rotate_ccw_ca.paa"; 

@@ -7,7 +7,7 @@ class CfgPatches {
             bwa3_common,
             bwa3_weapons,
             bwa3_units, 
-            AGM_Core, 
+            AGM_Core
         };
         version = "1.4";
         versionStr = "1.4";
