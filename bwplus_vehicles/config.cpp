@@ -264,7 +264,7 @@ class CfgVehicles {
 		scope = 2;
 		scopeCurator = 2;
 		hiddenSelections[] = {"camo", "camo2"};
-		hiddenSelectionsTextures[] = {"bwplus_vehicles\data\offroad\fldjgr.paa", "bwplus_vehicles\data\offroad\fldjgr.paa"};
+		hiddenSelectionsTextures[] = {"bwplus_vehicles\data\offroad\fldjgr_co.paa", "bwplus_vehicles\data\offroad\fldjgr_co.paa"};
 		class eventHandlers {
 			Init = "(_this select 0) call BWplus_vehicles_fnc_offroadFldjgrInit";
 		};
@@ -299,7 +299,7 @@ class CfgVehicles {
 		scope = 2;
 		scopeCurator = 2;
 		hiddenSelections[] = {"camo", "camo2"};
-		hiddenSelectionsTextures[] = {"bwplus_vehicles\data\offroad\offroad.paa", "bwplus_vehicles\data\offroad\offroad.paa"};
+		hiddenSelectionsTextures[] = {"bwplus_vehicles\data\offroad\offroad_co.paa", "bwplus_vehicles\data\offroad\offroad_co.paa"};
 	};
 
 
@@ -316,7 +316,7 @@ class CfgVehicles {
 		faction = "BWA3_Faction";
 		crew = "BWA3_crew_fleck";
 		hiddenSelections[] = {"camo"};
-		hiddenSelectionsTextures[] = {"bwplus_vehicles\data\hellcat\hellcat.paa"};
+		hiddenSelectionsTextures[] = {"bwplus_vehicles\data\hellcat\hellcat_co.paa"};
 		class TransportMagazines {
 			MACRO_ADDMAGAZINE(BWA3_30Rnd_556x45_G36,10)
 			MACRO_ADDMAGAZINE(BWA3_200Rnd_556x45,5)
@@ -346,7 +346,7 @@ class CfgVehicles {
 		faction = "BWA3_Faction";
 		crew = "BWA3_crew_fleck";
 		hiddenSelections[] = {"camo1","camo2","camo3"};
-		hiddenSelectionsTextures[] = {"bwplus_vehicles\data\mohawk\mhawk1.paa","BWplus_vehicles\data\mohawk\mhawk2.paa","BWplus_vehicles\data\mohawk\mhawk3.paa"};
+		hiddenSelectionsTextures[] = {"bwplus_vehicles\data\mohawk\mhawk1_co.paa","BWplus_vehicles\data\mohawk\mhawk2_co.paa","BWplus_vehicles\data\mohawk\mhawk3_co.paa"};
 		class eventHandlers {
 			Init = "_this call BWplus_vehicles_fnc_merlinInit";
 		};
