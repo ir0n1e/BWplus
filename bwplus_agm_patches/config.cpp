@@ -42,6 +42,11 @@ class CfgVehicles {
         AGM_Vehicle_Cargo = 20;
         AGM_Paradrop = 1;
     };
+    //AGM van_01_civil_transport_base_f error patch
+    class thing;
+    class van_01_civil_transport_base_f: thing {
+        scope = 0;
+    };
 };
 
 class CfgWeapons {
