@@ -1,0 +1,9 @@
+name = "BW.plus";
+picture = "BWplus_logo.paa";
+icon = "BWplus_logo.paa";
+logo = "BWplus_logo.paa";
+author = "EduardLaser, Ir0n1E";
+actionName = "Website";
+action = "https://github.com/ir0n1e/BWplus";
+description = "BW.plus - Additional skins and features for BWmod and AGM";
+version = "1.4";
