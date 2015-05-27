@@ -24,9 +24,9 @@ class CfgPatches {
         requiredAddons[] = {
             BWplus_core, 
         };
-        version = "1.4";
-        versionStr = "1.4";
-        versionAr[] = {1,4,0};
+        version = "1.4.1";
+        versionStr = "1.4.1";
+        versionAr[] = {1,4,1};
         author[] = {"EduardLaser", "Ir0n1E"};
         authorUrl = "http://ntalpha.de";
     };
@@ -239,6 +239,7 @@ class CfgVehicles {
         class eventHandlers {
             Init = "_this call BWplus_toolsandstructures_fnc_initCrater";
         };
+        
         class AGM_Actions {
             class BWplus_DismantleCrater {
                 displayName = "$STR_BWplus_toolsandstructures_DismantleCrate";
