@@ -30,4 +30,4 @@
 	
 	
 #define MACRO_NOT_DRAGABLE \
-	ace_dragging_canDrag = 0;
+  TRIPLES(ace,dragging,canDrag) = 0;\
