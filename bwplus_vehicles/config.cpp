@@ -43,12 +43,6 @@ class CfgPatches {
 	};
 };
 
-class CfgVehicleClasses {
-	class BWplus_Items {
-		displayName = "BW.plus";
-	};
-};
-
 class CfgFunctions {
 	class BWplus_vehicles {
     	class BWplus_vehicles {

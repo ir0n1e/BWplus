@@ -7,7 +7,7 @@ class CfgVehicles {
         };
     };
 
-    class BWplus_Box_Empty;
+    /*extern*/class BWplus_Box_Empty;
     class BWplus_Box_Items: BWplus_Box_Empty {
         author = "BW.plus";
         displayName = "$STR_BWplus_toolsandstructures_box_items";
@@ -24,11 +24,10 @@ class CfgVehicles {
             MACRO_ADDITEM(BWplus_Shovel, 2)
         };
     };
-
+	
     class Land_MetalCase_01_medium_F;
     class BWplus_Box_Helipad: Land_MetalCase_01_medium_F {
-		//XEH_ENABLED;
-        displayName = "$STR_BWplus_toolsandstructures_Box_Helipad";
+		displayName = "$STR_BWplus_toolsandstructures_Box_Helipad";
         author = "BW.plus";
         mapSize = 0.7;
         accuracy = 0.2;
@@ -36,52 +35,37 @@ class CfgVehicles {
         destrType = "DesturctNo";
         transportmaxmagazines = 50;
         maximumload = 2000;
-		MACRO_DRAGABLE
-		/*extern*/ class ACE_MainActions;
-		class BWplus_buildHelipad: ACE_MainActions {
-                displayName = "$STR_BWplus_toolsandstructures_buildHelipad";
-                priority = 0.5;
-                distance = 5;
-                conditionShow = "'BWplus_Spraycan' in (items ACE_Player) && {!(_target getVariable ['BWplus_BoxEmpty', false])}";
-                condition = "!(_target getVariable ['BWplus_BoxEmpty', false]) && {!(ACE_player getVariable ['BWplus_building', false])} && {'BWplus_Spraycan' in (items ACE_player)}";
-                statement = "[_target, ACE_player] call BWplus_toolsandstructures_fnc_buildHelipad";
-            };
-            class BWplus_dismantleHelipad: ACE_MainActions {
-                displayName = "$STR_BWplus_toolsandstructures_dismantleHelipad";
-                priority = 0.5;
-                distance = 5;
-                conditionShow = "'BWplus_Shovel' in (items ACE_player) && {_target getVariable ['BWplus_BoxEmpty', false]}";
-                condition = "(_target getVariable ['BWplus_BoxEmpty', false]) and {!(ACE_player getVariable ['BWplus_building', false])} && {'BWplus_Shovel' in (items ACE_player)}";
-                statement = "[_target, ACE_player] call BWplus_toolsandstructures_fnc_dismantleHelipad";
-            };
-		  
+		//MACRO_DRAGABLE
+		class eventHandlers {
+            Init = "(_this select 0) setvariable ['BWplus_BoxEmpty', false, true]";
+        };
+		ace_dragging_canDrag = 1;
+		ace_dragging_dragPosition[] = {0,1.2,0};
+		ace_dragging_dragDirection = 0;
+		class ACE_Actions {
+			class ACE_MainActions {	
+				displayName = "TEST";
+				slection = "";
+				distance = 10;
+				condition = "true";
+				
+				class BWplus_buildHelipad {
+						
+		                displayName = "$STR_BWplus_toolsandstructures_buildHelipad"; 
+						condition = "true"; 
+						statement = "[_target, ACE_player] call BWplus_toolsandstructures_fnc_buildHelipad";
+						exceptions[] = {}; 
+						showDisabled = 1; 
+						priority = 0.1; 
+						icon = PATHTOF(ui\bwplus_lamp_ca.paa);
+						distance = 4.5; 
+						
+						
+				};
+			};
+        };
+		class ACE_SelfActions {};
 		
-		
-		
-		
-		
-        //class eventHandlers {
-            //Init = "(_this select 0) setvariable ['BWplus_BoxEmpty', false, true]";
-        //};
-		//MACRO_DRAGABLE   
-		/*class ACE_Actions {
-			class BWplus_buildHelipad {
-                displayName = "$STR_BWplus_toolsandstructures_buildHelipad";
-                priority = 0.5;
-                distance = 5;
-                conditionShow = "'BWplus_Spraycan' in (items ACE_Player) && {!(_target getVariable ['BWplus_BoxEmpty', false])}";
-                condition = "!(_target getVariable ['BWplus_BoxEmpty', false]) && {!(ACE_player getVariable ['BWplus_building', false])} && {'BWplus_Spraycan' in (items ACE_player)}";
-                statement = "[_target, ACE_player] call BWplus_toolsandstructures_fnc_buildHelipad";
-            };
-            class BWplus_dismantleHelipad {
-                displayName = "$STR_BWplus_toolsandstructures_dismantleHelipad";
-                priority = 0.5;
-                distance = 5;
-                conditionShow = "'BWplus_Shovel' in (items ACE_player) && {_target getVariable ['BWplus_BoxEmpty', false]}";
-                condition = "(_target getVariable ['BWplus_BoxEmpty', false]) and {!(ACE_player getVariable ['BWplus_building', false])} && {'BWplus_Shovel' in (items ACE_player)}";
-                statement = "[_target, ACE_player] call BWplus_toolsandstructures_fnc_dismantleHelipad";
-            };
-		};*/
         class TransportMagazines {};
         class TransportBackpacks {};
         class TransportWeapons {};

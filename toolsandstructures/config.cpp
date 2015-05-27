@@ -24,7 +24,7 @@ class CfgPatches {
         };
         requiredVersion = 1.5;
         requiredAddons[] = {
-            BWplus_core,
+            ace_main,
 			ace_interaction
         };
         version = "1.5";
@@ -39,18 +39,3 @@ class CfgPatches {
 #include "CfgWeapons.hpp"
 
 #include "CfgEventHandlers.hpp"
-enum {
-    destructengine = 2,
-    destructdefault = 6,
-    destructwreck = 7,
-    destructtree = 3,
-    destructtent = 4,
-    stabilizedinaxisx = 1,
-    stabilizedinaxesxyz = 4,
-    stabilizedinaxisy = 2,
-    destructno = 0,
-    stabilizedinaxesboth = 3,
-    stabilizedinaxesnone = 0,
-    destructman = 5,
-    destructbuilding = 1
-}

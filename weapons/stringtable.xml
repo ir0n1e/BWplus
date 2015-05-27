@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project name="BW.plus">
+  <Package name="Weapons">
+    <Key ID="STR_BWplus_Box_weapons_SF">
+      <English>[BW.plus] SF Weapons</English>
+      <German>[BW.plus] SF Waffen</German>
+    </Key>
+     <Key ID="STR_BWplus_Weapon_G36K_SF_SD_Fleck">
+      <English>G36K IdZ-ES SF Green</English>
+      <German>G36K IdZ-ES Grün</German>
+    </Key>
+     <Key ID="STR_BWplus_Weapon_G36K_SF_SD_Tropen">
+      <English>G36K IdZ-ES SF Sand</English>
+      <German>G36K IdZ-ES Sand</German>
+    </Key>
+     <Key ID="STR_BWplus_Weapon_G36K_AG_SF_SD_Fleck">
+      <English>G36K IdZ-ES AG40-2 SF Green</English>
+      <German>G36K IdZ-ES AG40-2 Grün</German>
+    </Key>
+     <Key ID="STR_BWplus_Weapon_G36K_AG_SF_SD_Tropen">
+      <English>G36K IdZ-ES AG40-2 SF Sand</English>
+      <German>G36K IdZ-ES AG40-2 SF Sand</German>
+    </Key>
+    <Key ID="STR_Bwplus_optic_ZO4x30_Fleck">
+      <English>ZO 4x30 Green</English>
+      <German>ZO 4x30 Grün</German>
+    </Key>
+     <Key ID="STR_Bwplus_optic_ZO4x30_Tropen">
+      <English>ZO 4x30 Sand</English>
+      <German>ZO 4x30 Sand</German>
+    </Key>
+    <Key ID="STR_BWplus_optic_RSAS_Fleck">
+      <English>RSAS Green</English>
+      <German>RSAS Grün</German>
+    </Key>
+     <Key ID="STR_BWplus_optic_RSAS_Tropen">
+      <English>RSAS Sand</English>
+      <German>RSAS Sand</German>
+    </Key>
+    <Key ID="STR_BWplus_optic_ZO4x30_Fleck_NSV">
+      <English>ZO 4x30 NSV Green</English>
+      <German>ZO 4x30 NSV Grün</German>
+    </Key>
+     <Key ID="STR_BWplus_optic_ZO4x30_Tropen_NSV">
+      <English>ZO 4x30 NSV Sand</English>
+      <German>ZO 4x30 NSV Sand</German>
+    </Key>
+    <Key ID="STR_BWplus_optic_ZO4x30_Fleck_IRV">
+      <English>ZO 4x30 IRV Green</English>
+      <German>ZO 4x30 IRV Grün</German>
+    </Key>
+     <Key ID="STR_BWplus_optic_ZO4x30_Tropen_IRV">
+      <English>ZO 4x30 IRV Sand</English>
+      <German>ZO 4x30 IRV Sand</German>
+    </Key>
+  </Package>
+</Project>

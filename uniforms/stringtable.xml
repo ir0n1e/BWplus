@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project name="BW.plus">
+  <Package name="Uniformes">
+    <Key ID="STR_BWplus_Shemagh_Green">
+      <English>[BW.plus] Shemagh Green</English>
+      <German>[BW.plus] Shemagh Grün</German>
+    </Key>
+     <Key ID="STR_BWplus_Shemagh_Sand">
+      <English>[BW.plus] Shemagh Sand</English>
+      <German>[BW.plus] Shemagh Sand</German>
+    </Key>
+    <Key ID="STR_BWplus_LOG_Shemagh_Green">
+      <English>[BW.plus] Shades Orange / Shemagh Green</English>
+      <German>[BW.plus] Brille Orange / Shemagh Grün</German>
+    </Key>
+     <Key ID="STR_BWplus_LOG_Shemagh_Sand">
+      <English>[BW.plus] Shades Orange / Shemagh Sand</English>
+      <German>[BW.plus] Brille Orange / Shemagh Sand</German>
+    </Key>
+    <Key ID="STR_BWplus_LBG_Shemagh_Green">
+      <English>[BW.plus] Shades Black / Shemagh Green</English>
+      <German>[BW.plus] Brille Schwarz / Shemagh Grün</German>
+    </Key>
+     <Key ID="STR_BWplus_LBG_Shemagh_Sand">
+      <English>[BW.plus] Shades Black / Shemagh Sand</English>
+      <German>[BW.plus] Brille Schwarz / Shemagh Sand</German>
+    </Key>
+     <Key ID="STR_BWplus_LCG_Shemagh_Green">
+      <English>[BW.plus] Shades Clear / Shemagh Green</English>
+      <German>[BW.plus] Brille Klar / Shemagh Grün</German>
+    </Key>
+     <Key ID="STR_BWplus_LCG_Shemagh_Sand">
+      <English>[BW.plus] Shades Clear / Shemagh Sand</English>
+      <German>[BW.plus] Brille Klar / Shemagh Sand</German>
+    </Key>
+   <Key ID="STR_BWplus_Glasses">
+      <English>[BW.plus] Glasses</English>
+      <German>[BW.plus] Brillen</German>
+    </Key>
+    <Key ID="STR_BWplus_Cap_Green">
+      <English>[BW.plus] Cap Green</English>
+      <German>[BW.plus] Cap Grün</German>
+    </Key>
+    <Key ID="STR_BWplus_Cap_Sand">
+      <English>[BW.plus] Cap Sand</English>
+      <German>[BW.plus] Cap Sand</German>
+    </Key>
+     <Key ID="STR_BWplus_AddGoggles">
+      <English>Add Goggles</English>
+      <German>Brille aufsetzen</German>
+    </Key>
+    <Key ID="STR_BWplus_removeGoggles">
+      <English>Remove Goggles</English>
+      <German>Brille abnehmen</German>
+    </Key>
+    <Key ID="STR_BWplus_AttachGlasses">
+      <English>attached</English>
+      <German>aufgesetzt</German>
+    </Key>
+     <Key ID="STR_BWplus_detachGlasses">
+      <English>detached</English>
+      <German>aubgesetzt</German>
+    </Key>
+    <Key ID="STR_BWplus_uniforms_beretsani">
+      <English>Beret (Sanitäter)</English>
+      <German>Barett (Sanitäter)</German>
+    </Key>
+    <Key ID="STR_BWplus_uniforms_beretfldjgr">
+      <English>Beret (Feldjäger)</English>
+      <German>Barett (Feldjäger)</German>
+    </Key>
+    <Key ID="STR_BWplus_uniforms_beretpio">
+      <English>Beret (Pioniere)</English>
+      <German>Barett (Pioniere)</German>
+    </Key>
+    <Key ID="STR_BWplus_Box_HeadGear">
+      <English>[BW.plus] Box HeadGear</English>
+      <German>[BW.plus] Kopfbedeckungskiste</German>
+    </Key>
+     <Key ID="STR_BWplus_uniforms_beretfrnmldr">
+      <English>Beret (Fernmelder)</English>
+      <German>Barett (Fernmelder)</German>
+    </Key>
+  </Package>
+</Project>
