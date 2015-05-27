@@ -11,17 +11,20 @@
 	Returns:
 	none
 */
-#include "script_component.hpp"
+_this spawn {
 
-CHECK(!(isClass(configFile/"CfgPatches"/"MicroAirVehicles")))
+	#include "script_component.hpp"
 
-PARAMS_1(_object);
-DEFAULT_PARAM(1,_count,1);
+	CHECK(!(isClass(configFile/"CfgPatches"/"MicroAirVehicles")))
 
-#define	RAVEN "B_MAV_B_BACKPACK"
+	PARAMS_1(_object);
+	DEFAULT_PARAM(1,_count,1);
 
-if (typeOf _object isKindOf "Men") then {
-	_object addBackpack RAVEN;
-} else {
-	_object addBackpackCargoGlobal [RAVEN, _count];
+	#define	RAVEN "B_MAV_B_BACKPACK"
+
+	if (typeOf _object isKindOf "Men") then {
+		_object addBackpack RAVEN;
+	} else {
+		_object addBackpackCargoGlobal [RAVEN, _count];
+	};
 };
