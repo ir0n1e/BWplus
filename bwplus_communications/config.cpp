@@ -4,9 +4,9 @@ class CfgPatches {
         weapons[] = {BWplus_Satbag};
         requiredVersion = 0.1;
         requiredAddons[] = {BWplus_core, AGM_Interaction};
-        version = "1.4";
-        versionStr = "1.4";
-        versionAr[] = {1,4,0};
+        version = "1.4.1";
+        versionStr = "1.4.1";
+        versionAr[] = {1,4,1};
         author[] = {"EduardLaser", "Ir0n1E", "TheDog"};
         authorUrl = "http://ntalpha.de";
     };

@@ -18,7 +18,7 @@ _box allowdamage false;
 _box setpos _pos_rel;
 _box setdir _dir;
 _items pushback _box;
-waitUntil {alive _box};
+//waitUntil {alive _box};
 
 
 _pos_rel = [_pos, 4, _dir-210] call BIS_fnc_relPos;

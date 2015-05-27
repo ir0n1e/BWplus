@@ -33,9 +33,9 @@ class CfgPatches {
 			BWplus_uniforms,
 			BWplus_communications
 		};
-	 	version = "1.4";
-    	versionStr = "1.4";
-    	versionAr[] = {1,4,0};
+	 	version = "1.4.1";
+    	versionStr = "1.4.1";
+    	versionAr[] = {1,4,1};
     	author[] = {"EduardLaser", "Ir0n1E"};
     	authorUrl = "http://ntalpha.de";
 	};
@@ -304,7 +304,7 @@ class CfgVehicles {
 		magazines[] = {"BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_15Rnd_9x19_P8","BWA3_15Rnd_9x19_P8","BWA3_15Rnd_9x19_P8","BWA3_DM51A1","BWA3_DM25"};
 		respawnmagazines[] = {"BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_30Rnd_556x45_G36_SD","BWA3_15Rnd_9x19_P8","BWA3_15Rnd_9x19_P8","BWA3_15Rnd_9x19_P8","BWA3_DM51A1","BWA3_DM25"};
 		class eventHandlers {
-			Init = "(_this select 0) setvariable ['BWplus_isRadioman', true]; [(_this select 0), 'tf_rt1523g_big_bwmod'] call BWplus_core_fnc_addTFRbackpack;";
+			Init = "[(_this select 0), 'tf_rt1523g_big_bwmod'] call BWplus_core_fnc_addTFRbackpack;";
 		};
 		
 	};

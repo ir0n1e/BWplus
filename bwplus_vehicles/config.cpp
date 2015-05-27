@@ -20,7 +20,7 @@ class CfgPatches {
 			BWplus_Fennek_Flecktarn_gmg,
 			BWplus_Fennek_Flecktarn_mg,
 			BWplus_Fennek_Flecktarn_pio,
-			BWplus_Fennek_Flecktarntarn_san,
+			BWplus_Fennek_Flecktarn_san,
 			BWplus_Fennek_Tropen,
 			BWplus_Fennek_Tropen_gmg,
 			BWplus_Fennek_Tropen_mg,
@@ -35,9 +35,9 @@ class CfgPatches {
 			AGM_Interaction, 
 			AGM_Logistics
 		};
-	 	version = "1.4";
-    	versionStr = "1.4";
-    	versionAr[] = {1,4,0};
+	 	version = "1.4.1";
+    	versionStr = "1.4.1";
+    	versionAr[] = {1,4,1};
     	author[] = {"EduardLaser", "Ir0n1E"};
     	authorUrl = "http://ntalpha.de";
 	};
@@ -438,6 +438,7 @@ class CfgVehicles {
 			MACRO_ADDITEM(BWA3_ItemNavipad,1)
 			MACRO_ADDITEM(AGM_UAVBattery,1)
 			MACRO_ADDITEM(AGM_NVG_Wide,2)
+			MACRO_ADDITEM(BWplus_CamoNet_Dismantled,2)
 		};
 		class TransportBackpacks {
 			MACRO_ADDBACKPACK(BWA3_AssaultPack_Medic,1)

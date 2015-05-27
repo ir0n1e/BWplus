@@ -6,4 +6,4 @@ author = "EduardLaser, Ir0n1E";
 actionName = "Website";
 action = "https://github.com/ir0n1e/BWplus";
 description = "BW.plus - Additional skins and features for BWmod and AGM";
-version = "1.4";
+version = "1.4.1";

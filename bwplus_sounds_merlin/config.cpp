@@ -5,9 +5,9 @@ class CfgPatches {
 		weapons[] = {};
 		requiredVersion = 0.100000;
 		requiredAddons[] = {BWplus_core, bwplus_vehicles, A3_Air_F};
-		version = "1.4";
-    	versionStr = "1.4";
-    	versionAr[] = {1,4,0};
+		version = "1.4.1";
+    	versionStr = "1.4.1";
+    	versionAr[] = {1,4,1};
     	author[] = {"EduardLaser", "Ir0n1E"};
     	authorUrl = "http://ntalpha.de";
 	};
