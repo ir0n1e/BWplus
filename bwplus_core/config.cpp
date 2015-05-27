@@ -9,9 +9,9 @@ class CfgPatches {
             bwa3_units, 
             AGM_Core
         };
-        version = "1.4";
-        versionStr = "1.4";
-        versionAr[] = {1,4,0};
+        version = "1.4.1";
+        versionStr = "1.4.1";
+        versionAr[] = {1,4,1};
         author[] = {"EduardLaser", "Ir0n1E"};
         authorUrl = "http://ntalpha.de";
     };

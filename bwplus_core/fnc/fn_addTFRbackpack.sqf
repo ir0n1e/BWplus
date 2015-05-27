@@ -14,19 +14,22 @@
 */
 
 if !(isClass(configfile >> "CfgPatches" >> "task_force_radio_items")) exitWith {};
+_this spawn {
+	private ["_object", "_backpack", "_count"];
 
-private ["_object", "_backpack", "_count"];
+	_object 	= _this select 0;
+	_backpack 	= _this select 1;
+	_count 		= 1;
 
-_object 	= _this select 0;
-_backpack 	= _this select 1;
-_count 		= 1;
+	if (count _this > 2) then {
+		_count = _this select 2;
+	};
 
-if (count _this > 2) then {
-	_count = _this select 2;
-};
+	waitUntil {alive _object};
 
-if (typeOf _object isKindOf "Men") then {
-	_object addBackpack _backpack;
-} else {
-	_object addBackpackCargoGlobal [_backpack, _count];
+	if (typeOf _object isKindOf "Men") then {
+		_object addBackpack _backpack;
+	} else {
+		_object addBackpackCargoGlobal [_backpack, _count];
+	};
 };

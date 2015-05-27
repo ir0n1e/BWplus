@@ -13,20 +13,23 @@
 */
 
 if !(isClass(configFile/"CfgPatches"/"MicroAirVehicles")) exitWith {};
+_this spawn {
+	#define	RAVEN "B_MAV_B_BACKPACK"
 
-#define	RAVEN "B_MAV_B_BACKPACK"
+	private ["_object", "_count"];
 
-private ["_object", "_count"];
+	_object = _this select 0;
+	_count 	= 1;
 
-_object = _this select 0;
-_count 	= 1;
 
-if (count _this > 1) then {
-	_count = _this select 1;
-};
+	if (count _this > 1) then {
+		_count = _this select 1;
+	};
+	waitUntil {alive _object};
 
-if (typeOf _object isKindOf "Men") then {
-	_object addBackpack RAVEN;
-} else {
-	_object addBackpackCargoGlobal [RAVEN, _count];
+	if (typeOf _object isKindOf "Men") then {
+		_object addBackpack RAVEN;
+	} else {
+		_object addBackpackCargoGlobal [RAVEN, _count];
+	};
 };
