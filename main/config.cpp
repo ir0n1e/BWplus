@@ -34,6 +34,12 @@ class CfgMods {
     };
 };
 
+class CfgVehicleClasses {
+	class BWplus_Items {
+		displayName = "BW.plus";
+	};
+};
+
 #include "CfgVehicles.hpp"
 
 #include "CfgEventHandlers.hpp"
