@@ -12,17 +12,15 @@
 	Returns:
 	none
 */
-_this spawn {
-	#include "script_component.hpp"
+#include "script_component.hpp"
 
-	CHECK(!(isClass(configfile >> "CfgPatches" >> "task_force_radio_items")))
+CHECK(!(isClass(configfile >> "CfgPatches" >> "task_force_radio_items")))
 
-	PARAMS_2(_object,_backpack)
-	DEFAULT_PARAM(2,_count,1);
+PARAMS_2(_object,_backpack)
+DEFAULT_PARAM(2,_count,1);
 
-	if (typeOf _object isKindOf "Men") then {
-		_object addBackpack _backpack;
-	} else {
-		_object addBackpackCargoGlobal [_backpack, _count];
-	};
+if (typeOf _object isKindOf "Men") then {
+	_object addBackpack _backpack;
+} else {
+	_object addBackpackCargoGlobal [_backpack, _count];
 };
