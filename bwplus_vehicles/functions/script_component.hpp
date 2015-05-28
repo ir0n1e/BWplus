@@ -1,0 +1,1 @@
+#include "\y\BWplus\addons\vehicles\script_component.hpp"

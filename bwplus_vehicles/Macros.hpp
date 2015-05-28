@@ -1,3 +1,4 @@
+/*
 #define MACRO_OPENDOOR \
 	class BWplus_Open_left_door { \
         displayName = "Open Left Door"; \
@@ -39,30 +40,30 @@
 		showWindow = 0; \
 		onlyForPlayer = 1; \
  	};
-
+*/
 #define MACRO_ACTIONFOB \
 	class BWplus_buildFOB { \
         displayName = "$STR_BWplus_Vehicles_buildFOB"; \
-        condition = "!(AGM_Interaction_Target getVariable 'BWplus_FOBon') AND {[AGM_Interaction_Target] call BWplus_vehicles_fnc_canbuildFOB}"; \
-        statement = "[AGM_Interaction_Target] call BWplus_vehicles_fnc_buildFOB"; \
+        condition = "!((_this select 0) getVariable 'BWplus_FOBon') AND {[(_this select 0)] call BWplus_vehicles_fnc_canbuildFOB}"; \
+        statement = "[(_this select 0)] call BWplus_vehicles_fnc_buildFOB"; \
         distance = 4; \
         priority = 4; \
   	}; \
  	class BWplus_dismantleFOB { \
         displayName = "$STR_BWplus_Vehicles_DismantleFOB"; \
-        condition = "(AGM_Interaction_Target getVariable 'BWplus_FOBon') AND {[AGM_Interaction_Target] call BWplus_vehicles_fnc_canbuildFOB}"; \
-        statement = "[AGM_Interaction_Target] call BWplus_vehicles_fnc_dismantleFOB"; \
+        condition = "((_this select 0) getVariable 'BWplus_FOBon') AND {[(_this select 0)] call BWplus_vehicles_fnc_canbuildFOB}"; \
+        statement = "[(_this select 0)] call BWplus_vehicles_fnc_dismantleFOB"; \
         distance = 4; \
         priority = 5; \
   	};
-
+/*
 #define MACRO_DRAGBOAT \
   class BWplus_DragBoat { \
     displayName = "$STR_AGM_Drag_StartDrag"; \
     distance = 5; \
     condition = "!(AGM_player call AGM_Drag_fnc_isDraggingObject)"; \
-    conditionShow = "[AGM_Interaction_Target, AGM_player] call AGM_Drag_fnc_isDraggable"; \
-    statement = "[AGM_Interaction_Target, AGM_player] call BWplus_vehicles_fnc_dragBoat"; \
+    conditionShow = "[ACE_Interaction_Target, AGM_player] call AGM_Drag_fnc_isDraggable"; \
+    statement = "[ACE_Interaction_Target, AGM_player] call BWplus_vehicles_fnc_dragBoat"; \
     showDisabled = 0; \
     priority = 3; \
     Icon = "\A3\boat_F\Boat_Transport_01\data\UI\map_Boat_Transport_01_CA.paa"; \
@@ -84,30 +85,13 @@
   };
 
 
-#define MACRO_ADDITEM(ITEM,COUNT) class _xx_##ITEM { \
-  name = #ITEM; \
-  count = COUNT; \
-};
-#define MACRO_ADDBACKPACK(PACK,COUNT) class _xx_##PACK { \
-  backpack = #PACK; \
-  count = COUNT; \
-};
-#define MACRO_ADDMAGAZINE(MAGAZINE,COUNT) class _xx_##MAGAZINE { \
-  magazine = #MAGAZINE; \
-  count = COUNT; \
-};
-#define MACRO_ADDWEAPON(WEAPON,COUNT) class _xx_##WEAPON { \
-  weapon = #WEAPON; \
-  count = COUNT; \
-};
-
 //AGM_Actions
 #define MACRO_LOADABLE \
   class AGM_loadItem { \
     displayName = "$STR_AGM_Logistics_LoadItem"; \
     distance = 6; \
-    condition = "[AGM_Interaction_Target] call AGM_Logistics_fnc_canLoadItem"; \
-    statement = "[AGM_Interaction_Target, AGM_Logistics_targetVehicle] call AGM_Logistics_fnc_openLoadUI"; \
+    condition = "[ACE_Interaction_Target] call AGM_Logistics_fnc_canLoadItem"; \
+    statement = "[ACE_Interaction_Target, AGM_Logistics_targetVehicle] call AGM_Logistics_fnc_openLoadUI"; \
     showDisabled = 1; \
     priority = 1.6; \
     icon = "\A3\ui_f\data\igui\cfg\actions\gear_ca.paa"; \
@@ -118,8 +102,8 @@
     displayName = "$STR_AGM_Drag_StartDrag"; \
     distance = 4; \
     condition = "!(AGM_player call AGM_Drag_fnc_isDraggingObject)"; \
-    conditionShow = "[AGM_Interaction_Target, AGM_player] call AGM_Drag_fnc_isDraggable"; \
-    statement = "[AGM_Interaction_Target, AGM_player] call AGM_Drag_fnc_dragObject"; \
+    conditionShow = "[ACE_Interaction_Target, AGM_player] call AGM_Drag_fnc_isDraggable"; \
+    statement = "[ACE_Interaction_Target, AGM_player] call AGM_Drag_fnc_dragObject"; \
     showDisabled = 0; \
     priority = 3; \
     icon = "\A3\ui_f\data\igui\cfg\actions\gear_ca.paa"; \
@@ -136,8 +120,8 @@
   class AGM_GetIn { \
     displayName = "$STR_AGM_StaticWeapons_GetIn"; \
     distance = 4; \
-    condition = "[AGM_Interaction_Target] call AGM_StaticWeapons_fnc_canGetIn"; \
-    statement = "[AGM_Interaction_Target] call AGM_StaticWeapons_fnc_getIn"; \
+    condition = "[ACE_Interaction_Target] call AGM_StaticWeapons_fnc_canGetIn"; \
+    statement = "[ACE_Interaction_Target] call AGM_StaticWeapons_fnc_getIn"; \
     showDisabled = 0; \
     priority = 1; \
   };
@@ -146,8 +130,8 @@
   class AGM_RotateClockwise { \
     displayName = "$STR_AGM_StaticWeapons_RotateClockwise"; \
     distance = 4; \
-    condition = "alive AGM_Interaction_Target"; \
-    statement = "[AGM_Interaction_Target, true] call AGM_StaticWeapons_fnc_rotate"; \
+    condition = "alive ACE_Interaction_Target"; \
+    statement = "[ACE_Interaction_Target, true] call AGM_StaticWeapons_fnc_rotate"; \
     showDisabled = 1; \
     priority = 2.1; \
     icon = "AGM_Logistics\ui\rotate_cw_ca.paa"; \
@@ -155,9 +139,10 @@
   class AGM_RotateCounterclockwise { \
     displayName = "$STR_AGM_StaticWeapons_RotateCounterclockwise"; \
     distance = 4; \
-    condition = "alive AGM_Interaction_Target"; \
-    statement = "[AGM_Interaction_Target, false] call AGM_StaticWeapons_fnc_rotate"; \
+    condition = "alive ACE_Interaction_Target"; \
+    statement = "[ACE_Interaction_Target, false] call AGM_StaticWeapons_fnc_rotate"; \
     showDisabled = 1; \
     priority = 2; \
     icon = "AGM_Logistics\ui\rotate_ccw_ca.paa"; \
   };
+  */

@@ -1,0 +1,1 @@
+#include "\y\BWplus\addons\uniforms\script_component.hpp"

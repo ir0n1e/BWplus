@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project name="BW.plus">
+  <Package name="toolsandstructures">
+    <Key ID="STR_BWplus_Shovel">
+      <English>[BW.plus] Folding Shovel</English>
+      <German>[BW.plus] Klappspaten</German>
+    </Key>
+    <Key ID="STR_BWplus_Shovel_Description">
+      <English>Builds trenches and foxholes</English>
+      <German>Baut Unterstände und Schützenlöcher</German>
+    </Key>
+    <Key ID="STR_BWplus_SprayCan">
+      <English>[BW.plus] Spray Can White</English>
+      <German>[BW.plus] Sprühdose weiß</German>
+    </Key>
+     <Key ID="STR_BWplus_SprayCan_Empty">
+      <English>[BW.plus] Spray Can empty</English>
+      <German>[BW.plus] Sprühdose leer</German>
+    </Key>
+    <Key ID="STR_BWplus_SprayCan_Description">
+      <English>nipa Markierungslack, Kreide weiß</English>
+      <German>nipa Markierungslack, Kreide weiß</German>
+    </Key>
+    <Key ID="STR_BWplus_CamoNet">
+      <English>Camonet (BWplus)</English>
+      <German>Tarnnetz (BWplus)</German>
+    </Key>
+	<Key ID="STR_BWplus_Actions">
+      <English>BWplus Actions</English>
+      <German>BEplus Aktionen</German>
+    </Key>
+    <Key ID="STR_BWplus_toolsandstructures_Crate">
+      <English>Build Trench >></English>
+      <German>Stellung ausheben >></German>
+    </Key>
+    <Key ID="STR_BWplus_toolsandstructures_buildCrate">
+      <English>Build Foxhole</English>
+      <German>Schützenloch ausheben</German>
+    </Key>
+    <Key ID="STR_BWplus_toolsandstructures_DismantleCrate">
+      <English>Dismantle Foxhole</English>
+      <German>Schützenloch abbauen</German>
+    </Key>
+    <Key ID="STR_BWplus_toolsandstructures_Crater">
+      <English>[BW.plus] Trench</English>
+      <German>[BW.plus] Schützenloch</German>
+    </Key>
+    <Key ID="STR_BWplus_toolsandstructures_DismantlingCrater">
+      <English>Dismentling foxhole</English>
+      <German>Baue Stellung ab</German>
+    </Key>
+    <Key ID="STR_BWplus_toolsandstructures_buildCrateNet">
+      <English>Build Trench (Net)</English>
+      <German>Unterstand ausheben</German>
+    </Key>
+     <Key ID="STR_BWplus_toolsandstructures_buildNet">
+      <English>Build Camonet</English>
+      <German>Tarnnetz aufbauen</German>
+    </Key>
+    <Key ID="STR_BWplus_toolsandstructures_DismantleNet">
+      <English>Dismantle Camonet</English>
+      <German>Tarnnetz abbauen</German>
+    </Key>
+    <Key ID="STR_BWplus_toolsandstructures_LightsOn">
+      <English>Lights on</English>
+      <German>Strahler an</German>
+    </Key>
+    <Key ID="STR_BWplus_toolsandstructures_Net_Dismantled">
+      <English>[BW.plus] Camonet Dismantled</English>
+      <German>[BW.plus] Tarnnetz Demontiert</German>
+    </Key>
+     <Key ID="STR_BWplus_toolsandstructures_Net">
+      <English>[BW.plus] Camonet</English>
+      <German>[BW.plus] Tarnnetz</German>
+    </Key>
+     <Key ID="STR_BWplus_toolsandstructures_Lights">
+      <English>[BW.plus] Lights</English>
+      <German>[BW.plus] 2000 Watt Strahler</German>
+    </Key>
+    <Key ID="STR_BWplus_toolsandstructures_BuildingNet">
+      <English>Building Camo Net</English>
+      <German>Baue Tarnnetz auf</German>
+    </Key>
+     <Key ID="STR_BWplus_toolsandstructures_DismantlingNet">
+      <English>Dismentling Camo Net</English>
+      <German>Baue Tarnnetz ab</German>
+    </Key>
+    <Key ID="STR_BWplus_toolsandstructures_BuildingCrater">
+      <English>Building foxhole</English>
+      <German>Hebe Stellung aus</German>
+    </Key>
+     <Key ID="STR_BWplus_toolsandstructures_BuildingHelipad">
+      <English>Building Helipad</English>
+      <German>Baue Helipad</German>
+    </Key>
+     <Key ID="STR_BWplus_toolsandstructures_DismantlingHelipad">
+      <English>Dismantling Helipad</English>
+      <German>Baue Helipad ab</German>
+    </Key>
+     <Key ID="STR_BWplus_toolsandstructures_BuildHelipad">
+      <English>Build Helipad</English>
+      <German>Helipad aufbauen</German>
+    </Key>
+     <Key ID="STR_BWplus_toolsandstructures_DismantleHelipad">
+      <English>Dismantle Helipad</English>
+      <German>Helipad abbauen</German>
+    </Key>
+      <Key ID="STR_BWplus_toolsandstructures_LightsOff">
+      <English>Lights off</English>
+      <German>Strahler aus</German>
+    </Key>
+    <Key ID="STR_BWplus_toolsandstructures_box_Helipad">
+      <English>[BW.plus] Helipad Box</English>
+      <German>[BW.plus] Helipad Box</German>
+    </Key>
+    <Key ID="STR_BWplus_toolsandstructures_box_items">
+      <English>[BW.plus] Items</English>
+      <German>[BW.plus] Items</German>
+    </Key>
+  </Package>
+</Project>
