@@ -24,13 +24,17 @@ class CfgVehicles {
             MACRO_ADDITEM(BWplus_Shovel, 2)
         };
     };
-	
-    class Land_MetalCase_01_medium_F;
+	/*exter*/class MetalCase_01_base_F;
+    class Land_MetalCase_01_medium_F: MetalCase_01_base_F{
+		class Ace_Actions;
+	};
     class BWplus_Box_Helipad: Land_MetalCase_01_medium_F {
 		displayName = "$STR_BWplus_toolsandstructures_Box_Helipad";
         author = "BW.plus";
         mapSize = 0.7;
         accuracy = 0.2;
+		scope = 2;
+		scopeCurator = 2;
         vehicleClass = "BWplus_Items";
         destrType = "DesturctNo";
         transportmaxmagazines = 50;
@@ -42,26 +46,19 @@ class CfgVehicles {
 		ace_dragging_canDrag = 1;
 		ace_dragging_dragPosition[] = {0,1.2,0};
 		ace_dragging_dragDirection = 0;
-		class ACE_Actions {
-			class ACE_MainActions {	
-				displayName = "TEST";
-				slection = "";
-				distance = 10;
-				condition = "true";
-				
-				class BWplus_buildHelipad {
+		class ACE_Actions : ACE_Actions {
+			class BWplus_buildHelipad {
 						
-		                displayName = "$STR_BWplus_toolsandstructures_buildHelipad"; 
-						condition = "true"; 
-						statement = "[_target, ACE_player] call BWplus_toolsandstructures_fnc_buildHelipad";
-						exceptions[] = {}; 
-						showDisabled = 1; 
-						priority = 0.1; 
-						icon = PATHTOF(ui\bwplus_lamp_ca.paa);
-						distance = 4.5; 
+		        displayName = "$STR_BWplus_toolsandstructures_buildHelipad"; 
+				condition = "true"; 
+				statement = "[_target, ACE_player] call BWplus_toolsandstructures_fnc_buildHelipad";
+				exceptions[] = {}; 
+				showDisabled = 1; 
+				priority = 0.1; 
+				icon = PATHTOF(ui\bwplus_lamp_ca.paa);
+				distance = 4.5; 
 						
 						
-				};
 			};
         };
 		class ACE_SelfActions {};
