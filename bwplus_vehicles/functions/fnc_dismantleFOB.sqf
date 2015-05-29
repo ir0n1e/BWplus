@@ -5,8 +5,9 @@
 PARAMS_1(_vec);
 
 BWplus_vehicles_dismantleFOBCallback = {
-	_vec = _this select 0;
-
+	PARAMS_1(_parameter);
+	EXPLODE_2_PVT(_parameter,_vec);
+	
 	{
 		deleteVehicle _x;
 	} forEach (GETVAR(_vec,BWplus_FOBitems,[]));
