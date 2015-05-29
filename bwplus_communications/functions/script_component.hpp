@@ -1,0 +1,1 @@
+#include "\y\BWplus\addons\communications\script_component.hpp"
