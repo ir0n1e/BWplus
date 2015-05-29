@@ -10,7 +10,8 @@ SETPVAR(_player,BWplus_building,true);
 
 BWplus_buildNetCallback = {
  	private ["_pos"];
-	PARAMS_2(_net,_player);
+	PARAMS_1(_parameter);
+	EXPLODE_2_PVT(_parameter,_net,_player);
  	
 	_pos = position _player;
  	deletevehicle _net;
@@ -19,4 +20,4 @@ BWplus_buildNetCallback = {
  	SETPVAR(_player,BWplus_building,false);
 };
 
-[DISMENTLETIME, _this, BWplus_buildNetCallback , {_this call EFUNC(main,BuildAbort)}, localize "STR_BWplus_toolsandstructures_DismantlingNet"] call ace_common_fnc_progressBar;
+[DISMENTLETIME, [_net,_player], BWplus_buildNetCallback , {_this call EFUNC(main,BuildAbort)}, localize "STR_BWplus_toolsandstructures_DismantlingNet"] call ace_common_fnc_progressBar;

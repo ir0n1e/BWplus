@@ -13,7 +13,8 @@ playSound3D ["BWplus_weapons\sounds\Spray.wss", _player, false, getPosASL _playe
 
 BWplus_buildHelipadCallback = {
 	private ["_pad","_pos", "_dir", "_light","_items"];
-	PARAMS_2(_box,_player);
+	PARAMS_1(_parameter);
+	EXPLODE_2_PVT(_parameter,_box,_player);
 	
 	_angel = 45;
 	_pos = position _box;

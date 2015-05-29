@@ -22,7 +22,8 @@ If (GETVAR(_player,BWplus_pio,false)) then {
 
 BWplus_dismantleCraterCallback = {
 	private ["_items", "_player", "_items", "_crater_count", "_pos"];
-	PARAMS_1(_box,_player);
+	PARAMS_1(_parameter);
+	EXPLODE_2_PVT(_parameter,_box,_player);
 	_items = GETVAR(_box,BWplus_crater_items,[]);
 	GETVAR(_box,BWplus_crater_count,0);
 	_builder = GETVAR((_items select 0),BWplus_builder,objNull);
