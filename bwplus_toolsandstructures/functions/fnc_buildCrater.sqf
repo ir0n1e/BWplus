@@ -78,4 +78,4 @@ BWplus_buildCrater = {
 	};
 };
 [_buildtime, [_items, _crater_count, ACE_player, _buildwithNet], {_this call FUNC(buildCraterCallback);}, {_this call FUNC(buildCraterAbort);}, localize "STR_BWplus_toolsandstructures_BuildingCrater"] call ace_common_fnc_progressBar;
-[_buildtime,_items, _buildwithNet] spawn  BWplus_buildCrater;
+[_buildtime,_items, _buildwithNet] call  BWplus_buildCrater;
