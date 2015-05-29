@@ -4,7 +4,7 @@ PARAMS_1(_parameter);
 EXPLODE_4_PVT(_parameter,_items,_cratercount,_unit,_buildwithnet);
 EXPLODE_2_PVT(_items,_crater,_net);
 
-[_unit, "AmovPknlMstpSrasWrflDnon", 1] call AGM_Core_fnc_doAnimation;
+[_unit, "AmovPknlMstpSrasWrflDnon", 1] call ACE_common_fnc_doAnimation;
 INC(_cratercount);
 SETPVAR(_crater,BWplus_builder,_unit);
 SETPVAR(_crater,BWplus_crater_items,_craterthings);
